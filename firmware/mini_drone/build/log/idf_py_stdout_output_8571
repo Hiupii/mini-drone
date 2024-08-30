@@ -1,0 +1,426 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 25 2024 23:05:57[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b060h ( 45152) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b088 vaddr=3ffb0000 size=02384h (  9092) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d414 vaddr=40080000 size=02c04h ( 11268) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16c78h ( 93304) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=00036ca0 vaddr=40082c04 size=0b40ch ( 46092) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) app_init: Application information:[0m
+[0;32mI (215) app_init: Project name:     mini_drone[0m
+[0;32mI (220) app_init: App version:      1[0m
+[0;32mI (224) app_init: Compile time:     Aug 26 2024 21:24:40[0m
+[0;32mI (230) app_init: ELF file SHA256:  39c33bfa0...[0m
+[0;32mI (235) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (240) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (245) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (255) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (262) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFB2CA0 len 0002D360 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (280) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 4008E010 len 00011FF0 (71 KiB): IRAM[0m
+[0;32mI (294) spi_flash: detected chip: generic[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;33mW (301) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (315) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (326) main_task: Started on CPU0[0m
+[0;32mI (336) main_task: Calling app_main()[0m
+[0;32mI (336) mpu6050_test: Found MPU60x0 device[0m
+[0;32mI (336) mpu6050_test: Accel range: 0[0m
+[0;32mI (336) mpu6050_test: Gyro range:  0[0m
+[0;32mI (346) main_task: Returned from app_main()[0m
+[0;32mI (346) mpu6050_test: **********************************************************************[0m
+[0;32mI (356) mpu6050_test: Acceleration: x=0.3252   y=0.0046   z=1.0164[0m
+[0;32mI (366) mpu6050_test: Rotation:     x=-1.4877   y=-2.1591   z=0.0839[0m
+[0;32mI (366) mpu6050_test: Temperature:  30.8[0m
+[0;32mI (476) mpu6050_test: **********************************************************************[0m
+[0;32mI (476) mpu6050_test: Acceleration: x=0.3184   y=0.0081   z=1.0100[0m
+[0;32mI (476) mpu6050_test: Rotation:     x=-1.4114   y=-2.2354   z=0.2213[0m
+[0;32mI (486) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (586) mpu6050_test: **********************************************************************[0m
+[0;32mI (586) mpu6050_test: Acceleration: x=0.3284   y=0.0078   z=1.0110[0m
+[0;32mI (586) mpu6050_test: Rotation:     x=-1.3351   y=-2.1362   z=0.1221[0m
+[0;32mI (596) mpu6050_test: Temperature:  30.8[0m
+[0;32mI (696) mpu6050_test: **********************************************************************[0m
+[0;32mI (696) mpu6050_test: Acceleration: x=0.3232   y=0.0037   z=1.0122[0m
+[0;32mI (696) mpu6050_test: Rotation:     x=-1.3733   y=-2.0905   z=0.0687[0m
+[0;32mI (706) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (806) mpu6050_test: **********************************************************************[0m
+[0;32mI (806) mpu6050_test: Acceleration: x=0.3237   y=0.0044   z=1.0205[0m
+[0;32mI (806) mpu6050_test: Rotation:     x=-1.3885   y=-2.0142   z=0.0458[0m
+[0;32mI (816) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (916) mpu6050_test: **********************************************************************[0m
+[0;32mI (916) mpu6050_test: Acceleration: x=0.3203   y=0.0029   z=1.0081[0m
+[0;32mI (916) mpu6050_test: Rotation:     x=-1.4191   y=-2.0142   z=0.1678[0m
+[0;32mI (926) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (1026) mpu6050_test: **********************************************************************[0m
+[0;32mI (1026) mpu6050_test: Acceleration: x=0.3247   y=0.0063   z=1.0122[0m
+[0;32mI (1026) mpu6050_test: Rotation:     x=-1.4267   y=-2.2049   z=0.1602[0m
+[0;32mI (1036) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (1136) mpu6050_test: **********************************************************************[0m
+[0;32mI (1136) mpu6050_test: Acceleration: x=0.3179   y=0.0076   z=1.0164[0m
+[0;32mI (1136) mpu6050_test: Rotation:     x=-1.6098   y=-2.4490   z=-0.0153[0m
+[0;32mI (1146) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (1246) mpu6050_test: **********************************************************************[0m
+[0;32mI (1246) mpu6050_test: Acceleration: x=0.3235   y=0.0024   z=1.0112[0m
+[0;32mI (1246) mpu6050_test: Rotation:     x=-1.2894   y=-2.0599   z=0.1907[0m
+[0;32mI (1256) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (1356) mpu6050_test: **********************************************************************[0m
+[0;32mI (1356) mpu6050_test: Acceleration: x=0.3191   y=0.0085   z=1.0176[0m
+[0;32mI (1356) mpu6050_test: Rotation:     x=-1.4191   y=-2.3804   z=0.0305[0m
+[0;32mI (1366) mpu6050_test: Temperature:  30.8[0m
+[0;32mI (1466) mpu6050_test: **********************************************************************[0m
+[0;32mI (1466) mpu6050_test: Acceleration: x=0.3157   y=0.0073   z=1.0125[0m
+[0;32mI (1466) mpu6050_test: Rotation:     x=-1.3657   y=-2.1973   z=0.0992[0m
+[0;32mI (1476) mpu6050_test: Temperature:  30.8[0m
+[0;32mI (1576) mpu6050_test: **********************************************************************[0m
+[0;32mI (1576) mpu6050_test: Acceleration: x=0.3252   y=0.0022   z=1.0081[0m
+[0;32mI (1576) mpu6050_test: Rotation:     x=-1.3275   y=-2.2583   z=-0.0763[0m
+[0;32mI (1586) mpu6050_test: Temperature:  31.0[0m
+[0;32mI (1686) mpu6050_test: **********************************************************************[0m
+[0;32mI (1686) mpu6050_test: Acceleration: x=0.3213   y=0.0076   z=1.0154[0m
+[0;32mI (1686) mpu6050_test: Rotation:     x=-1.4496   y=-2.0523   z=0.0381[0m
+[0;32mI (1696) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (1796) mpu6050_test: **********************************************************************[0m
+[0;32mI (1796) mpu6050_test: Acceleration: x=0.3223   y=0.0056   z=1.0200[0m
+[0;32mI (1796) mpu6050_test: Rotation:     x=-1.3199   y=-2.1973   z=0.0153[0m
+[0;32mI (1806) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (1906) mpu6050_test: **********************************************************************[0m
+[0;32mI (1906) mpu6050_test: Acceleration: x=0.3311   y=0.0022   z=1.0042[0m
+[0;32mI (1906) mpu6050_test: Rotation:     x=-1.4267   y=-2.2964   z=0.1068[0m
+[0;32mI (1916) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (2016) mpu6050_test: **********************************************************************[0m
+[0;32mI (2016) mpu6050_test: Acceleration: x=0.3293   y=-0.0017   z=1.0186[0m
+[0;32mI (2016) mpu6050_test: Rotation:     x=-1.3733   y=-2.5406   z=-0.0534[0m
+[0;32mI (2026) mpu6050_test: Temperature:  30.8[0m
+[0;32mI (2126) mpu6050_test: **********************************************************************[0m
+[0;32mI (2126) mpu6050_test: Acceleration: x=0.3235   y=0.0024   z=1.0127[0m
+[0;32mI (2126) mpu6050_test: Rotation:     x=-1.3733   y=-1.7853   z=0.0305[0m
+[0;32mI (2136) mpu6050_test: Temperature:  30.8[0m
+[0;32mI (2236) mpu6050_test: **********************************************************************[0m
+[0;32mI (2236) mpu6050_test: Acceleration: x=0.3210   y=0.0037   z=1.0142[0m
+[0;32mI (2236) mpu6050_test: Rotation:     x=-1.2817   y=-1.9608   z=0.1755[0m
+[0;32mI (2246) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (2346) mpu6050_test: **********************************************************************[0m
+[0;32mI (2346) mpu6050_test: Acceleration: x=0.3242   y=0.0051   z=1.0125[0m
+[0;32mI (2346) mpu6050_test: Rotation:     x=-1.3351   y=-1.8311   z=0.2136[0m
+[0;32mI (2356) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (2456) mpu6050_test: **********************************************************************[0m
+[0;32mI (2456) mpu6050_test: Acceleration: x=0.3284   y=0.0037   z=1.0129[0m
+[0;32mI (2456) mpu6050_test: Rotation:     x=-1.3733   y=-2.2583   z=-0.1068[0m
+[0;32mI (2466) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (2566) mpu6050_test: **********************************************************************[0m
+[0;32mI (2566) mpu6050_test: Acceleration: x=0.3250   y=-0.0015   z=1.0090[0m
+[0;32mI (2566) mpu6050_test: Rotation:     x=-1.2360   y=-2.2583   z=-0.1068[0m
+[0;32mI (2576) mpu6050_test: Temperature:  30.8[0m
+[0;32mI (2676) mpu6050_test: **********************************************************************[0m
+[0;32mI (2676) mpu6050_test: Acceleration: x=0.3252   y=-0.0005   z=1.0051[0m
+[0;32mI (2676) mpu6050_test: Rotation:     x=-1.1673   y=-1.8921   z=0.2670[0m
+[0;32mI (2686) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (2786) mpu6050_test: **********************************************************************[0m
+[0;32mI (2786) mpu6050_test: Acceleration: x=0.3254   y=0.0059   z=1.0129[0m
+[0;32mI (2786) mpu6050_test: Rotation:     x=-1.2665   y=-1.8845   z=0.1755[0m
+[0;32mI (2796) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (2896) mpu6050_test: **********************************************************************[0m
+[0;32mI (2896) mpu6050_test: Acceleration: x=0.3232   y=0.0034   z=1.0144[0m
+[0;32mI (2896) mpu6050_test: Rotation:     x=-1.4954   y=-2.1591   z=0.2060[0m
+[0;32mI (2906) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (3006) mpu6050_test: **********************************************************************[0m
+[0;32mI (3006) mpu6050_test: Acceleration: x=0.2937   y=0.0051   z=1.0310[0m
+[0;32mI (3006) mpu6050_test: Rotation:     x=-1.5106   y=-3.9749   z=0.5722[0m
+[0;32mI (3016) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (3116) mpu6050_test: **********************************************************************[0m
+[0;32mI (3116) mpu6050_test: Acceleration: x=0.3264   y=-0.0010   z=1.0183[0m
+[0;32mI (3116) mpu6050_test: Rotation:     x=-1.3275   y=-1.9760   z=0.5264[0m
+[0;32mI (3126) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (3226) mpu6050_test: **********************************************************************[0m
+[0;32mI (3226) mpu6050_test: Acceleration: x=0.3293   y=0.0068   z=1.0127[0m
+[0;32mI (3226) mpu6050_test: Rotation:     x=-1.4420   y=-1.8158   z=0.3967[0m
+[0;32mI (3236) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (3336) mpu6050_test: **********************************************************************[0m
+[0;32mI (3336) mpu6050_test: Acceleration: x=0.3276   y=0.0046   z=1.0093[0m
+[0;32mI (3336) mpu6050_test: Rotation:     x=-1.5488   y=-1.9302   z=0.0153[0m
+[0;32mI (3346) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (3446) mpu6050_test: **********************************************************************[0m
+[0;32mI (3446) mpu6050_test: Acceleration: x=0.3174   y=0.0029   z=1.0156[0m
+[0;32mI (3446) mpu6050_test: Rotation:     x=-1.5411   y=-2.0752   z=0.1526[0m
+[0;32mI (3456) mpu6050_test: Temperature:  30.8[0m
+[0;32mI (3556) mpu6050_test: **********************************************************************[0m
+[0;32mI (3556) mpu6050_test: Acceleration: x=0.3196   y=0.0029   z=1.0183[0m
+[0;32mI (3556) mpu6050_test: Rotation:     x=-1.3885   y=-2.1515   z=0.0534[0m
+[0;32mI (3566) mpu6050_test: Temperature:  31.0[0m
+[0;32mI (3666) mpu6050_test: **********************************************************************[0m
+[0;32mI (3666) mpu6050_test: Acceleration: x=0.3247   y=0.0029   z=1.0142[0m
+[0;32mI (3666) mpu6050_test: Rotation:     x=-1.3580   y=-2.5406   z=0.0839[0m
+[0;32mI (3676) mpu6050_test: Temperature:  31.0[0m
+[0;32mI (3776) mpu6050_test: **********************************************************************[0m
+[0;32mI (3776) mpu6050_test: Acceleration: x=0.3289   y=0.0049   z=1.0151[0m
+[0;32mI (3776) mpu6050_test: Rotation:     x=-1.3351   y=-2.2964   z=0.1068[0m
+[0;32mI (3786) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (3886) mpu6050_test: **********************************************************************[0m
+[0;32mI (3886) mpu6050_test: Acceleration: x=0.3191   y=0.0034   z=1.0049[0m
+[0;32mI (3886) mpu6050_test: Rotation:     x=-1.4267   y=-1.9836   z=0.1755[0m
+[0;32mI (3896) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (3996) mpu6050_test: **********************************************************************[0m
+[0;32mI (3996) mpu6050_test: Acceleration: x=0.3306   y=0.0029   z=1.0161[0m
+[0;32mI (3996) mpu6050_test: Rotation:     x=-1.3046   y=-2.2278   z=0.2365[0m
+[0;32mI (4006) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (4106) mpu6050_test: **********************************************************************[0m
+[0;32mI (4106) mpu6050_test: Acceleration: x=0.3267   y=0.0063   z=1.0198[0m
+[0;32mI (4106) mpu6050_test: Rotation:     x=-1.3657   y=-2.0905   z=0.1526[0m
+[0;32mI (4116) mpu6050_test: Temperature:  31.0[0m
+[0;32mI (4216) mpu6050_test: **********************************************************************[0m
+[0;32mI (4216) mpu6050_test: Acceleration: x=0.3293   y=0.0071   z=1.0051[0m
+[0;32mI (4216) mpu6050_test: Rotation:     x=-1.3580   y=-2.0752   z=0.1831[0m
+[0;32mI (4226) mpu6050_test: Temperature:  31.0[0m
+[0;32mI (4326) mpu6050_test: **********************************************************************[0m
+[0;32mI (4326) mpu6050_test: Acceleration: x=0.3235   y=0.0061   z=1.0054[0m
+[0;32mI (4326) mpu6050_test: Rotation:     x=-1.2283   y=-1.9989   z=0.1526[0m
+[0;32mI (4336) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (4436) mpu6050_test: **********************************************************************[0m
+[0;32mI (4436) mpu6050_test: Acceleration: x=0.3237   y=0.0037   z=1.0137[0m
+[0;32mI (4436) mpu6050_test: Rotation:     x=-1.3657   y=-2.4490   z=0.2670[0m
+[0;32mI (4446) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (4546) mpu6050_test: **********************************************************************[0m
+[0;32mI (4546) mpu6050_test: Acceleration: x=0.3240   y=0.0024   z=1.0122[0m
+[0;32mI (4546) mpu6050_test: Rotation:     x=-1.2512   y=-2.2583   z=-0.0610[0m
+[0;32mI (4556) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (4656) mpu6050_test: **********************************************************************[0m
+[0;32mI (4656) mpu6050_test: Acceleration: x=0.3203   y=0.0066   z=1.0129[0m
+[0;32mI (4656) mpu6050_test: Rotation:     x=-1.5030   y=-2.2736   z=0.1907[0m
+[0;32mI (4666) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (4766) mpu6050_test: **********************************************************************[0m
+[0;32mI (4766) mpu6050_test: Acceleration: x=0.3240   y=0.0039   z=1.0171[0m
+[0;32mI (4766) mpu6050_test: Rotation:     x=-1.4420   y=-2.1591   z=0.1297[0m
+[0;32mI (4776) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (4876) mpu6050_test: **********************************************************************[0m
+[0;32mI (4876) mpu6050_test: Acceleration: x=0.3250   y=0.0029   z=1.0132[0m
+[0;32mI (4876) mpu6050_test: Rotation:     x=-1.3199   y=-2.1820   z=0.1221[0m
+[0;32mI (4886) mpu6050_test: Temperature:  31.1[0m
+[0;32mI (4986) mpu6050_test: **********************************************************************[0m
+[0;32mI (4986) mpu6050_test: Acceleration: x=0.3198   y=0.0095   z=1.0105[0m
+[0;32mI (4986) mpu6050_test: Rotation:     x=-1.3275   y=-2.1210   z=0.1602[0m
+[0;32mI (4996) mpu6050_test: Temperature:  31.0[0m
+[0;32mI (5096) mpu6050_test: **********************************************************************[0m
+[0;32mI (5096) mpu6050_test: Acceleration: x=0.3215   y=0.0083   z=1.0061[0m
+[0;32mI (5096) mpu6050_test: Rotation:     x=-1.3275   y=-2.1973   z=0.1755[0m
+[0;32mI (5106) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (5206) mpu6050_test: **********************************************************************[0m
+[0;32mI (5206) mpu6050_test: Acceleration: x=0.3252   y=0.0032   z=1.0151[0m
+[0;32mI (5206) mpu6050_test: Rotation:     x=-1.3657   y=-2.0065   z=0.1221[0m
+[0;32mI (5216) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (5316) mpu6050_test: **********************************************************************[0m
+[0;32mI (5316) mpu6050_test: Acceleration: x=0.3254   y=0.0007   z=1.0044[0m
+[0;32mI (5316) mpu6050_test: Rotation:     x=-1.4801   y=-2.0523   z=0.0916[0m
+[0;32mI (5326) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (5426) mpu6050_test: **********************************************************************[0m
+[0;32mI (5426) mpu6050_test: Acceleration: x=0.3196   y=0.0005   z=1.0088[0m
+[0;32mI (5426) mpu6050_test: Rotation:     x=-1.1978   y=-2.1896   z=0.1984[0m
+[0;32mI (5436) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (5536) mpu6050_test: **********************************************************************[0m
+[0;32mI (5536) mpu6050_test: Acceleration: x=0.3269   y=0.0044   z=1.0146[0m
+[0;32mI (5536) mpu6050_test: Rotation:     x=-1.2512   y=-2.1591   z=0.0534[0m
+[0;32mI (5546) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (5646) mpu6050_test: **********************************************************************[0m
+[0;32mI (5646) mpu6050_test: Acceleration: x=0.3267   y=-0.0032   z=1.0103[0m
+[0;32mI (5646) mpu6050_test: Rotation:     x=-1.2665   y=-2.0981   z=-0.1526[0m
+[0;32mI (5656) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (5756) mpu6050_test: **********************************************************************[0m
+[0;32mI (5756) mpu6050_test: Acceleration: x=0.3291   y=0.0046   z=1.0105[0m
+[0;32mI (5756) mpu6050_test: Rotation:     x=-1.3733   y=-2.3651   z=-0.1221[0m
+[0;32mI (5766) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (5866) mpu6050_test: **********************************************************************[0m
+[0;32mI (5866) mpu6050_test: Acceleration: x=0.3232   y=0.0042   z=1.0151[0m
+[0;32mI (5866) mpu6050_test: Rotation:     x=-1.3428   y=-2.2659   z=0.0916[0m
+[0;32mI (5876) mpu6050_test: Temperature:  31.0[0m
+[0;32mI (5976) mpu6050_test: **********************************************************************[0m
+[0;32mI (5976) mpu6050_test: Acceleration: x=0.3232   y=0.0071   z=1.0105[0m
+[0;32mI (5976) mpu6050_test: Rotation:     x=-1.5488   y=-2.3041   z=0.0076[0m
+[0;32mI (5986) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (6086) mpu6050_test: **********************************************************************[0m
+[0;32mI (6086) mpu6050_test: Acceleration: x=0.3257   y=0.0049   z=1.0056[0m
+[0;32mI (6086) mpu6050_test: Rotation:     x=-1.3657   y=-2.1362   z=0.2594[0m
+[0;32mI (6096) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (6196) mpu6050_test: **********************************************************************[0m
+[0;32mI (6196) mpu6050_test: Acceleration: x=0.3225   y=0.0049   z=1.0037[0m
+[0;32mI (6196) mpu6050_test: Rotation:     x=-1.4191   y=-2.1591   z=0.0153[0m
+[0;32mI (6206) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (6306) mpu6050_test: **********************************************************************[0m
+[0;32mI (6306) mpu6050_test: Acceleration: x=0.3264   y=0.0076   z=1.0225[0m
+[0;32mI (6306) mpu6050_test: Rotation:     x=-1.3885   y=-2.2812   z=-0.0305[0m
+[0;32mI (6316) mpu6050_test: Temperature:  31.0[0m
+[0;32mI (6416) mpu6050_test: **********************************************************************[0m
+[0;32mI (6416) mpu6050_test: Acceleration: x=0.3264   y=0.0068   z=1.0200[0m
+[0;32mI (6416) mpu6050_test: Rotation:     x=-1.3046   y=-2.3956   z=0.0916[0m
+[0;32mI (6426) mpu6050_test: Temperature:  31.0[0m
+[0;32mI (6526) mpu6050_test: **********************************************************************[0m
+[0;32mI (6526) mpu6050_test: Acceleration: x=0.3276   y=0.0007   z=1.0098[0m
+[0;32mI (6526) mpu6050_test: Rotation:     x=-1.2283   y=-2.3270   z=-0.1450[0m
+[0;32mI (6536) mpu6050_test: Temperature:  31.0[0m
+[0;32mI (6636) mpu6050_test: **********************************************************************[0m
+[0;32mI (6636) mpu6050_test: Acceleration: x=0.3232   y=0.0093   z=1.0083[0m
+[0;32mI (6636) mpu6050_test: Rotation:     x=-1.2741   y=-1.8692   z=-0.0610[0m
+[0;32mI (6646) mpu6050_test: Temperature:  31.0[0m
+[0;32mI (6746) mpu6050_test: **********************************************************************[0m
+[0;32mI (6746) mpu6050_test: Acceleration: x=0.3247   y=0.0039   z=1.0234[0m
+[0;32mI (6746) mpu6050_test: Rotation:     x=-1.4877   y=-2.1133   z=0.0229[0m
+[0;32mI (6756) mpu6050_test: Temperature:  30.9[0m
+[0;32mI (6856) mpu6050_test: **********************************************************************[0m
+[0;32mI (6856) mpu6050_test: Acceleration: x=0.3245   y=0.0012   z=1.0090[0m
+[0;32mI (6856) mpu6050_test: Rotation:     x=-1.2360   y=-2.0218   z=0.0534[0m
+[0;32mI (6866) mpu6050_test: Temperature:  31.0[0m
+[0;32mI (6966) mpu6050_test: **********************************************************************[0m
+[0;32mI (6966) mpu6050_test: Acceleration: x=0.3433   y=0.0288   z=0.8721[0m
+[0;32mI (6966) mpu6050_test: Rotation:     x=2.5787   y=13.3133   z=3.7689[0m
+[0;32mI (6976) mpu6050_test: Temperature:  31.0[0m
+[0;31mE (7076) i2cdev: Could not read from device [0x68 at 0]: 263 (ESP_ERR_TIMEOUT)[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x107 (ESP_ERR_TIMEOUT) at 0x400d62d0
+file: "./main/mini_drone.c" line 46
+func: mpu6050_test
+expression: mpu6050_get_temperature(&dev, &temp)
+
+abort() was called at PC 0x400867bb on core 0
+
+
+Backtrace: 0x40081932:0x3ffb6e60 0x400867c5:0x3ffb6e80 0x4008c8e9:0x3ffb6ea0 0x400867bb:0x3ffb6f10 0x400d62d0:0x3ffb6f40 0x4008726d:0x3ffb6fd0
+
+
+
+
+ELF file SHA256: 39c33bfa0
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 25 2024 23:05:57[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b060h ( 45152) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b088 vaddr=3ffb0000 size=02384h (  9092) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d414 vaddr=40080000 size=02c04h ( 11268) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16c78h ( 93304) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=00036ca0 vaddr=40082c04 size=0b40ch ( 46092) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     mini_drone[0m
+[0;32mI (220) app_init: App version:      1[0m
+[0;32mI (224) app_init: Compile time:     Aug 26 2024 21:24:40[0m
+[0;32mI (230) app_init: ELF file SHA256:  39c33bfa0...[0m
+[0;32mI (235) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (240) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (245) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (255) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (262) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFB2CA0 len 0002D360 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (280) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 4008E010 len 00011FF0 (71 KiB): IRAM[0m
+[0;32mI (294) spi_flash: detected chip: generic[0m
+[0;32mI (297) spi_flash: flash io: dio[0m
+[0;33mW (301) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (314) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (326) main_task: Started on CPU0[0m
+[0;32mI (336) main_task: Calling app_main()[0m
+[0;32mI (336) main_task: Returned from app_main()[0m
+[0;31mE (336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (1336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (2336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (3336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (4336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (5336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (6336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (7336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (8336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (9336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (10336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (11336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (12336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (13336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (14336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (15336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (16336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (17336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (18336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (19336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (20336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (21336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (22336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (23336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (24336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (25336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (26336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (27336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (28336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (29336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (30336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (31336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (32336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (33336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (34336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (35336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (36336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (37336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (38336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (39336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (40336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (41336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (42336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (43336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (44336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (45336) mpu6050_test: MPU60x0 not found[0m

@@ -1,0 +1,83 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 25 2024 23:05:57[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b060h ( 45152) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b088 vaddr=3ffb0000 size=02384h (  9092) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d414 vaddr=40080000 size=02c04h ( 11268) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16c78h ( 93304) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=00036ca0 vaddr=40082c04 size=0b40ch ( 46092) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) app_init: Application information:[0m
+[0;32mI (215) app_init: Project name:     mini_drone[0m
+[0;32mI (220) app_init: App version:      1[0m
+[0;32mI (224) app_init: Compile time:     Aug 26 2024 21:24:40[0m
+[0;32mI (230) app_init: ELF file SHA256:  6f3be3984...[0m
+[0;32mI (235) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (240) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (245) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (255) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (262) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFB2CA0 len 0002D360 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (280) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 4008E010 len 00011FF0 (71 KiB): IRAM[0m
+[0;32mI (294) spi_flash: detected chip: generic[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;33mW (301) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (315) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (326) main_task: Started on CPU0[0m
+[0;32mI (336) main_task: Calling app_main()[0m
+[0;31mE (336) mpu6050_test: MPU60x0 not found[0m
+[0;32mI (336) main_task: Returned from app_main()[0m
+[0;31mE (1336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (2336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (3336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (4336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (5336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (6336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (7336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (8336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (9336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (10336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (11336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (12336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (13336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (14336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (15336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (16336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (17336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (18336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (19336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (20336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (21336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (22336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (23336) mpu6050_test: MPU60x0 not found[0m
+[0;31mE (24336) mpu6050_test: MPU60x0 not found[0m

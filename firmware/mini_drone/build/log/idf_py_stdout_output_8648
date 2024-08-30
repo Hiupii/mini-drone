@@ -1,0 +1,1971 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 25 2024 23:05:57[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0afe8h ( 45032) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b010 vaddr=3ffb0000 size=02384h (  9092) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d39c vaddr=40080000 size=02c7ch ( 11388) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17448h ( 95304) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00037470 vaddr=40082c7c size=0b394h ( 45972) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) app_init: Application information:[0m
+[0;32mI (215) app_init: Project name:     mini_drone[0m
+[0;32mI (220) app_init: App version:      1[0m
+[0;32mI (225) app_init: Compile time:     Aug 26 2024 21:24:40[0m
+[0;32mI (231) app_init: ELF file SHA256:  597f16055...[0m
+[0;32mI (236) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (240) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (245) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (255) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (262) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFB2CA8 len 0002D358 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 4008E010 len 00011FF0 (71 KiB): IRAM[0m
+[0;32mI (295) spi_flash: detected chip: generic[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (315) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (326) main_task: Started on CPU0[0m
+[0;32mI (336) main_task: Calling app_main()[0m
+[0;32mI (336) main_task: Returned from app_main()[0m
+[0;31mE (376) mpu6050_log: MPU60x0 not found[0m
+[0;31mE (1376) mpu6050_log: MPU60x0 not found[0m
+[0;31mE (2376) mpu6050_log: MPU60x0 not found[0m
+[0;32mI (3376) mpu6050_log: Found MPU60x0 device[0m
+[0;32mI (3376) mpu6050_log: Accel range: 0[0m
+[0;32mI (3376) mpu6050_log: Gyro range:  0[0m
+[0;32mI (3376) mpu6050_log: Pitch: 0.001045[0m
+[0;32mI (3376) mpu6050_log: Roll: 0.048316[0m
+[0;32mI (3486) mpu6050_log: Pitch: 0.002812[0m
+[0;32mI (3486) mpu6050_log: Roll: 0.045423[0m
+[0;32mI (3586) mpu6050_log: Pitch: 0.002986[0m
+[0;32mI (3586) mpu6050_log: Roll: 0.024719[0m
+[0;32mI (3686) mpu6050_log: Pitch: -0.001020[0m
+[0;32mI (3686) mpu6050_log: Roll: 0.008538[0m
+[0;32mI (3786) mpu6050_log: Pitch: 0.000448[0m
+[0;32mI (3786) mpu6050_log: Roll: 0.042107[0m
+[0;32mI (3886) mpu6050_log: Pitch: 0.001493[0m
+[0;32mI (3886) mpu6050_log: Roll: 0.046396[0m
+[0;32mI (3986) mpu6050_log: Pitch: -0.002713[0m
+[0;32mI (3986) mpu6050_log: Roll: 0.024750[0m
+[0;32mI (4086) mpu6050_log: Pitch: 0.000871[0m
+[0;32mI (4086) mpu6050_log: Roll: 0.048884[0m
+[0;32mI (4186) mpu6050_log: Pitch: 0.000025[0m
+[0;32mI (4186) mpu6050_log: Roll: 0.037396[0m
+[0;32mI (4286) mpu6050_log: Pitch: 0.000473[0m
+[0;32mI (4286) mpu6050_log: Roll: 0.044617[0m
+[0;32mI (4386) mpu6050_log: Pitch: 0.000572[0m
+[0;32mI (4386) mpu6050_log: Roll: 0.041111[0m
+[0;32mI (4486) mpu6050_log: Pitch: 0.000274[0m
+[0;32mI (4486) mpu6050_log: Roll: 0.043823[0m
+[0;32mI (4586) mpu6050_log: Pitch: 0.002215[0m
+[0;32mI (4586) mpu6050_log: Roll: 0.045348[0m
+[0;32mI (4686) mpu6050_log: Pitch: 0.001020[0m
+[0;32mI (4686) mpu6050_log: Roll: 0.040832[0m
+[0;32mI (4786) mpu6050_log: Pitch: 0.000398[0m
+[0;32mI (4786) mpu6050_log: Roll: 0.041827[0m
+[0;32mI (4886) mpu6050_log: Pitch: 0.001070[0m
+[0;32mI (4886) mpu6050_log: Roll: 0.040242[0m
+[0;32mI (4986) mpu6050_log: Pitch: 0.000747[0m
+[0;32mI (4986) mpu6050_log: Roll: 0.043541[0m
+[0;32mI (5086) mpu6050_log: Pitch: 0.000896[0m
+[0;32mI (5086) mpu6050_log: Roll: 0.048271[0m
+[0;32mI (5186) mpu6050_log: Pitch: 0.002091[0m
+[0;32mI (5186) mpu6050_log: Roll: 0.038719[0m
+[0;32mI (5286) mpu6050_log: Pitch: 0.004281[0m
+[0;32mI (5286) mpu6050_log: Roll: 0.040543[0m
+[0;32mI (5386) mpu6050_log: Pitch: 0.008735[0m
+[0;32mI (5386) mpu6050_log: Roll: 0.055705[0m
+[0;32mI (5486) mpu6050_log: Pitch: 0.002986[0m
+[0;32mI (5486) mpu6050_log: Roll: 0.054678[0m
+[0;32mI (5586) mpu6050_log: Pitch: 0.001095[0m
+[0;32mI (5586) mpu6050_log: Roll: 0.049912[0m
+[0;32mI (5686) mpu6050_log: Pitch: 0.001568[0m
+[0;32mI (5686) mpu6050_log: Roll: 0.048331[0m
+[0;32mI (5786) mpu6050_log: Pitch: 0.004181[0m
+[0;32mI (5786) mpu6050_log: Roll: 0.040446[0m
+[0;32mI (5886) mpu6050_log: Pitch: 0.002290[0m
+[0;32mI (5886) mpu6050_log: Roll: 0.039868[0m
+[0;32mI (5986) mpu6050_log: Pitch: 0.000771[0m
+[0;32mI (5986) mpu6050_log: Roll: 0.049785[0m
+[0;32mI (6086) mpu6050_log: Pitch: 0.000821[0m
+[0;32mI (6086) mpu6050_log: Roll: 0.074724[0m
+[0;32mI (6186) mpu6050_log: Pitch: 0.007665[0m
+[0;32mI (6186) mpu6050_log: Roll: 0.078098[0m
+[0;32mI (6286) mpu6050_log: Pitch: 0.008014[0m
+[0;32mI (6286) mpu6050_log: Roll: 0.090744[0m
+[0;32mI (6386) mpu6050_log: Pitch: 0.010104[0m
+[0;32mI (6386) mpu6050_log: Roll: 0.114655[0m
+[0;32mI (6486) mpu6050_log: Pitch: 0.010179[0m
+[0;32mI (6486) mpu6050_log: Roll: 0.159085[0m
+[0;32mI (6586) mpu6050_log: Pitch: 0.002887[0m
+[0;32mI (6586) mpu6050_log: Roll: 0.244618[0m
+[0;32mI (6686) mpu6050_log: Pitch: 0.009457[0m
+[0;32mI (6686) mpu6050_log: Roll: 0.308146[0m
+[0;32mI (6786) mpu6050_log: Pitch: 0.011274[0m
+[0;32mI (6786) mpu6050_log: Roll: 0.360548[0m
+[0;32mI (6886) mpu6050_log: Pitch: 0.007914[0m
+[0;32mI (6886) mpu6050_log: Roll: 0.417448[0m
+[0;32mI (6986) mpu6050_log: Pitch: 0.010403[0m
+[0;32mI (6986) mpu6050_log: Roll: 0.464681[0m
+[0;32mI (7086) mpu6050_log: Pitch: 0.008412[0m
+[0;32mI (7086) mpu6050_log: Roll: 0.480149[0m
+[0;32mI (7186) mpu6050_log: Pitch: 0.009432[0m
+[0;32mI (7186) mpu6050_log: Roll: 0.509787[0m
+[0;32mI (7286) mpu6050_log: Pitch: 0.009880[0m
+[0;32mI (7286) mpu6050_log: Roll: 0.536479[0m
+[0;32mI (7386) mpu6050_log: Pitch: 0.007217[0m
+[0;32mI (7386) mpu6050_log: Roll: 0.569116[0m
+[0;32mI (7486) mpu6050_log: Pitch: 0.008263[0m
+[0;32mI (7486) mpu6050_log: Roll: 0.577851[0m
+[0;32mI (7586) mpu6050_log: Pitch: 0.010901[0m
+[0;32mI (7586) mpu6050_log: Roll: 0.580973[0m
+[0;32mI (7686) mpu6050_log: Pitch: 0.006496[0m
+[0;32mI (7686) mpu6050_log: Roll: 0.623049[0m
+[0;32mI (7786) mpu6050_log: Pitch: 0.003310[0m
+[0;32mI (7786) mpu6050_log: Roll: 0.641862[0m
+[0;32mI (7886) mpu6050_log: Pitch: 0.002041[0m
+[0;32mI (7886) mpu6050_log: Roll: 0.631131[0m
+[0;32mI (7986) mpu6050_log: Pitch: -0.004032[0m
+[0;32mI (7986) mpu6050_log: Roll: 0.661726[0m
+[0;32mI (8086) mpu6050_log: Pitch: 0.005500[0m
+[0;32mI (8086) mpu6050_log: Roll: 0.639213[0m
+[0;32mI (8186) mpu6050_log: Pitch: 0.009134[0m
+[0;32mI (8186) mpu6050_log: Roll: 0.678052[0m
+[0;32mI (8286) mpu6050_log: Pitch: 0.009034[0m
+[0;32mI (8286) mpu6050_log: Roll: 0.689744[0m
+[0;32mI (8386) mpu6050_log: Pitch: 0.006446[0m
+[0;32mI (8386) mpu6050_log: Roll: 0.712605[0m
+[0;32mI (8486) mpu6050_log: Pitch: 0.006794[0m
+[0;32mI (8486) mpu6050_log: Roll: 0.695980[0m
+[0;32mI (8586) mpu6050_log: Pitch: 0.005550[0m
+[0;32mI (8586) mpu6050_log: Roll: 0.707842[0m
+[0;32mI (8686) mpu6050_log: Pitch: 0.010652[0m
+[0;32mI (8686) mpu6050_log: Roll: 0.663820[0m
+[0;32mI (8786) mpu6050_log: Pitch: 0.005824[0m
+[0;32mI (8786) mpu6050_log: Roll: 0.725855[0m
+[0;32mI (8886) mpu6050_log: Pitch: 0.006097[0m
+[0;32mI (8886) mpu6050_log: Roll: 0.682201[0m
+[0;32mI (8986) mpu6050_log: Pitch: 0.008437[0m
+[0;32mI (8986) mpu6050_log: Roll: 0.658669[0m
+[0;32mI (9086) mpu6050_log: Pitch: 0.008014[0m
+[0;32mI (9086) mpu6050_log: Roll: 0.670465[0m
+[0;32mI (9186) mpu6050_log: Pitch: 0.006620[0m
+[0;32mI (9186) mpu6050_log: Roll: 0.658129[0m
+[0;32mI (9286) mpu6050_log: Pitch: 0.014211[0m
+[0;32mI (9286) mpu6050_log: Roll: 0.672376[0m
+[0;32mI (9386) mpu6050_log: Pitch: 0.007516[0m
+[0;32mI (9386) mpu6050_log: Roll: 0.662478[0m
+[0;32mI (9486) mpu6050_log: Pitch: 0.007939[0m
+[0;32mI (9486) mpu6050_log: Roll: 0.670362[0m
+[0;32mI (9586) mpu6050_log: Pitch: 0.008536[0m
+[0;32mI (9586) mpu6050_log: Roll: 0.651501[0m
+[0;32mI (9686) mpu6050_log: Pitch: 0.007839[0m
+[0;32mI (9686) mpu6050_log: Roll: 0.675071[0m
+[0;32mI (9786) mpu6050_log: Pitch: 0.007889[0m
+[0;32mI (9786) mpu6050_log: Roll: 0.674340[0m
+[0;32mI (9886) mpu6050_log: Pitch: 0.006072[0m
+[0;32mI (9886) mpu6050_log: Roll: 0.677482[0m
+[0;32mI (9986) mpu6050_log: Pitch: 0.007317[0m
+[0;32mI (9986) mpu6050_log: Roll: 0.704927[0m
+[0;32mI (10086) mpu6050_log: Pitch: 0.014833[0m
+[0;32mI (10086) mpu6050_log: Roll: 0.708975[0m
+[0;32mI (10186) mpu6050_log: Pitch: 0.009183[0m
+[0;32mI (10186) mpu6050_log: Roll: 0.671680[0m
+[0;32mI (10286) mpu6050_log: Pitch: 0.008138[0m
+[0;32mI (10286) mpu6050_log: Roll: 0.687697[0m
+[0;32mI (10386) mpu6050_log: Pitch: 0.007765[0m
+[0;32mI (10386) mpu6050_log: Roll: 0.697767[0m
+[0;32mI (10486) mpu6050_log: Pitch: 0.007864[0m
+[0;32mI (10486) mpu6050_log: Roll: 0.681083[0m
+[0;32mI (10586) mpu6050_log: Pitch: 0.006968[0m
+[0;32mI (10586) mpu6050_log: Roll: 0.685960[0m
+[0;32mI (10686) mpu6050_log: Pitch: 0.009781[0m
+[0;32mI (10686) mpu6050_log: Roll: 0.680772[0m
+[0;32mI (10786) mpu6050_log: Pitch: 0.008213[0m
+[0;32mI (10786) mpu6050_log: Roll: 0.690832[0m
+[0;32mI (10886) mpu6050_log: Pitch: 0.007690[0m
+[0;32mI (10886) mpu6050_log: Roll: 0.693550[0m
+[0;32mI (10986) mpu6050_log: Pitch: 0.007889[0m
+[0;32mI (10986) mpu6050_log: Roll: 0.685199[0m
+[0;32mI (11086) mpu6050_log: Pitch: 0.007466[0m
+[0;32mI (11086) mpu6050_log: Roll: 0.687078[0m
+[0;32mI (11186) mpu6050_log: Pitch: 0.009009[0m
+[0;32mI (11186) mpu6050_log: Roll: 0.682876[0m
+[0;32mI (11286) mpu6050_log: Pitch: 0.008511[0m
+[0;32mI (11286) mpu6050_log: Roll: 0.692515[0m
+[0;32mI (11386) mpu6050_log: Pitch: 0.007815[0m
+[0;32mI (11386) mpu6050_log: Roll: 0.699969[0m
+[0;32mI (11486) mpu6050_log: Pitch: 0.008412[0m
+[0;32mI (11486) mpu6050_log: Roll: 0.681293[0m
+[0;32mI (11586) mpu6050_log: Pitch: 0.008138[0m
+[0;32mI (11586) mpu6050_log: Roll: 0.668801[0m
+[0;32mI (11686) mpu6050_log: Pitch: 0.007939[0m
+[0;32mI (11686) mpu6050_log: Roll: 0.669445[0m
+[0;32mI (11786) mpu6050_log: Pitch: 0.008910[0m
+[0;32mI (11786) mpu6050_log: Roll: 0.675772[0m
+[0;32mI (11886) mpu6050_log: Pitch: 0.007964[0m
+[0;32mI (11886) mpu6050_log: Roll: 0.642847[0m
+[0;32mI (11986) mpu6050_log: Pitch: 0.009009[0m
+[0;32mI (11986) mpu6050_log: Roll: 0.619699[0m
+[0;32mI (12086) mpu6050_log: Pitch: 0.009582[0m
+[0;32mI (12086) mpu6050_log: Roll: 0.578848[0m
+[0;32mI (12186) mpu6050_log: Pitch: 0.008686[0m
+[0;32mI (12186) mpu6050_log: Roll: 0.538180[0m
+[0;32mI (12286) mpu6050_log: Pitch: 0.008561[0m
+[0;32mI (12286) mpu6050_log: Roll: 0.498189[0m
+[0;32mI (12386) mpu6050_log: Pitch: 0.009059[0m
+[0;32mI (12386) mpu6050_log: Roll: 0.461357[0m
+[0;32mI (12486) mpu6050_log: Pitch: 0.010278[0m
+[0;32mI (12486) mpu6050_log: Roll: 0.426782[0m
+[0;32mI (12586) mpu6050_log: Pitch: 0.009681[0m
+[0;32mI (12586) mpu6050_log: Roll: 0.390947[0m
+[0;32mI (12686) mpu6050_log: Pitch: 0.010229[0m
+[0;32mI (12686) mpu6050_log: Roll: 0.368318[0m
+[0;32mI (12786) mpu6050_log: Pitch: 0.010104[0m
+[0;32mI (12786) mpu6050_log: Roll: 0.328433[0m
+[0;32mI (12886) mpu6050_log: Pitch: 0.010627[0m
+[0;32mI (12886) mpu6050_log: Roll: 0.307330[0m
+[0;32mI (12986) mpu6050_log: Pitch: 0.015903[0m
+[0;32mI (12986) mpu6050_log: Roll: 0.245434[0m
+[0;32mI (13086) mpu6050_log: Pitch: 0.010403[0m
+[0;32mI (13086) mpu6050_log: Roll: 0.283136[0m
+[0;32mI (13186) mpu6050_log: Pitch: 0.011100[0m
+[0;32mI (13186) mpu6050_log: Roll: 0.282686[0m
+[0;32mI (13286) mpu6050_log: Pitch: 0.010353[0m
+[0;32mI (13286) mpu6050_log: Roll: 0.271611[0m
+[0;32mI (13386) mpu6050_log: Pitch: 0.008636[0m
+[0;32mI (13386) mpu6050_log: Roll: 0.274196[0m
+[0;32mI (13486) mpu6050_log: Pitch: 0.008735[0m
+[0;32mI (13486) mpu6050_log: Roll: 0.244003[0m
+[0;32mI (13586) mpu6050_log: Pitch: 0.003086[0m
+[0;32mI (13586) mpu6050_log: Roll: 0.326694[0m
+[0;32mI (13686) mpu6050_log: Pitch: 0.008287[0m
+[0;32mI (13686) mpu6050_log: Roll: 0.228877[0m
+[0;32mI (13786) mpu6050_log: Pitch: 0.015829[0m
+[0;32mI (13786) mpu6050_log: Roll: 0.171367[0m
+[0;32mI (13886) mpu6050_log: Pitch: 0.012120[0m
+[0;32mI (13886) mpu6050_log: Roll: 0.166206[0m
+[0;32mI (13986) mpu6050_log: Pitch: 0.012518[0m
+[0;32mI (13986) mpu6050_log: Roll: 0.177053[0m
+[0;32mI (14086) mpu6050_log: Pitch: 0.012817[0m
+[0;32mI (14086) mpu6050_log: Roll: 0.126486[0m
+[0;32mI (14186) mpu6050_log: Pitch: 0.011299[0m
+[0;32mI (14186) mpu6050_log: Roll: 0.129233[0m
+[0;32mI (14286) mpu6050_log: Pitch: 0.009557[0m
+[0;32mI (14286) mpu6050_log: Roll: 0.124850[0m
+[0;32mI (14386) mpu6050_log: Pitch: 0.009930[0m
+[0;32mI (14386) mpu6050_log: Roll: 0.115931[0m
+[0;32mI (14486) mpu6050_log: Pitch: 0.018666[0m
+[0;32mI (14486) mpu6050_log: Roll: 0.111641[0m
+[0;32mI (14586) mpu6050_log: Pitch: 0.007242[0m
+[0;32mI (14586) mpu6050_log: Roll: 0.066926[0m
+[0;32mI (14686) mpu6050_log: Pitch: 0.005973[0m
+[0;32mI (14686) mpu6050_log: Roll: 0.064754[0m
+[0;32mI (14786) mpu6050_log: Pitch: 0.005276[0m
+[0;32mI (14786) mpu6050_log: Roll: 0.064015[0m
+[0;32mI (14886) mpu6050_log: Pitch: 0.007192[0m
+[0;32mI (14886) mpu6050_log: Roll: 0.054692[0m
+[0;32mI (14986) mpu6050_log: Pitch: 0.007242[0m
+[0;32mI (14986) mpu6050_log: Roll: 0.067440[0m
+[0;32mI (15086) mpu6050_log: Pitch: 0.007690[0m
+[0;32mI (15086) mpu6050_log: Roll: 0.068785[0m
+[0;32mI (15186) mpu6050_log: Pitch: 0.011324[0m
+[0;32mI (15186) mpu6050_log: Roll: 0.056262[0m
+[0;32mI (15286) mpu6050_log: Pitch: 0.012170[0m
+[0;32mI (15286) mpu6050_log: Roll: 0.058164[0m
+[0;32mI (15386) mpu6050_log: Pitch: 0.011896[0m
+[0;32mI (15386) mpu6050_log: Roll: 0.050658[0m
+[0;32mI (15486) mpu6050_log: Pitch: 0.013414[0m
+[0;32mI (15486) mpu6050_log: Roll: 0.053562[0m
+[0;32mI (15586) mpu6050_log: Pitch: 0.012718[0m
+[0;32mI (15586) mpu6050_log: Roll: 0.054001[0m
+[0;32mI (15686) mpu6050_log: Pitch: 0.011971[0m
+[0;32mI (15686) mpu6050_log: Roll: 0.062548[0m
+[0;32mI (15786) mpu6050_log: Pitch: 0.012294[0m
+[0;32mI (15786) mpu6050_log: Roll: 0.056282[0m
+[0;32mI (15886) mpu6050_log: Pitch: 0.011174[0m
+[0;32mI (15886) mpu6050_log: Roll: 0.037528[0m
+[0;32mI (15986) mpu6050_log: Pitch: 0.010453[0m
+[0;32mI (15986) mpu6050_log: Roll: 0.040295[0m
+[0;32mI (16086) mpu6050_log: Pitch: 0.010079[0m
+[0;32mI (16086) mpu6050_log: Roll: 0.021199[0m
+[0;32mI (16186) mpu6050_log: Pitch: 0.011150[0m
+[0;32mI (16186) mpu6050_log: Roll: 0.009296[0m
+[0;32mI (16286) mpu6050_log: Pitch: 0.011697[0m
+[0;32mI (16286) mpu6050_log: Roll: 0.000470[0m
+[0;32mI (16386) mpu6050_log: Pitch: 0.010901[0m
+[0;32mI (16386) mpu6050_log: Roll: -0.022110[0m
+[0;32mI (16486) mpu6050_log: Pitch: 0.010926[0m
+[0;32mI (16486) mpu6050_log: Roll: -0.050843[0m
+[0;32mI (16586) mpu6050_log: Pitch: 0.010478[0m
+[0;32mI (16586) mpu6050_log: Roll: -0.077023[0m
+[0;32mI (16686) mpu6050_log: Pitch: 0.010328[0m
+[0;32mI (16686) mpu6050_log: Roll: -0.101127[0m
+[0;32mI (16786) mpu6050_log: Pitch: 0.010901[0m
+[0;32mI (16786) mpu6050_log: Roll: -0.126953[0m
+[0;32mI (16886) mpu6050_log: Pitch: 0.010552[0m
+[0;32mI (16886) mpu6050_log: Roll: -0.157810[0m
+[0;32mI (16986) mpu6050_log: Pitch: 0.010204[0m
+[0;32mI (16986) mpu6050_log: Roll: -0.186874[0m
+[0;32mI (17086) mpu6050_log: Pitch: 0.009457[0m
+[0;32mI (17086) mpu6050_log: Roll: -0.199987[0m
+[0;32mI (17186) mpu6050_log: Pitch: 0.010527[0m
+[0;32mI (17186) mpu6050_log: Roll: -0.217681[0m
+[0;32mI (17286) mpu6050_log: Pitch: 0.010677[0m
+[0;32mI (17286) mpu6050_log: Roll: -0.245491[0m
+[0;32mI (17386) mpu6050_log: Pitch: 0.010179[0m
+[0;32mI (17386) mpu6050_log: Roll: -0.259971[0m
+[0;32mI (17486) mpu6050_log: Pitch: 0.010378[0m
+[0;32mI (17486) mpu6050_log: Roll: -0.277976[0m
+[0;32mI (17586) mpu6050_log: Pitch: 0.009606[0m
+[0;32mI (17586) mpu6050_log: Roll: -0.298603[0m
+[0;32mI (17686) mpu6050_log: Pitch: 0.009806[0m
+[0;32mI (17686) mpu6050_log: Roll: -0.307769[0m
+[0;32mI (17786) mpu6050_log: Pitch: 0.008611[0m
+[0;32mI (17786) mpu6050_log: Roll: -0.340591[0m
+[0;32mI (17886) mpu6050_log: Pitch: 0.008511[0m
+[0;32mI (17886) mpu6050_log: Roll: -0.359942[0m
+[0;32mI (17986) mpu6050_log: Pitch: 0.008586[0m
+[0;32mI (17986) mpu6050_log: Roll: -0.383706[0m
+[0;32mI (18086) mpu6050_log: Pitch: 0.008063[0m
+[0;32mI (18086) mpu6050_log: Roll: -0.409539[0m
+[0;32mI (18186) mpu6050_log: Pitch: 0.008337[0m
+[0;32mI (18186) mpu6050_log: Roll: -0.422758[0m
+[0;32mI (18286) mpu6050_log: Pitch: 0.009159[0m
+[0;32mI (18286) mpu6050_log: Roll: -0.449914[0m
+[0;32mI (18386) mpu6050_log: Pitch: 0.009308[0m
+[0;32mI (18386) mpu6050_log: Roll: -0.464171[0m
+[0;32mI (18486) mpu6050_log: Pitch: 0.008511[0m
+[0;32mI (18486) mpu6050_log: Roll: -0.508738[0m
+[0;32mI (18586) mpu6050_log: Pitch: 0.009059[0m
+[0;32mI (18586) mpu6050_log: Roll: -0.521670[0m
+[0;32mI (18686) mpu6050_log: Pitch: 0.009756[0m
+[0;32mI (18686) mpu6050_log: Roll: -0.530690[0m
+[0;32mI (18786) mpu6050_log: Pitch: 0.010179[0m
+[0;32mI (18786) mpu6050_log: Roll: -0.543917[0m
+[0;32mI (18886) mpu6050_log: Pitch: 0.010726[0m
+[0;32mI (18886) mpu6050_log: Roll: -0.549374[0m
+[0;32mI (18986) mpu6050_log: Pitch: 0.009557[0m
+[0;32mI (18986) mpu6050_log: Roll: -0.575990[0m
+[0;32mI (19086) mpu6050_log: Pitch: 0.008885[0m
+[0;32mI (19086) mpu6050_log: Roll: -0.597705[0m
+[0;32mI (19186) mpu6050_log: Pitch: 0.009880[0m
+[0;32mI (19186) mpu6050_log: Roll: -0.610726[0m
+[0;32mI (19286) mpu6050_log: Pitch: 0.009482[0m
+[0;32mI (19286) mpu6050_log: Roll: -0.624952[0m
+[0;32mI (19386) mpu6050_log: Pitch: 0.009706[0m
+[0;32mI (19386) mpu6050_log: Roll: -0.635127[0m
+[0;32mI (19486) mpu6050_log: Pitch: 0.009482[0m
+[0;32mI (19486) mpu6050_log: Roll: -0.656229[0m
+[0;32mI (19586) mpu6050_log: Pitch: 0.009034[0m
+[0;32mI (19586) mpu6050_log: Roll: -0.652901[0m
+[0;32mI (19686) mpu6050_log: Pitch: 0.009084[0m
+[0;32mI (19686) mpu6050_log: Roll: -0.667744[0m
+[0;32mI (19786) mpu6050_log: Pitch: 0.009830[0m
+[0;32mI (19786) mpu6050_log: Roll: -0.674294[0m
+[0;32mI (19886) mpu6050_log: Pitch: 0.009308[0m
+[0;32mI (19886) mpu6050_log: Roll: -0.674408[0m
+[0;32mI (19986) mpu6050_log: Pitch: 0.009432[0m
+[0;32mI (19986) mpu6050_log: Roll: -0.670778[0m
+[0;32mI (20086) mpu6050_log: Pitch: 0.008586[0m
+[0;32mI (20086) mpu6050_log: Roll: -0.669207[0m
+[0;32mI (20186) mpu6050_log: Pitch: 0.009183[0m
+[0;32mI (20186) mpu6050_log: Roll: -0.654250[0m
+[0;32mI (20286) mpu6050_log: Pitch: 0.008337[0m
+[0;32mI (20286) mpu6050_log: Roll: -0.655881[0m
+[0;32mI (20386) mpu6050_log: Pitch: 0.008959[0m
+[0;32mI (20386) mpu6050_log: Roll: -0.647827[0m
+[0;32mI (20486) mpu6050_log: Pitch: 0.008785[0m
+[0;32mI (20486) mpu6050_log: Roll: -0.641134[0m
+[0;32mI (20586) mpu6050_log: Pitch: 0.009084[0m
+[0;32mI (20586) mpu6050_log: Roll: -0.629144[0m
+[0;32mI (20686) mpu6050_log: Pitch: 0.007491[0m
+[0;32mI (20686) mpu6050_log: Roll: -0.612574[0m
+[0;32mI (20786) mpu6050_log: Pitch: 0.008312[0m
+[0;32mI (20786) mpu6050_log: Roll: -0.592630[0m
+[0;32mI (20886) mpu6050_log: Pitch: 0.007640[0m
+[0;32mI (20886) mpu6050_log: Roll: -0.577511[0m
+[0;32mI (20986) mpu6050_log: Pitch: 0.007815[0m
+[0;32mI (20986) mpu6050_log: Roll: -0.548157[0m
+[0;32mI (21086) mpu6050_log: Pitch: 0.007118[0m
+[0;32mI (21086) mpu6050_log: Roll: -0.523505[0m
+[0;32mI (21186) mpu6050_log: Pitch: 0.007342[0m
+[0;32mI (21186) mpu6050_log: Roll: -0.490152[0m
+[0;32mI (21286) mpu6050_log: Pitch: 0.006172[0m
+[0;32mI (21286) mpu6050_log: Roll: -0.465963[0m
+[0;32mI (21386) mpu6050_log: Pitch: 0.006147[0m
+[0;32mI (21386) mpu6050_log: Roll: -0.425831[0m
+[0;32mI (21486) mpu6050_log: Pitch: 0.006496[0m
+[0;32mI (21486) mpu6050_log: Roll: -0.360412[0m
+[0;32mI (21586) mpu6050_log: Pitch: 0.006471[0m
+[0;32mI (21586) mpu6050_log: Roll: -0.328125[0m
+[0;32mI (21686) mpu6050_log: Pitch: 0.007566[0m
+[0;32mI (21686) mpu6050_log: Roll: -0.288594[0m
+[0;32mI (21786) mpu6050_log: Pitch: 0.007765[0m
+[0;32mI (21786) mpu6050_log: Roll: -0.252765[0m
+[0;32mI (21886) mpu6050_log: Pitch: 0.008511[0m
+[0;32mI (21886) mpu6050_log: Roll: -0.209037[0m
+[0;32mI (21986) mpu6050_log: Pitch: 0.009507[0m
+[0;32mI (21986) mpu6050_log: Roll: -0.175293[0m
+[0;32mI (22086) mpu6050_log: Pitch: 0.008586[0m
+[0;32mI (22086) mpu6050_log: Roll: -0.156819[0m
+[0;32mI (22186) mpu6050_log: Pitch: 0.009631[0m
+[0;32mI (22186) mpu6050_log: Roll: -0.119140[0m
+[0;32mI (22286) mpu6050_log: Pitch: 0.009159[0m
+[0;32mI (22286) mpu6050_log: Roll: -0.103681[0m
+[0;32mI (22386) mpu6050_log: Pitch: 0.009656[0m
+[0;32mI (22386) mpu6050_log: Roll: -0.079710[0m
+[0;32mI (22486) mpu6050_log: Pitch: 0.010428[0m
+[0;32mI (22486) mpu6050_log: Roll: -0.059114[0m
+[0;32mI (22586) mpu6050_log: Pitch: 0.011598[0m
+[0;32mI (22586) mpu6050_log: Roll: -0.040219[0m
+[0;32mI (22686) mpu6050_log: Pitch: 0.011921[0m
+[0;32mI (22686) mpu6050_log: Roll: -0.014630[0m
+[0;32mI (22786) mpu6050_log: Pitch: 0.012344[0m
+[0;32mI (22786) mpu6050_log: Roll: 0.003722[0m
+[0;32mI (22886) mpu6050_log: Pitch: 0.012718[0m
+[0;32mI (22886) mpu6050_log: Roll: 0.014769[0m
+[0;32mI (22986) mpu6050_log: Pitch: 0.013390[0m
+[0;32mI (22986) mpu6050_log: Roll: 0.037012[0m
+[0;32mI (23086) mpu6050_log: Pitch: 0.014833[0m
+[0;32mI (23086) mpu6050_log: Roll: 0.052634[0m
+[0;32mI (23186) mpu6050_log: Pitch: 0.014485[0m
+[0;32mI (23186) mpu6050_log: Roll: 0.065094[0m
+[0;32mI (23286) mpu6050_log: Pitch: 0.011846[0m
+[0;32mI (23286) mpu6050_log: Roll: 0.061615[0m
+[0;32mI (23386) mpu6050_log: Pitch: 0.007715[0m
+[0;32mI (23386) mpu6050_log: Roll: 0.050147[0m
+[0;32mI (23486) mpu6050_log: Pitch: 0.005923[0m
+[0;32mI (23486) mpu6050_log: Roll: 0.063944[0m
+[0;32mI (23586) mpu6050_log: Pitch: 0.007217[0m
+[0;32mI (23586) mpu6050_log: Roll: 0.032813[0m
+[0;32mI (23686) mpu6050_log: Pitch: 0.008661[0m
+[0;32mI (23686) mpu6050_log: Roll: 0.049840[0m
+[0;32mI (23786) mpu6050_log: Pitch: 0.008287[0m
+[0;32mI (23786) mpu6050_log: Roll: 0.050469[0m
+[0;32mI (23886) mpu6050_log: Pitch: 0.015580[0m
+[0;32mI (23886) mpu6050_log: Roll: 0.037376[0m
+[0;32mI (23986) mpu6050_log: Pitch: 0.010005[0m
+[0;32mI (23986) mpu6050_log: Roll: -0.019550[0m
+[0;32mI (24086) mpu6050_log: Pitch: 0.015580[0m
+[0;32mI (24086) mpu6050_log: Roll: 0.004711[0m
+[0;32mI (24186) mpu6050_log: Pitch: 0.011921[0m
+[0;32mI (24186) mpu6050_log: Roll: 0.000456[0m
+[0;32mI (24286) mpu6050_log: Pitch: 0.000199[0m
+[0;32mI (24286) mpu6050_log: Roll: 0.013628[0m
+[0;32mI (24386) mpu6050_log: Pitch: -0.004057[0m
+[0;32mI (24386) mpu6050_log: Roll: -0.005255[0m
+[0;32mI (24486) mpu6050_log: Pitch: -0.005475[0m
+[0;32mI (24486) mpu6050_log: Roll: -0.014792[0m
+[0;32mI (24586) mpu6050_log: Pitch: -0.006744[0m
+[0;32mI (24586) mpu6050_log: Roll: 0.001180[0m
+[0;32mI (24686) mpu6050_log: Pitch: -0.006296[0m
+[0;32mI (24686) mpu6050_log: Roll: -0.002233[0m
+[0;32mI (24786) mpu6050_log: Pitch: -0.011374[0m
+[0;32mI (24786) mpu6050_log: Roll: -0.001378[0m
+[0;32mI (24886) mpu6050_log: Pitch: -0.015605[0m
+[0;32mI (24886) mpu6050_log: Roll: 0.000238[0m
+[0;32mI (24986) mpu6050_log: Pitch: -0.022176[0m
+[0;32mI (24986) mpu6050_log: Roll: -0.005313[0m
+[0;32mI (25086) mpu6050_log: Pitch: -0.025188[0m
+[0;32mI (25086) mpu6050_log: Roll: 0.009176[0m
+[0;32mI (25186) mpu6050_log: Pitch: -0.030765[0m
+[0;32mI (25186) mpu6050_log: Roll: 0.022515[0m
+[0;32mI (25286) mpu6050_log: Pitch: -0.032657[0m
+[0;32mI (25286) mpu6050_log: Roll: -0.001552[0m
+[0;32mI (25386) mpu6050_log: Pitch: -0.037613[0m
+[0;32mI (25386) mpu6050_log: Roll: 0.008403[0m
+[0;32mI (25486) mpu6050_log: Pitch: -0.041399[0m
+[0;32mI (25486) mpu6050_log: Roll: -0.007299[0m
+[0;32mI (25586) mpu6050_log: Pitch: -0.046456[0m
+[0;32mI (25586) mpu6050_log: Roll: 0.007664[0m
+[0;32mI (25686) mpu6050_log: Pitch: -0.049720[0m
+[0;32mI (25686) mpu6050_log: Roll: 0.009048[0m
+[0;32mI (25786) mpu6050_log: Pitch: -0.050467[0m
+[0;32mI (25786) mpu6050_log: Roll: -0.005213[0m
+[0;32mI (25886) mpu6050_log: Pitch: -0.052635[0m
+[0;32mI (25886) mpu6050_log: Roll: 0.003448[0m
+[0;32mI (25986) mpu6050_log: Pitch: -0.053782[0m
+[0;32mI (25986) mpu6050_log: Roll: 0.004244[0m
+[0;32mI (26086) mpu6050_log: Pitch: -0.057845[0m
+[0;32mI (26086) mpu6050_log: Roll: 0.017643[0m
+[0;32mI (26186) mpu6050_log: Pitch: -0.060811[0m
+[0;32mI (26186) mpu6050_log: Roll: 0.017245[0m
+[0;32mI (26286) mpu6050_log: Pitch: -0.064053[0m
+[0;32mI (26286) mpu6050_log: Roll: 0.014513[0m
+[0;32mI (26386) mpu6050_log: Pitch: -0.066073[0m
+[0;32mI (26386) mpu6050_log: Roll: -0.003520[0m
+[0;32mI (26486) mpu6050_log: Pitch: -0.069665[0m
+[0;32mI (26486) mpu6050_log: Roll: 0.009615[0m
+[0;32mI (26586) mpu6050_log: Pitch: -0.073308[0m
+[0;32mI (26586) mpu6050_log: Roll: -0.003082[0m
+[0;32mI (26686) mpu6050_log: Pitch: -0.075429[0m
+[0;32mI (26686) mpu6050_log: Roll: -0.004793[0m
+[0;32mI (26786) mpu6050_log: Pitch: -0.078799[0m
+[0;32mI (26786) mpu6050_log: Roll: -0.005004[0m
+[0;32mI (26886) mpu6050_log: Pitch: -0.080247[0m
+[0;32mI (26886) mpu6050_log: Roll: -0.007538[0m
+[0;32mI (26986) mpu6050_log: Pitch: -0.080821[0m
+[0;32mI (26986) mpu6050_log: Roll: -0.021994[0m
+[0;32mI (27086) mpu6050_log: Pitch: -0.082144[0m
+[0;32mI (27086) mpu6050_log: Roll: -0.017410[0m
+[0;32mI (27186) mpu6050_log: Pitch: -0.085716[0m
+[0;32mI (27186) mpu6050_log: Roll: -0.001403[0m
+[0;32mI (27286) mpu6050_log: Pitch: -0.085416[0m
+[0;32mI (27286) mpu6050_log: Roll: 0.004712[0m
+[0;32mI (27386) mpu6050_log: Pitch: -0.090288[0m
+[0;32mI (27386) mpu6050_log: Roll: -0.000512[0m
+[0;32mI (27486) mpu6050_log: Pitch: -0.086890[0m
+[0;32mI (27486) mpu6050_log: Roll: -0.027624[0m
+[0;32mI (27586) mpu6050_log: Pitch: -0.088564[0m
+[0;32mI (27586) mpu6050_log: Roll: -0.060060[0m
+[0;32mI (27686) mpu6050_log: Pitch: -0.090438[0m
+[0;32mI (27686) mpu6050_log: Roll: -0.018203[0m
+[0;32mI (27786) mpu6050_log: Pitch: -0.090913[0m
+[0;32mI (27786) mpu6050_log: Roll: -0.054722[0m
+[0;32mI (27886) mpu6050_log: Pitch: -0.091263[0m
+[0;32mI (27886) mpu6050_log: Roll: -0.056445[0m
+[0;32mI (27986) mpu6050_log: Pitch: -0.091887[0m
+[0;32mI (27986) mpu6050_log: Roll: -0.019631[0m
+[0;32mI (28086) mpu6050_log: Pitch: -0.092362[0m
+[0;32mI (28086) mpu6050_log: Roll: -0.037020[0m
+[0;32mI (28186) mpu6050_log: Pitch: -0.090638[0m
+[0;32mI (28186) mpu6050_log: Roll: -0.032861[0m
+[0;32mI (28286) mpu6050_log: Pitch: -0.091437[0m
+[0;32mI (28286) mpu6050_log: Roll: -0.012088[0m
+[0;32mI (28386) mpu6050_log: Pitch: -0.091712[0m
+[0;32mI (28386) mpu6050_log: Roll: -0.039333[0m
+[0;32mI (28486) mpu6050_log: Pitch: -0.092962[0m
+[0;32mI (28486) mpu6050_log: Roll: -0.020477[0m
+[0;32mI (28586) mpu6050_log: Pitch: -0.093812[0m
+[0;32mI (28586) mpu6050_log: Roll: -0.007529[0m
+[0;32mI (28686) mpu6050_log: Pitch: -0.092887[0m
+[0;32mI (28686) mpu6050_log: Roll: 0.017292[0m
+[0;32mI (28786) mpu6050_log: Pitch: -0.093287[0m
+[0;32mI (28786) mpu6050_log: Roll: -0.010917[0m
+[0;32mI (28886) mpu6050_log: Pitch: -0.092087[0m
+[0;32mI (28886) mpu6050_log: Roll: -0.003785[0m
+[0;32mI (28986) mpu6050_log: Pitch: -0.092937[0m
+[0;32mI (28986) mpu6050_log: Roll: 0.007576[0m
+[0;32mI (29086) mpu6050_log: Pitch: -0.093587[0m
+[0;32mI (29086) mpu6050_log: Roll: 0.024385[0m
+[0;32mI (29186) mpu6050_log: Pitch: -0.094287[0m
+[0;32mI (29186) mpu6050_log: Roll: 0.069742[0m
+[0;32mI (29286) mpu6050_log: Pitch: -0.093287[0m
+[0;32mI (29286) mpu6050_log: Roll: 0.079344[0m
+[0;32mI (29386) mpu6050_log: Pitch: -0.091862[0m
+[0;32mI (29386) mpu6050_log: Roll: 0.077755[0m
+[0;32mI (29486) mpu6050_log: Pitch: -0.094112[0m
+[0;32mI (29486) mpu6050_log: Roll: 0.082220[0m
+[0;32mI (29586) mpu6050_log: Pitch: -0.093062[0m
+[0;32mI (29586) mpu6050_log: Roll: 0.098456[0m
+[0;32mI (29686) mpu6050_log: Pitch: -0.093062[0m
+[0;32mI (29686) mpu6050_log: Roll: 0.082492[0m
+[0;32mI (29786) mpu6050_log: Pitch: -0.092237[0m
+[0;32mI (29786) mpu6050_log: Roll: 0.105349[0m
+[0;32mI (29886) mpu6050_log: Pitch: -0.092162[0m
+[0;32mI (29886) mpu6050_log: Roll: 0.100577[0m
+[0;32mI (29986) mpu6050_log: Pitch: -0.092462[0m
+[0;32mI (29986) mpu6050_log: Roll: 0.089976[0m
+[0;32mI (30086) mpu6050_log: Pitch: -0.093012[0m
+[0;32mI (30086) mpu6050_log: Roll: 0.074478[0m
+[0;32mI (30186) mpu6050_log: Pitch: -0.091063[0m
+[0;32mI (30186) mpu6050_log: Roll: 0.088211[0m
+[0;32mI (30286) mpu6050_log: Pitch: -0.092462[0m
+[0;32mI (30286) mpu6050_log: Roll: 0.063138[0m
+[0;32mI (30386) mpu6050_log: Pitch: -0.091362[0m
+[0;32mI (30386) mpu6050_log: Roll: 0.060420[0m
+[0;32mI (30486) mpu6050_log: Pitch: -0.089363[0m
+[0;32mI (30486) mpu6050_log: Roll: 0.070679[0m
+[0;32mI (30586) mpu6050_log: Pitch: -0.086340[0m
+[0;32mI (30586) mpu6050_log: Roll: 0.074048[0m
+[0;32mI (30686) mpu6050_log: Pitch: -0.084567[0m
+[0;32mI (30686) mpu6050_log: Roll: 0.067906[0m
+[0;32mI (30786) mpu6050_log: Pitch: -0.081046[0m
+[0;32mI (30786) mpu6050_log: Roll: 0.055139[0m
+[0;32mI (30886) mpu6050_log: Pitch: -0.079323[0m
+[0;32mI (30886) mpu6050_log: Roll: 0.046651[0m
+[0;32mI (30986) mpu6050_log: Pitch: -0.075554[0m
+[0;32mI (30986) mpu6050_log: Roll: 0.063636[0m
+[0;32mI (31086) mpu6050_log: Pitch: -0.067046[0m
+[0;32mI (31086) mpu6050_log: Roll: -0.003363[0m
+[0;32mI (31186) mpu6050_log: Pitch: -0.066971[0m
+[0;32mI (31186) mpu6050_log: Roll: 0.053933[0m
+[0;32mI (31286) mpu6050_log: Pitch: -0.062008[0m
+[0;32mI (31286) mpu6050_log: Roll: 0.064980[0m
+[0;32mI (31386) mpu6050_log: Pitch: -0.058792[0m
+[0;32mI (31386) mpu6050_log: Roll: 0.066820[0m
+[0;32mI (31486) mpu6050_log: Pitch: -0.052187[0m
+[0;32mI (31486) mpu6050_log: Roll: 0.058639[0m
+[0;32mI (31586) mpu6050_log: Pitch: -0.047054[0m
+[0;32mI (31586) mpu6050_log: Roll: 0.059407[0m
+[0;32mI (31686) mpu6050_log: Pitch: -0.040776[0m
+[0;32mI (31686) mpu6050_log: Roll: 0.044278[0m
+[0;32mI (31786) mpu6050_log: Pitch: -0.032707[0m
+[0;32mI (31786) mpu6050_log: Roll: 0.049514[0m
+[0;32mI (31886) mpu6050_log: Pitch: -0.029047[0m
+[0;32mI (31886) mpu6050_log: Roll: 0.050155[0m
+[0;32mI (31986) mpu6050_log: Pitch: -0.016152[0m
+[0;32mI (31986) mpu6050_log: Roll: 0.064742[0m
+[0;32mI (32086) mpu6050_log: Pitch: -0.009308[0m
+[0;32mI (32086) mpu6050_log: Roll: 0.066453[0m
+[0;32mI (32186) mpu6050_log: Pitch: -0.001294[0m
+[0;32mI (32186) mpu6050_log: Roll: 0.061450[0m
+[0;32mI (32286) mpu6050_log: Pitch: -0.000946[0m
+[0;32mI (32286) mpu6050_log: Roll: 0.093419[0m
+[0;32mI (32386) mpu6050_log: Pitch: -0.001767[0m
+[0;32mI (32386) mpu6050_log: Roll: 0.079455[0m
+[0;32mI (32486) mpu6050_log: Pitch: 0.005077[0m
+[0;32mI (32486) mpu6050_log: Roll: 0.069537[0m
+[0;32mI (32586) mpu6050_log: Pitch: 0.006794[0m
+[0;32mI (32586) mpu6050_log: Roll: 0.069784[0m
+[0;32mI (32686) mpu6050_log: Pitch: 0.013265[0m
+[0;32mI (32686) mpu6050_log: Roll: 0.076993[0m
+[0;32mI (32786) mpu6050_log: Pitch: 0.023296[0m
+[0;32mI (32786) mpu6050_log: Roll: 0.080508[0m
+[0;32mI (32886) mpu6050_log: Pitch: 0.031388[0m
+[0;32mI (32886) mpu6050_log: Roll: 0.071273[0m
+[0;32mI (32986) mpu6050_log: Pitch: 0.038784[0m
+[0;32mI (32986) mpu6050_log: Roll: 0.067020[0m
+[0;32mI (33086) mpu6050_log: Pitch: 0.042096[0m
+[0;32mI (33086) mpu6050_log: Roll: 0.062895[0m
+[0;32mI (33186) mpu6050_log: Pitch: 0.048349[0m
+[0;32mI (33186) mpu6050_log: Roll: 0.073109[0m
+[0;32mI (33286) mpu6050_log: Pitch: 0.052187[0m
+[0;32mI (33286) mpu6050_log: Roll: 0.054463[0m
+[0;32mI (33386) mpu6050_log: Pitch: 0.057545[0m
+[0;32mI (33386) mpu6050_log: Roll: 0.060269[0m
+[0;32mI (33486) mpu6050_log: Pitch: 0.063504[0m
+[0;32mI (33486) mpu6050_log: Roll: 0.077828[0m
+[0;32mI (33586) mpu6050_log: Pitch: 0.070413[0m
+[0;32mI (33586) mpu6050_log: Roll: 0.075914[0m
+[0;32mI (33686) mpu6050_log: Pitch: 0.073158[0m
+[0;32mI (33686) mpu6050_log: Roll: 0.066724[0m
+[0;32mI (33786) mpu6050_log: Pitch: 0.075629[0m
+[0;32mI (33786) mpu6050_log: Roll: 0.077812[0m
+[0;32mI (33886) mpu6050_log: Pitch: 0.079772[0m
+[0;32mI (33886) mpu6050_log: Roll: 0.056086[0m
+[0;32mI (33986) mpu6050_log: Pitch: 0.084267[0m
+[0;32mI (33986) mpu6050_log: Roll: 0.088080[0m
+[0;32mI (34086) mpu6050_log: Pitch: 0.087265[0m
+[0;32mI (34086) mpu6050_log: Roll: 0.109758[0m
+[0;32mI (34186) mpu6050_log: Pitch: 0.090188[0m
+[0;32mI (34186) mpu6050_log: Roll: 0.071012[0m
+[0;32mI (34286) mpu6050_log: Pitch: 0.094512[0m
+[0;32mI (34286) mpu6050_log: Roll: 0.063069[0m
+[0;32mI (34386) mpu6050_log: Pitch: 0.098412[0m
+[0;32mI (34386) mpu6050_log: Roll: 0.066323[0m
+[0;32mI (34486) mpu6050_log: Pitch: 0.100713[0m
+[0;32mI (34486) mpu6050_log: Roll: 0.033695[0m
+[0;32mI (34586) mpu6050_log: Pitch: 0.102039[0m
+[0;32mI (34586) mpu6050_log: Roll: 0.077341[0m
+[0;32mI (34686) mpu6050_log: Pitch: 0.103690[0m
+[0;32mI (34686) mpu6050_log: Roll: 0.081969[0m
+[0;32mI (34786) mpu6050_log: Pitch: 0.105442[0m
+[0;32mI (34786) mpu6050_log: Roll: 0.075576[0m
+[0;32mI (34886) mpu6050_log: Pitch: 0.104541[0m
+[0;32mI (34886) mpu6050_log: Roll: 0.076264[0m
+[0;32mI (34986) mpu6050_log: Pitch: 0.105342[0m
+[0;32mI (34986) mpu6050_log: Roll: 0.001986[0m
+[0;32mI (35086) mpu6050_log: Pitch: 0.104616[0m
+[0;32mI (35086) mpu6050_log: Roll: -0.086418[0m
+[0;32mI (35186) mpu6050_log: Pitch: 0.107294[0m
+[0;32mI (35186) mpu6050_log: Roll: -0.081483[0m
+[0;32mI (35286) mpu6050_log: Pitch: 0.107695[0m
+[0;32mI (35286) mpu6050_log: Roll: -0.092021[0m
+[0;32mI (35386) mpu6050_log: Pitch: 0.108421[0m
+[0;32mI (35386) mpu6050_log: Roll: -0.169358[0m
+[0;32mI (35486) mpu6050_log: Pitch: 0.106393[0m
+[0;32mI (35486) mpu6050_log: Roll: -0.229946[0m
+[0;32mI (35586) mpu6050_log: Pitch: 0.107494[0m
+[0;32mI (35586) mpu6050_log: Roll: -0.276031[0m
+[0;32mI (35686) mpu6050_log: Pitch: 0.107745[0m
+[0;32mI (35686) mpu6050_log: Roll: -0.224050[0m
+[0;32mI (35786) mpu6050_log: Pitch: 0.108446[0m
+[0;32mI (35786) mpu6050_log: Roll: -0.450043[0m
+[0;32mI (35886) mpu6050_log: Pitch: 0.106693[0m
+[0;32mI (35886) mpu6050_log: Roll: -0.434136[0m
+[0;32mI (35986) mpu6050_log: Pitch: 0.109747[0m
+[0;32mI (35986) mpu6050_log: Roll: -0.165149[0m
+[0;32mI (36086) mpu6050_log: Pitch: 0.108446[0m
+[0;32mI (36086) mpu6050_log: Roll: -0.304755[0m
+[0;32mI (36186) mpu6050_log: Pitch: 0.106568[0m
+[0;32mI (36186) mpu6050_log: Roll: -0.415492[0m
+[0;32mI (36286) mpu6050_log: Pitch: 0.107419[0m
+[0;32mI (36286) mpu6050_log: Roll: -0.238005[0m
+[0;32mI (36386) mpu6050_log: Pitch: 0.108496[0m
+[0;32mI (36386) mpu6050_log: Roll: -0.294960[0m
+[0;32mI (36486) mpu6050_log: Pitch: 0.108796[0m
+[0;32mI (36486) mpu6050_log: Roll: -0.432922[0m
+[0;32mI (36586) mpu6050_log: Pitch: 0.108245[0m
+[0;32mI (36586) mpu6050_log: Roll: -0.398290[0m
+[0;32mI (36686) mpu6050_log: Pitch: 0.107269[0m
+[0;32mI (36686) mpu6050_log: Roll: -0.333546[0m
+[0;32mI (36786) mpu6050_log: Pitch: 0.106743[0m
+[0;32mI (36786) mpu6050_log: Roll: -0.514624[0m
+[0;32mI (36886) mpu6050_log: Pitch: 0.108045[0m
+[0;32mI (36886) mpu6050_log: Roll: -0.332516[0m
+[0;32mI (36986) mpu6050_log: Pitch: 0.107695[0m
+[0;32mI (36986) mpu6050_log: Roll: -0.324536[0m
+[0;32mI (37086) mpu6050_log: Pitch: 0.108320[0m
+[0;32mI (37086) mpu6050_log: Roll: -0.377053[0m
+[0;32mI (37186) mpu6050_log: Pitch: 0.106919[0m
+[0;32mI (37186) mpu6050_log: Roll: -0.362947[0m
+[0;32mI (37286) mpu6050_log: Pitch: 0.107970[0m
+[0;32mI (37286) mpu6050_log: Roll: -0.299084[0m
+[0;32mI (37386) mpu6050_log: Pitch: 0.107294[0m
+[0;32mI (37386) mpu6050_log: Roll: -0.306485[0m
+[0;32mI (37486) mpu6050_log: Pitch: 0.107119[0m
+[0;32mI (37486) mpu6050_log: Roll: -0.235738[0m
+[0;32mI (37586) mpu6050_log: Pitch: 0.108621[0m
+[0;32mI (37586) mpu6050_log: Roll: -0.226688[0m
+[0;32mI (37686) mpu6050_log: Pitch: 0.106293[0m
+[0;32mI (37686) mpu6050_log: Roll: -0.273067[0m
+[0;32mI (37786) mpu6050_log: Pitch: 0.105893[0m
+[0;32mI (37786) mpu6050_log: Roll: -0.203644[0m
+[0;32mI (37886) mpu6050_log: Pitch: 0.106343[0m
+[0;32mI (37886) mpu6050_log: Roll: -0.215849[0m
+[0;32mI (37986) mpu6050_log: Pitch: 0.108195[0m
+[0;32mI (37986) mpu6050_log: Roll: -0.157469[0m
+[0;32mI (38086) mpu6050_log: Pitch: 0.104416[0m
+[0;32mI (38086) mpu6050_log: Roll: -0.073882[0m
+[0;32mI (38186) mpu6050_log: Pitch: 0.099963[0m
+[0;32mI (38186) mpu6050_log: Roll: 0.001823[0m
+[0;32mI (38286) mpu6050_log: Pitch: 0.092912[0m
+[0;32mI (38286) mpu6050_log: Roll: -0.002879[0m
+[0;32mI (38386) mpu6050_log: Pitch: 0.088764[0m
+[0;32mI (38386) mpu6050_log: Roll: 0.065038[0m
+[0;32mI (38486) mpu6050_log: Pitch: 0.074855[0m
+[0;32mI (38486) mpu6050_log: Roll: 0.067175[0m
+[0;32mI (38586) mpu6050_log: Pitch: 0.063080[0m
+[0;32mI (38586) mpu6050_log: Roll: 0.072474[0m
+[0;32mI (38686) mpu6050_log: Pitch: 0.055975[0m
+[0;32mI (38686) mpu6050_log: Roll: 0.050058[0m
+[0;32mI (38786) mpu6050_log: Pitch: 0.054878[0m
+[0;32mI (38786) mpu6050_log: Roll: 0.049299[0m
+[0;32mI (38886) mpu6050_log: Pitch: 0.051838[0m
+[0;32mI (38886) mpu6050_log: Roll: 0.070361[0m
+[0;32mI (38986) mpu6050_log: Pitch: 0.052336[0m
+[0;32mI (38986) mpu6050_log: Roll: 0.071924[0m
+[0;32mI (39086) mpu6050_log: Pitch: 0.051240[0m
+[0;32mI (39086) mpu6050_log: Roll: 0.072544[0m
+[0;32mI (39186) mpu6050_log: Pitch: 0.048449[0m
+[0;32mI (39186) mpu6050_log: Roll: 0.062893[0m
+[0;32mI (39286) mpu6050_log: Pitch: 0.045683[0m
+[0;32mI (39286) mpu6050_log: Roll: 0.058540[0m
+[0;32mI (39386) mpu6050_log: Pitch: 0.038510[0m
+[0;32mI (39386) mpu6050_log: Roll: 0.037760[0m
+[0;32mI (39486) mpu6050_log: Pitch: 0.026657[0m
+[0;32mI (39486) mpu6050_log: Roll: 0.030704[0m
+[0;32mI (39586) mpu6050_log: Pitch: 0.026159[0m
+[0;32mI (39586) mpu6050_log: Roll: 0.000905[0m
+[0;32mI (39686) mpu6050_log: Pitch: 0.017098[0m
+[0;32mI (39686) mpu6050_log: Roll: 0.043700[0m
+[0;32mI (39786) mpu6050_log: Pitch: 0.015679[0m
+[0;32mI (39786) mpu6050_log: Roll: 0.064961[0m
+[0;32mI (39886) mpu6050_log: Pitch: 0.013738[0m
+[0;32mI (39886) mpu6050_log: Roll: 0.053714[0m
+[0;32mI (39986) mpu6050_log: Pitch: 0.011896[0m
+[0;32mI (39986) mpu6050_log: Roll: 0.045391[0m
+[0;32mI (40086) mpu6050_log: Pitch: 0.012718[0m
+[0;32mI (40086) mpu6050_log: Roll: 0.058153[0m
+[0;32mI (40186) mpu6050_log: Pitch: 0.006520[0m
+[0;32mI (40186) mpu6050_log: Roll: 0.123805[0m
+[0;32mI (40286) mpu6050_log: Pitch: 0.005201[0m
+[0;32mI (40286) mpu6050_log: Roll: 0.073102[0m
+[0;32mI (40386) mpu6050_log: Pitch: 0.002738[0m
+[0;32mI (40386) mpu6050_log: Roll: 0.072288[0m
+[0;32mI (40486) mpu6050_log: Pitch: 0.002563[0m
+[0;32mI (40486) mpu6050_log: Roll: 0.095839[0m
+[0;32mI (40586) mpu6050_log: Pitch: 0.008511[0m
+[0;32mI (40586) mpu6050_log: Roll: 0.073195[0m
+[0;32mI (40686) mpu6050_log: Pitch: 0.011921[0m
+[0;32mI (40686) mpu6050_log: Roll: 0.115266[0m
+[0;32mI (40786) mpu6050_log: Pitch: 0.003136[0m
+[0;32mI (40786) mpu6050_log: Roll: 0.140458[0m
+[0;32mI (40886) mpu6050_log: Pitch: 0.005400[0m
+[0;32mI (40886) mpu6050_log: Roll: 0.188398[0m
+[0;32mI (40986) mpu6050_log: Pitch: 0.005525[0m
+[0;32mI (40986) mpu6050_log: Roll: 0.173596[0m
+[0;32mI (41086) mpu6050_log: Pitch: -0.020956[0m
+[0;32mI (41086) mpu6050_log: Roll: 0.549478[0m
+[0;31mE (41186) i2cdev: Could not read from device [0x68 at 0]: -1 (ESP_FAIL)[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x400d63c6
+file: "./main/mini_drone.c" line 52
+func: mpu6050_task
+expression: mpu6050_get_motion(&dev, &accel, &rotation)
+
+abort() was called at PC 0x400867bb on core 0
+
+
+Backtrace: 0x40081932:0x3ffb6e80 0x400867c5:0x3ffb6ea0 0x4008c8e9:0x3ffb6ec0 0x400867bb:0x3ffb6f30 0x400d63c6:0x3ffb6f60 0x4008726d:0x3ffb6fe0
+
+
+
+
+ELF file SHA256: 597f16055
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 25 2024 23:05:57[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0afe8h ( 45032) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001b010 vaddr=3ffb0000 size=02384h (  9092) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d39c vaddr=40080000 size=02c7ch ( 11388) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17448h ( 95304) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=00037470 vaddr=40082c7c size=0b394h ( 45972) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) app_init: Application information:[0m
+[0;32mI (215) app_init: Project name:     mini_drone[0m
+[0;32mI (220) app_init: App version:      1[0m
+[0;32mI (225) app_init: Compile time:     Aug 26 2024 21:24:40[0m
+[0;32mI (230) app_init: ELF file SHA256:  597f16055...[0m
+[0;32mI (236) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (240) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (245) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (255) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (262) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFB2CA8 len 0002D358 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 4008E010 len 00011FF0 (71 KiB): IRAM[0m
+[0;32mI (295) spi_flash: detected chip: generic[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (315) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (327) main_task: Started on CPU0[0m
+[0;32mI (337) main_task: Calling app_main()[0m
+[0;32mI (337) main_task: Returned from app_main()[0m
+[0;31mE (337) mpu6050_log: MPU60x0 not found[0m
+[0;31mE (2337) mpu6050_log: MPU60x0 not found[0m
+[0;31mE (3337) mpu6050_log: MPU60x0 not found[0m
+[0;31mE (4337) mpu6050_log: MPU60x0 not found[0m
+[0;31mE (5337) mpu6050_log: MPU60x0 not found[0m
+[0;31mE (6337) mpu6050_log: MPU60x0 not found[0m
+[0;31mE (7337) mpu6050_log: MPU60x0 not found[0m
+[0;31mE (8337) mpu6050_log: MPU60x0 not found[0m
+[0;31mE (9337) mpu6050_log: MPU60x0 not found[0m
+[0;32mI (10337) mpu6050_log: Found MPU60x0 device[0m
+[0;32mI (10337) mpu6050_log: Accel range: 0[0m
+[0;32mI (10337) mpu6050_log: Gyro range:  0[0m
+[0;32mI (10337) mpu6050_log: Pitch: 0.000000[0m
+[0;32mI (10337) mpu6050_log: Roll: 0.000000[0m
+[0;32mI (10447) mpu6050_log: Pitch: -0.003061[0m
+[0;32mI (10447) mpu6050_log: Roll: 0.045123[0m
+[0;32mI (10547) mpu6050_log: Pitch: -0.000921[0m
+[0;32mI (10547) mpu6050_log: Roll: 0.058152[0m
+[0;32mI (10647) mpu6050_log: Pitch: -0.004455[0m
+[0;32mI (10647) mpu6050_log: Roll: 0.083490[0m
+[0;32mI (10747) mpu6050_log: Pitch: -0.003136[0m
+[0;32mI (10747) mpu6050_log: Roll: 0.059163[0m
+[0;32mI (10847) mpu6050_log: Pitch: -0.002663[0m
+[0;32mI (10847) mpu6050_log: Roll: 0.071217[0m
+[0;32mI (10947) mpu6050_log: Pitch: 0.000622[0m
+[0;32mI (10947) mpu6050_log: Roll: 0.051280[0m
+[0;32mI (11047) mpu6050_log: Pitch: -0.001767[0m
+[0;32mI (11047) mpu6050_log: Roll: 0.060219[0m
+[0;32mI (11147) mpu6050_log: Pitch: -0.003932[0m
+[0;32mI (11147) mpu6050_log: Roll: 0.057709[0m
+[0;32mI (11247) mpu6050_log: Pitch: -0.004529[0m
+[0;32mI (11247) mpu6050_log: Roll: 0.045942[0m
+[0;32mI (11347) mpu6050_log: Pitch: -0.001817[0m
+[0;32mI (11347) mpu6050_log: Roll: 0.063557[0m
+[0;32mI (11447) mpu6050_log: Pitch: -0.004455[0m
+[0;32mI (11447) mpu6050_log: Roll: 0.059413[0m
+[0;32mI (11547) mpu6050_log: Pitch: -0.002762[0m
+[0;32mI (11547) mpu6050_log: Roll: 0.060299[0m
+[0;32mI (11647) mpu6050_log: Pitch: -0.004604[0m
+[0;32mI (11647) mpu6050_log: Roll: 0.053178[0m
+[0;32mI (11747) mpu6050_log: Pitch: -0.006296[0m
+[0;32mI (11747) mpu6050_log: Roll: 0.031429[0m
+[0;32mI (11847) mpu6050_log: Pitch: -0.003683[0m
+[0;32mI (11847) mpu6050_log: Roll: 0.059415[0m
+[0;32mI (11947) mpu6050_log: Pitch: -0.003882[0m
+[0;32mI (11947) mpu6050_log: Roll: 0.058091[0m
+[0;32mI (12047) mpu6050_log: Pitch: -0.003534[0m
+[0;32mI (12047) mpu6050_log: Roll: 0.057268[0m
+[0;32mI (12147) mpu6050_log: Pitch: 0.002165[0m
+[0;32mI (12147) mpu6050_log: Roll: 0.043811[0m
+[0;32mI (12247) mpu6050_log: Pitch: -0.003385[0m
+[0;32mI (12247) mpu6050_log: Roll: 0.062638[0m
+[0;32mI (12347) mpu6050_log: Pitch: -0.004654[0m
+[0;32mI (12347) mpu6050_log: Roll: 0.055064[0m
+[0;32mI (12447) mpu6050_log: Pitch: -0.011249[0m
+[0;32mI (12447) mpu6050_log: Roll: 0.046976[0m
+[0;32mI (12547) mpu6050_log: Pitch: -0.002663[0m
+[0;32mI (12547) mpu6050_log: Roll: 0.025582[0m
+[0;32mI (12647) mpu6050_log: Pitch: -0.003982[0m
+[0;32mI (12647) mpu6050_log: Roll: 0.053758[0m
+[0;32mI (12747) mpu6050_log: Pitch: -0.027504[0m
+[0;32mI (12747) mpu6050_log: Roll: -0.062361[0m
+[0;32mI (12847) mpu6050_log: Pitch: -0.013763[0m
+[0;32mI (12847) mpu6050_log: Roll: 0.028794[0m
+[0;32mI (12947) mpu6050_log: Pitch: -0.005326[0m
+[0;32mI (12947) mpu6050_log: Roll: 0.019429[0m
+[0;32mI (13047) mpu6050_log: Pitch: -0.007143[0m
+[0;32mI (13047) mpu6050_log: Roll: 0.082972[0m
+[0;32mI (13147) mpu6050_log: Pitch: 0.001941[0m
+[0;32mI (13147) mpu6050_log: Roll: 0.040883[0m
+[0;32mI (13247) mpu6050_log: Pitch: 0.000100[0m
+[0;32mI (13247) mpu6050_log: Roll: 0.065397[0m
+[0;32mI (13347) mpu6050_log: Pitch: -0.000448[0m
+[0;32mI (13347) mpu6050_log: Roll: 0.022239[0m
+[0;32mI (13447) mpu6050_log: Pitch: -0.005425[0m
+[0;32mI (13447) mpu6050_log: Roll: 0.042209[0m
+[0;32mI (13547) mpu6050_log: Pitch: -0.008113[0m
+[0;32mI (13547) mpu6050_log: Roll: 0.069437[0m
+[0;32mI (13647) mpu6050_log: Pitch: -0.002464[0m
+[0;32mI (13647) mpu6050_log: Roll: 0.017084[0m
+[0;32mI (13747) mpu6050_log: Pitch: 0.003136[0m
+[0;32mI (13747) mpu6050_log: Roll: 0.015020[0m
+[0;32mI (13847) mpu6050_log: Pitch: -0.000423[0m
+[0;32mI (13847) mpu6050_log: Roll: 0.021293[0m
+[0;32mI (13947) mpu6050_log: Pitch: -0.005301[0m
+[0;32mI (13947) mpu6050_log: Roll: 0.053127[0m
+[0;32mI (14047) mpu6050_log: Pitch: 0.002389[0m
+[0;32mI (14047) mpu6050_log: Roll: 0.011915[0m
+[0;32mI (14147) mpu6050_log: Pitch: -0.000224[0m
+[0;32mI (14147) mpu6050_log: Roll: 0.033236[0m
+[0;32mI (14247) mpu6050_log: Pitch: 0.002588[0m
+[0;32mI (14247) mpu6050_log: Roll: 0.014793[0m
+[0;32mI (14347) mpu6050_log: Pitch: 0.006023[0m
+[0;32mI (14347) mpu6050_log: Roll: -0.031877[0m
+[0;32mI (14447) mpu6050_log: Pitch: 0.000523[0m
+[0;32mI (14447) mpu6050_log: Roll: 0.013062[0m
+[0;32mI (14547) mpu6050_log: Pitch: 0.001095[0m
+[0;32mI (14547) mpu6050_log: Roll: 0.033442[0m
+[0;32mI (14647) mpu6050_log: Pitch: 0.000971[0m
+[0;32mI (14647) mpu6050_log: Roll: 0.034659[0m
+[0;32mI (14747) mpu6050_log: Pitch: 0.003733[0m
+[0;32mI (14747) mpu6050_log: Roll: 0.029055[0m
+[0;32mI (14847) mpu6050_log: Pitch: -0.003235[0m
+[0;32mI (14847) mpu6050_log: Roll: 0.064075[0m
+[0;32mI (14947) mpu6050_log: Pitch: -0.002613[0m
+[0;32mI (14947) mpu6050_log: Roll: -0.006854[0m
+[0;32mI (15047) mpu6050_log: Pitch: -0.002837[0m
+[0;32mI (15047) mpu6050_log: Roll: 0.003784[0m
+[0;32mI (15147) mpu6050_log: Pitch: -0.000572[0m
+[0;32mI (15147) mpu6050_log: Roll: 0.069854[0m
+[0;32mI (15247) mpu6050_log: Pitch: 0.000771[0m
+[0;32mI (15247) mpu6050_log: Roll: 0.065237[0m
+[0;32mI (15347) mpu6050_log: Pitch: -0.002439[0m
+[0;32mI (15347) mpu6050_log: Roll: 0.029377[0m
+[0;32mI (15447) mpu6050_log: Pitch: 0.005077[0m
+[0;32mI (15447) mpu6050_log: Roll: 0.040690[0m
+[0;32mI (15547) mpu6050_log: Pitch: -0.008511[0m
+[0;32mI (15547) mpu6050_log: Roll: 0.066835[0m
+[0;32mI (15647) mpu6050_log: Pitch: 0.007790[0m
+[0;32mI (15647) mpu6050_log: Roll: -0.008594[0m
+[0;32mI (15747) mpu6050_log: Pitch: 0.007939[0m
+[0;32mI (15747) mpu6050_log: Roll: 0.060654[0m
+[0;32mI (15847) mpu6050_log: Pitch: 0.020309[0m
+[0;32mI (15847) mpu6050_log: Roll: 0.017931[0m
+[0;32mI (15947) mpu6050_log: Pitch: 0.000050[0m
+[0;32mI (15947) mpu6050_log: Roll: 0.142192[0m
+[0;32mI (16047) mpu6050_log: Pitch: 0.025960[0m
+[0;32mI (16047) mpu6050_log: Roll: -0.047720[0m
+[0;32mI (16147) mpu6050_log: Pitch: 0.001269[0m
+[0;32mI (16147) mpu6050_log: Roll: -0.025320[0m
+[0;32mI (16247) mpu6050_log: Pitch: 0.003360[0m
+[0;32mI (16247) mpu6050_log: Roll: 0.056630[0m
+[0;32mI (16347) mpu6050_log: Pitch: 0.004554[0m
+[0;32mI (16347) mpu6050_log: Roll: 0.057571[0m
+[0;32mI (16447) mpu6050_log: Pitch: 0.005873[0m
+[0;32mI (16447) mpu6050_log: Roll: 0.086860[0m
+[0;32mI (16547) mpu6050_log: Pitch: 0.005027[0m
+[0;32mI (16547) mpu6050_log: Roll: 0.059032[0m
+[0;32mI (16647) mpu6050_log: Pitch: 0.001991[0m
+[0;32mI (16647) mpu6050_log: Roll: 0.072124[0m
+[0;32mI (16747) mpu6050_log: Pitch: 0.004007[0m
+[0;32mI (16747) mpu6050_log: Roll: 0.051356[0m
+[0;32mI (16847) mpu6050_log: Pitch: -0.000199[0m
+[0;32mI (16847) mpu6050_log: Roll: 0.052067[0m
+[0;32mI (16947) mpu6050_log: Pitch: 0.009681[0m
+[0;32mI (16947) mpu6050_log: Roll: 0.044859[0m
+[0;32mI (17047) mpu6050_log: Pitch: 0.004928[0m
+[0;32mI (17047) mpu6050_log: Roll: 0.057834[0m
+[0;32mI (17147) mpu6050_log: Pitch: 0.007516[0m
+[0;32mI (17147) mpu6050_log: Roll: 0.073360[0m
+[0;32mI (17247) mpu6050_log: Pitch: -0.004853[0m
+[0;32mI (17247) mpu6050_log: Roll: 0.051072[0m
+[0;32mI (17347) mpu6050_log: Pitch: 0.000672[0m
+[0;32mI (17347) mpu6050_log: Roll: 0.025030[0m
+[0;32mI (17447) mpu6050_log: Pitch: 0.002912[0m
+[0;32mI (17447) mpu6050_log: Roll: 0.073802[0m
+[0;32mI (17547) mpu6050_log: Pitch: 0.006570[0m
+[0;32mI (17547) mpu6050_log: Roll: 0.079620[0m
+[0;32mI (17647) mpu6050_log: Pitch: -0.002165[0m
+[0;32mI (17647) mpu6050_log: Roll: 0.019087[0m
+[0;32mI (17747) mpu6050_log: Pitch: -0.001817[0m
+[0;32mI (17747) mpu6050_log: Roll: 0.019295[0m
+[0;32mI (17847) mpu6050_log: Pitch: 0.001966[0m
+[0;32mI (17847) mpu6050_log: Roll: 0.059166[0m
+[0;32mI (17947) mpu6050_log: Pitch: -0.003086[0m
+[0;32mI (17947) mpu6050_log: Roll: 0.058269[0m
+[0;32mI (18047) mpu6050_log: Pitch: -0.004455[0m
+[0;32mI (18047) mpu6050_log: Roll: 0.051962[0m
+[0;32mI (18147) mpu6050_log: Pitch: -0.004156[0m
+[0;32mI (18147) mpu6050_log: Roll: 0.049383[0m
+[0;32mI (18247) mpu6050_log: Pitch: -0.004430[0m
+[0;32mI (18247) mpu6050_log: Roll: 0.049072[0m
+[0;32mI (18347) mpu6050_log: Pitch: -0.004753[0m
+[0;32mI (18347) mpu6050_log: Roll: 0.045159[0m
+[0;32mI (18447) mpu6050_log: Pitch: -0.003857[0m
+[0;32mI (18447) mpu6050_log: Roll: 0.048327[0m
+[0;32mI (18547) mpu6050_log: Pitch: 0.000921[0m
+[0;32mI (18547) mpu6050_log: Roll: 0.049390[0m
+[0;32mI (18647) mpu6050_log: Pitch: -0.003683[0m
+[0;32mI (18647) mpu6050_log: Roll: 0.047376[0m
+[0;32mI (18747) mpu6050_log: Pitch: -0.002290[0m
+[0;32mI (18747) mpu6050_log: Roll: 0.054982[0m
+[0;32mI (18847) mpu6050_log: Pitch: -0.000572[0m
+[0;32mI (18847) mpu6050_log: Roll: 0.050429[0m
+[0;32mI (18947) mpu6050_log: Pitch: -0.001020[0m
+[0;32mI (18947) mpu6050_log: Roll: 0.042602[0m
+[0;32mI (19047) mpu6050_log: Pitch: -0.024367[0m
+[0;32mI (19047) mpu6050_log: Roll: 0.121639[0m
+[0;32mI (19147) mpu6050_log: Pitch: 0.011423[0m
+[0;32mI (19147) mpu6050_log: Roll: 0.076409[0m
+[0;32mI (19247) mpu6050_log: Pitch: 0.002066[0m
+[0;32mI (19247) mpu6050_log: Roll: 0.044573[0m
+[0;32mI (19347) mpu6050_log: Pitch: -0.002837[0m
+[0;32mI (19347) mpu6050_log: Roll: 0.053722[0m
+[0;32mI (19447) mpu6050_log: Pitch: 0.000398[0m
+[0;32mI (19447) mpu6050_log: Roll: 0.054165[0m
+[0;32mI (19547) mpu6050_log: Pitch: 0.002240[0m
+[0;32mI (19547) mpu6050_log: Roll: 0.056724[0m
+[0;32mI (19647) mpu6050_log: Pitch: 0.002663[0m
+[0;32mI (19647) mpu6050_log: Roll: 0.044715[0m
+[0;32mI (19747) mpu6050_log: Pitch: 0.002837[0m
+[0;32mI (19747) mpu6050_log: Roll: 0.079188[0m
+[0;32mI (19847) mpu6050_log: Pitch: 0.003434[0m
+[0;32mI (19847) mpu6050_log: Roll: 0.063864[0m
+[0;32mI (19947) mpu6050_log: Pitch: -0.000821[0m
+[0;32mI (19947) mpu6050_log: Roll: 0.056338[0m
+[0;32mI (20047) mpu6050_log: Pitch: 0.004629[0m
+[0;32mI (20047) mpu6050_log: Roll: 0.063009[0m
+[0;32mI (20147) mpu6050_log: Pitch: 0.001493[0m
+[0;32mI (20147) mpu6050_log: Roll: 0.043481[0m
+[0;32mI (20247) mpu6050_log: Pitch: 0.001742[0m
+[0;32mI (20247) mpu6050_log: Roll: 0.047660[0m
+[0;32mI (20347) mpu6050_log: Pitch: 0.004281[0m
+[0;32mI (20347) mpu6050_log: Roll: 0.056107[0m
+[0;32mI (20447) mpu6050_log: Pitch: 0.001593[0m
+[0;32mI (20447) mpu6050_log: Roll: 0.057181[0m
+[0;32mI (20547) mpu6050_log: Pitch: 0.001219[0m
+[0;32mI (20547) mpu6050_log: Roll: 0.048896[0m
+[0;32mI (20647) mpu6050_log: Pitch: 0.001219[0m
+[0;32mI (20647) mpu6050_log: Roll: 0.057193[0m
+[0;32mI (20747) mpu6050_log: Pitch: -0.001593[0m
+[0;32mI (20747) mpu6050_log: Roll: 0.039772[0m
+[0;32mI (20847) mpu6050_log: Pitch: 0.000771[0m
+[0;32mI (20847) mpu6050_log: Roll: 0.048223[0m
+[0;32mI (20947) mpu6050_log: Pitch: 0.003410[0m
+[0;32mI (20947) mpu6050_log: Roll: 0.056333[0m
+[0;32mI (21047) mpu6050_log: Pitch: -0.008885[0m
+[0;32mI (21047) mpu6050_log: Roll: 0.047382[0m
+[0;32mI (21147) mpu6050_log: Pitch: 0.000771[0m
+[0;32mI (21147) mpu6050_log: Roll: 0.068720[0m
+[0;32mI (21247) mpu6050_log: Pitch: 0.000274[0m
+[0;32mI (21247) mpu6050_log: Roll: 0.057432[0m
+[0;32mI (21347) mpu6050_log: Pitch: 0.002762[0m
+[0;32mI (21347) mpu6050_log: Roll: 0.054579[0m
+[0;32mI (21447) mpu6050_log: Pitch: 0.004281[0m
+[0;32mI (21447) mpu6050_log: Roll: 0.027926[0m
+[0;32mI (21547) mpu6050_log: Pitch: 0.001244[0m
+[0;32mI (21547) mpu6050_log: Roll: 0.051721[0m
+[0;32mI (21647) mpu6050_log: Pitch: 0.003136[0m
+[0;32mI (21647) mpu6050_log: Roll: 0.051706[0m
+[0;32mI (21747) mpu6050_log: Pitch: 0.007143[0m
+[0;32mI (21747) mpu6050_log: Roll: 0.056768[0m
+[0;32mI (21847) mpu6050_log: Pitch: 0.004803[0m
+[0;32mI (21847) mpu6050_log: Roll: 0.064334[0m
+[0;32mI (21947) mpu6050_log: Pitch: 0.003459[0m
+[0;32mI (21947) mpu6050_log: Roll: 0.064114[0m
+[0;32mI (22047) mpu6050_log: Pitch: 0.002489[0m
+[0;32mI (22047) mpu6050_log: Roll: 0.058632[0m
+[0;32mI (22147) mpu6050_log: Pitch: 0.006023[0m
+[0;32mI (22147) mpu6050_log: Roll: 0.048548[0m
+[0;32mI (22247) mpu6050_log: Pitch: 0.002563[0m
+[0;32mI (22247) mpu6050_log: Roll: 0.050561[0m
+[0;32mI (22347) mpu6050_log: Pitch: 0.002240[0m
+[0;32mI (22347) mpu6050_log: Roll: 0.050981[0m
+[0;32mI (22447) mpu6050_log: Pitch: 0.002489[0m
+[0;32mI (22447) mpu6050_log: Roll: 0.057318[0m
+[0;32mI (22547) mpu6050_log: Pitch: -0.000373[0m
+[0;32mI (22547) mpu6050_log: Roll: 0.070995[0m
+[0;32mI (22647) mpu6050_log: Pitch: 0.002738[0m
+[0;32mI (22647) mpu6050_log: Roll: 0.052198[0m
+[0;32mI (22747) mpu6050_log: Pitch: 0.002912[0m
+[0;32mI (22747) mpu6050_log: Roll: 0.057400[0m
+[0;32mI (22847) mpu6050_log: Pitch: 0.002514[0m
+[0;32mI (22847) mpu6050_log: Roll: 0.053009[0m
+[0;32mI (22947) mpu6050_log: Pitch: 0.002812[0m
+[0;32mI (22947) mpu6050_log: Roll: 0.053122[0m
+[0;32mI (23047) mpu6050_log: Pitch: 0.002240[0m
+[0;32mI (23047) mpu6050_log: Roll: 0.053644[0m
+[0;32mI (23147) mpu6050_log: Pitch: 0.003708[0m
+[0;32mI (23147) mpu6050_log: Roll: 0.058347[0m
+[0;32mI (23247) mpu6050_log: Pitch: 0.002812[0m
+[0;32mI (23247) mpu6050_log: Roll: 0.056425[0m
+[0;32mI (23347) mpu6050_log: Pitch: 0.003584[0m
+[0;32mI (23347) mpu6050_log: Roll: 0.059900[0m
+[0;32mI (23447) mpu6050_log: Pitch: 0.002912[0m
+[0;32mI (23447) mpu6050_log: Roll: 0.054660[0m
+[0;32mI (23547) mpu6050_log: Pitch: 0.002787[0m
+[0;32mI (23547) mpu6050_log: Roll: 0.051662[0m
+[0;32mI (23647) mpu6050_log: Pitch: 0.002937[0m
+[0;32mI (23647) mpu6050_log: Roll: 0.056954[0m
+[0;32mI (23747) mpu6050_log: Pitch: 0.002713[0m
+[0;32mI (23747) mpu6050_log: Roll: 0.058769[0m
+[0;32mI (23847) mpu6050_log: Pitch: 0.005575[0m
+[0;32mI (23847) mpu6050_log: Roll: 0.057721[0m
+[0;32mI (23947) mpu6050_log: Pitch: 0.001792[0m
+[0;32mI (23947) mpu6050_log: Roll: 0.056625[0m
+[0;32mI (24047) mpu6050_log: Pitch: 0.003609[0m
+[0;32mI (24047) mpu6050_log: Roll: 0.062230[0m
+[0;32mI (24147) mpu6050_log: Pitch: 0.003808[0m
+[0;32mI (24147) mpu6050_log: Roll: 0.061011[0m
+[0;32mI (24247) mpu6050_log: Pitch: 0.004106[0m
+[0;32mI (24247) mpu6050_log: Roll: 0.055318[0m
+[0;32mI (24347) mpu6050_log: Pitch: 0.004355[0m
+[0;32mI (24347) mpu6050_log: Roll: 0.057054[0m
+[0;32mI (24447) mpu6050_log: Pitch: 0.004729[0m
+[0;32mI (24447) mpu6050_log: Roll: 0.053048[0m
+[0;32mI (24547) mpu6050_log: Pitch: 0.005152[0m
+[0;32mI (24547) mpu6050_log: Roll: 0.060219[0m
+[0;32mI (24647) mpu6050_log: Pitch: 0.005152[0m
+[0;32mI (24647) mpu6050_log: Roll: 0.067007[0m
+[0;32mI (24747) mpu6050_log: Pitch: 0.005077[0m
+[0;32mI (24747) mpu6050_log: Roll: 0.059760[0m
+[0;32mI (24847) mpu6050_log: Pitch: 0.004505[0m
+[0;32mI (24847) mpu6050_log: Roll: 0.064457[0m
+[0;32mI (24947) mpu6050_log: Pitch: 0.003882[0m
+[0;32mI (24947) mpu6050_log: Roll: 0.058553[0m
+[0;32mI (25047) mpu6050_log: Pitch: 0.004953[0m
+[0;32mI (25047) mpu6050_log: Roll: 0.053983[0m
+[0;32mI (25147) mpu6050_log: Pitch: 0.004480[0m
+[0;32mI (25147) mpu6050_log: Roll: 0.061789[0m
+[0;32mI (25247) mpu6050_log: Pitch: 0.004007[0m
+[0;32mI (25247) mpu6050_log: Roll: 0.063271[0m
+[0;32mI (25347) mpu6050_log: Pitch: 0.003584[0m
+[0;32mI (25347) mpu6050_log: Roll: 0.060118[0m
+[0;32mI (25447) mpu6050_log: Pitch: 0.004753[0m
+[0;32mI (25447) mpu6050_log: Roll: 0.058115[0m
+[0;32mI (25547) mpu6050_log: Pitch: 0.003733[0m
+[0;32mI (25547) mpu6050_log: Roll: 0.057949[0m
+[0;32mI (25647) mpu6050_log: Pitch: 0.004106[0m
+[0;32mI (25647) mpu6050_log: Roll: 0.061414[0m
+[0;32mI (25747) mpu6050_log: Pitch: 0.005824[0m
+[0;32mI (25747) mpu6050_log: Roll: 0.059603[0m
+[0;32mI (25847) mpu6050_log: Pitch: 0.004977[0m
+[0;32mI (25847) mpu6050_log: Roll: 0.057408[0m
+[0;32mI (25947) mpu6050_log: Pitch: 0.005351[0m
+[0;32mI (25947) mpu6050_log: Roll: 0.065615[0m
+[0;32mI (26047) mpu6050_log: Pitch: 0.005749[0m
+[0;32mI (26047) mpu6050_log: Roll: 0.058598[0m
+[0;32mI (26147) mpu6050_log: Pitch: 0.003235[0m
+[0;32mI (26147) mpu6050_log: Roll: 0.057857[0m
+[0;32mI (26247) mpu6050_log: Pitch: 0.005002[0m
+[0;32mI (26247) mpu6050_log: Roll: 0.056640[0m
+[0;32mI (26347) mpu6050_log: Pitch: 0.004977[0m
+[0;32mI (26347) mpu6050_log: Roll: 0.063444[0m
+[0;32mI (26447) mpu6050_log: Pitch: 0.005226[0m
+[0;32mI (26447) mpu6050_log: Roll: 0.056672[0m
+[0;32mI (26547) mpu6050_log: Pitch: 0.005002[0m
+[0;32mI (26547) mpu6050_log: Roll: 0.059237[0m
+[0;32mI (26647) mpu6050_log: Pitch: 0.004480[0m
+[0;32mI (26647) mpu6050_log: Roll: 0.068254[0m
+[0;32mI (26747) mpu6050_log: Pitch: 0.005002[0m
+[0;32mI (26747) mpu6050_log: Roll: 0.058271[0m
+[0;32mI (26847) mpu6050_log: Pitch: 0.005749[0m
+[0;32mI (26847) mpu6050_log: Roll: 0.062287[0m
+[0;32mI (26947) mpu6050_log: Pitch: 0.004654[0m
+[0;32mI (26947) mpu6050_log: Roll: 0.058878[0m
+[0;32mI (27047) mpu6050_log: Pitch: 0.005301[0m
+[0;32mI (27047) mpu6050_log: Roll: 0.061994[0m
+[0;32mI (27147) mpu6050_log: Pitch: 0.005749[0m
+[0;32mI (27147) mpu6050_log: Roll: 0.062317[0m
+[0;32mI (27247) mpu6050_log: Pitch: 0.005425[0m
+[0;32mI (27247) mpu6050_log: Roll: 0.062909[0m
+[0;32mI (27347) mpu6050_log: Pitch: 0.005002[0m
+[0;32mI (27347) mpu6050_log: Roll: 0.056995[0m
+[0;32mI (27447) mpu6050_log: Pitch: 0.004903[0m
+[0;32mI (27447) mpu6050_log: Roll: 0.059526[0m
+[0;32mI (27547) mpu6050_log: Pitch: 0.003285[0m
+[0;32mI (27547) mpu6050_log: Roll: 0.051717[0m
+[0;32mI (27647) mpu6050_log: Pitch: 0.003857[0m
+[0;32mI (27647) mpu6050_log: Roll: 0.058618[0m
+[0;32mI (27747) mpu6050_log: Pitch: 0.003982[0m
+[0;32mI (27747) mpu6050_log: Roll: 0.051561[0m
+[0;32mI (27847) mpu6050_log: Pitch: 0.002937[0m
+[0;32mI (27847) mpu6050_log: Roll: 0.051427[0m
+[0;32mI (27947) mpu6050_log: Pitch: 0.001817[0m
+[0;32mI (27947) mpu6050_log: Roll: 0.049444[0m
+[0;32mI (28047) mpu6050_log: Pitch: 0.002240[0m
+[0;32mI (28047) mpu6050_log: Roll: 0.048164[0m
+[0;32mI (28147) mpu6050_log: Pitch: 0.001767[0m
+[0;32mI (28147) mpu6050_log: Roll: 0.023700[0m
+[0;32mI (28247) mpu6050_log: Pitch: 0.003609[0m
+[0;32mI (28247) mpu6050_log: Roll: -0.000455[0m
+[0;32mI (28347) mpu6050_log: Pitch: 0.004579[0m
+[0;32mI (28347) mpu6050_log: Roll: -0.015853[0m
+[0;32mI (28447) mpu6050_log: Pitch: 0.003982[0m
+[0;32mI (28447) mpu6050_log: Roll: -0.039514[0m
+[0;32mI (28547) mpu6050_log: Pitch: 0.004057[0m
+[0;32mI (28547) mpu6050_log: Roll: -0.064896[0m
+[0;32mI (28647) mpu6050_log: Pitch: 0.002912[0m
+[0;32mI (28647) mpu6050_log: Roll: -0.072087[0m
+[0;32mI (28747) mpu6050_log: Pitch: 0.003434[0m
+[0;32mI (28747) mpu6050_log: Roll: -0.090618[0m
+[0;32mI (28847) mpu6050_log: Pitch: 0.003210[0m
+[0;32mI (28847) mpu6050_log: Roll: -0.102509[0m
+[0;32mI (28947) mpu6050_log: Pitch: 0.003086[0m
+[0;32mI (28947) mpu6050_log: Roll: -0.124472[0m
+[0;32mI (29047) mpu6050_log: Pitch: 0.003086[0m
+[0;32mI (29047) mpu6050_log: Roll: -0.137685[0m
+[0;32mI (29147) mpu6050_log: Pitch: 0.002688[0m
+[0;32mI (29147) mpu6050_log: Roll: -0.147677[0m
+[0;32mI (29247) mpu6050_log: Pitch: 0.002563[0m
+[0;32mI (29247) mpu6050_log: Roll: -0.161187[0m
+[0;32mI (29347) mpu6050_log: Pitch: 0.002663[0m
+[0;32mI (29347) mpu6050_log: Roll: -0.168748[0m
+[0;32mI (29447) mpu6050_log: Pitch: 0.002414[0m
+[0;32mI (29447) mpu6050_log: Roll: -0.185663[0m
+[0;32mI (29547) mpu6050_log: Pitch: 0.003061[0m
+[0;32mI (29547) mpu6050_log: Roll: -0.203166[0m
+[0;32mI (29647) mpu6050_log: Pitch: 0.002762[0m
+[0;32mI (29647) mpu6050_log: Roll: -0.215616[0m
+[0;32mI (29747) mpu6050_log: Pitch: 0.002489[0m
+[0;32mI (29747) mpu6050_log: Roll: -0.235829[0m
+[0;32mI (29847) mpu6050_log: Pitch: 0.002290[0m
+[0;32mI (29847) mpu6050_log: Roll: -0.246911[0m
+[0;32mI (29947) mpu6050_log: Pitch: 0.002489[0m
+[0;32mI (29947) mpu6050_log: Roll: -0.253258[0m
+[0;32mI (30047) mpu6050_log: Pitch: 0.002290[0m
+[0;32mI (30047) mpu6050_log: Roll: -0.263309[0m
+[0;32mI (30147) mpu6050_log: Pitch: 0.002514[0m
+[0;32mI (30147) mpu6050_log: Roll: -0.271562[0m
+[0;32mI (30247) mpu6050_log: Pitch: 0.001916[0m
+[0;32mI (30247) mpu6050_log: Roll: -0.287362[0m
+[0;32mI (30347) mpu6050_log: Pitch: 0.002290[0m
+[0;32mI (30347) mpu6050_log: Roll: -0.310543[0m
+[0;32mI (30447) mpu6050_log: Pitch: 0.001867[0m
+[0;32mI (30447) mpu6050_log: Roll: -0.330094[0m
+[0;32mI (30547) mpu6050_log: Pitch: 0.002986[0m
+[0;32mI (30547) mpu6050_log: Roll: -0.347420[0m
+[0;32mI (30647) mpu6050_log: Pitch: 0.001742[0m
+[0;32mI (30647) mpu6050_log: Roll: -0.363623[0m
+[0;32mI (30747) mpu6050_log: Pitch: 0.002215[0m
+[0;32mI (30747) mpu6050_log: Roll: -0.376982[0m
+[0;32mI (30847) mpu6050_log: Pitch: 0.001991[0m
+[0;32mI (30847) mpu6050_log: Roll: -0.385280[0m
+[0;32mI (30947) mpu6050_log: Pitch: 0.002638[0m
+[0;32mI (30947) mpu6050_log: Roll: -0.417270[0m
+[0;32mI (31047) mpu6050_log: Pitch: 0.002066[0m
+[0;32mI (31047) mpu6050_log: Roll: -0.428821[0m
+[0;32mI (31147) mpu6050_log: Pitch: 0.002538[0m
+[0;32mI (31147) mpu6050_log: Roll: -0.440304[0m
+[0;32mI (31247) mpu6050_log: Pitch: 0.002091[0m
+[0;32mI (31247) mpu6050_log: Roll: -0.442363[0m
+[0;32mI (31347) mpu6050_log: Pitch: 0.001817[0m
+[0;32mI (31347) mpu6050_log: Roll: -0.470063[0m
+[0;32mI (31447) mpu6050_log: Pitch: 0.001767[0m
+[0;32mI (31447) mpu6050_log: Roll: -0.483411[0m
+[0;32mI (31547) mpu6050_log: Pitch: 0.001667[0m
+[0;32mI (31547) mpu6050_log: Roll: -0.508659[0m
+[0;32mI (31647) mpu6050_log: Pitch: 0.002190[0m
+[0;32mI (31647) mpu6050_log: Roll: -0.526191[0m
+[0;32mI (31747) mpu6050_log: Pitch: 0.003186[0m
+[0;32mI (31747) mpu6050_log: Roll: -0.531244[0m
+[0;32mI (31847) mpu6050_log: Pitch: 0.001941[0m
+[0;32mI (31847) mpu6050_log: Roll: -0.556355[0m
+[0;32mI (31947) mpu6050_log: Pitch: 0.001792[0m
+[0;32mI (31947) mpu6050_log: Roll: -0.568206[0m
+[0;32mI (32047) mpu6050_log: Pitch: 0.001593[0m
+[0;32mI (32047) mpu6050_log: Roll: -0.561775[0m
+[0;32mI (32147) mpu6050_log: Pitch: 0.001419[0m
+[0;32mI (32147) mpu6050_log: Roll: -0.565081[0m
+[0;32mI (32247) mpu6050_log: Pitch: 0.001369[0m
+[0;32mI (32247) mpu6050_log: Roll: -0.565434[0m
+[0;32mI (32347) mpu6050_log: Pitch: 0.000100[0m
+[0;32mI (32347) mpu6050_log: Roll: -0.557758[0m
+[0;32mI (32447) mpu6050_log: Pitch: 0.001568[0m
+[0;32mI (32447) mpu6050_log: Roll: -0.561677[0m
+[0;32mI (32547) mpu6050_log: Pitch: 0.001817[0m
+[0;32mI (32547) mpu6050_log: Roll: -0.545605[0m
+[0;32mI (32647) mpu6050_log: Pitch: 0.001244[0m
+[0;32mI (32647) mpu6050_log: Roll: -0.533209[0m
+[0;32mI (32747) mpu6050_log: Pitch: 0.001170[0m
+[0;32mI (32747) mpu6050_log: Roll: -0.506710[0m
+[0;32mI (32847) mpu6050_log: Pitch: 0.000971[0m
+[0;32mI (32847) mpu6050_log: Roll: -0.497064[0m
+[0;32mI (32947) mpu6050_log: Pitch: 0.000896[0m
+[0;32mI (32947) mpu6050_log: Roll: -0.487696[0m
+[0;32mI (33047) mpu6050_log: Pitch: 0.000373[0m
+[0;32mI (33047) mpu6050_log: Roll: -0.455554[0m
+[0;32mI (33147) mpu6050_log: Pitch: 0.000771[0m
+[0;32mI (33147) mpu6050_log: Roll: -0.433032[0m
+[0;32mI (33247) mpu6050_log: Pitch: 0.000124[0m
+[0;32mI (33247) mpu6050_log: Roll: -0.396292[0m
+[0;32mI (33347) mpu6050_log: Pitch: 0.000149[0m
+[0;32mI (33347) mpu6050_log: Roll: -0.369723[0m
+[0;32mI (33447) mpu6050_log: Pitch: 0.000971[0m
+[0;32mI (33447) mpu6050_log: Roll: -0.360282[0m
+[0;32mI (33547) mpu6050_log: Pitch: -0.001045[0m
+[0;32mI (33547) mpu6050_log: Roll: -0.332363[0m
+[0;32mI (33647) mpu6050_log: Pitch: 0.000324[0m
+[0;32mI (33647) mpu6050_log: Roll: -0.309999[0m
+[0;32mI (33747) mpu6050_log: Pitch: 0.001916[0m
+[0;32mI (33747) mpu6050_log: Roll: -0.266987[0m
+[0;32mI (33847) mpu6050_log: Pitch: 0.000771[0m
+[0;32mI (33847) mpu6050_log: Roll: -0.245887[0m
+[0;32mI (33947) mpu6050_log: Pitch: 0.000199[0m
+[0;32mI (33947) mpu6050_log: Roll: -0.219021[0m
+[0;32mI (34047) mpu6050_log: Pitch: -0.000100[0m
+[0;32mI (34047) mpu6050_log: Roll: -0.212119[0m
+[0;32mI (34147) mpu6050_log: Pitch: -0.000747[0m
+[0;32mI (34147) mpu6050_log: Roll: -0.189199[0m
+[0;32mI (34247) mpu6050_log: Pitch: 0.000971[0m
+[0;32mI (34247) mpu6050_log: Roll: -0.170056[0m
+[0;32mI (34347) mpu6050_log: Pitch: 0.000224[0m
+[0;32mI (34347) mpu6050_log: Roll: -0.161819[0m
+[0;32mI (34447) mpu6050_log: Pitch: -0.001369[0m
+[0;32mI (34447) mpu6050_log: Roll: -0.137850[0m
+[0;32mI (34547) mpu6050_log: Pitch: -0.001916[0m
+[0;32mI (34547) mpu6050_log: Roll: -0.128781[0m
+[0;32mI (34647) mpu6050_log: Pitch: 0.001443[0m
+[0;32mI (34647) mpu6050_log: Roll: -0.109715[0m
+[0;32mI (34747) mpu6050_log: Pitch: -0.000174[0m
+[0;32mI (34747) mpu6050_log: Roll: -0.104461[0m
+[0;32mI (34847) mpu6050_log: Pitch: -0.000075[0m
+[0;32mI (34847) mpu6050_log: Roll: -0.095525[0m
+[0;32mI (34947) mpu6050_log: Pitch: -0.000100[0m
+[0;32mI (34947) mpu6050_log: Roll: -0.077325[0m
+[0;32mI (35047) mpu6050_log: Pitch: 0.000299[0m
+[0;32mI (35047) mpu6050_log: Roll: -0.059624[0m
+[0;32mI (35147) mpu6050_log: Pitch: 0.000224[0m
+[0;32mI (35147) mpu6050_log: Roll: -0.025189[0m
+[0;32mI (35247) mpu6050_log: Pitch: -0.000373[0m
+[0;32mI (35247) mpu6050_log: Roll: -0.016684[0m
+[0;32mI (35347) mpu6050_log: Pitch: -0.001817[0m
+[0;32mI (35347) mpu6050_log: Roll: 0.015179[0m
+[0;32mI (35447) mpu6050_log: Pitch: -0.000971[0m
+[0;32mI (35447) mpu6050_log: Roll: 0.006774[0m
+[0;32mI (35547) mpu6050_log: Pitch: -0.001170[0m
+[0;32mI (35547) mpu6050_log: Roll: 0.010884[0m
+[0;32mI (35647) mpu6050_log: Pitch: -0.001394[0m
+[0;32mI (35647) mpu6050_log: Roll: 0.021623[0m
+[0;32mI (35747) mpu6050_log: Pitch: 0.000075[0m
+[0;32mI (35747) mpu6050_log: Roll: 0.017910[0m
+[0;32mI (35847) mpu6050_log: Pitch: -0.002613[0m
+[0;32mI (35847) mpu6050_log: Roll: 0.015649[0m
+[0;32mI (35947) mpu6050_log: Pitch: -0.000697[0m
+[0;32mI (35947) mpu6050_log: Roll: 0.003873[0m
+[0;32mI (36047) mpu6050_log: Pitch: 0.000572[0m
+[0;32mI (36047) mpu6050_log: Roll: 0.018577[0m
+[0;32mI (36147) mpu6050_log: Pitch: -0.001518[0m
+[0;32mI (36147) mpu6050_log: Roll: 0.037088[0m
+[0;32mI (36247) mpu6050_log: Pitch: -0.001817[0m
+[0;32mI (36247) mpu6050_log: Roll: 0.040034[0m
+[0;32mI (36347) mpu6050_log: Pitch: -0.001095[0m
+[0;32mI (36347) mpu6050_log: Roll: 0.054001[0m
+[0;32mI (36447) mpu6050_log: Pitch: -0.003335[0m
+[0;32mI (36447) mpu6050_log: Roll: 0.084590[0m
+[0;32mI (36547) mpu6050_log: Pitch: -0.000871[0m
+[0;32mI (36547) mpu6050_log: Roll: 0.088694[0m
+[0;32mI (36647) mpu6050_log: Pitch: -0.002389[0m
+[0;32mI (36647) mpu6050_log: Roll: 0.133302[0m
+[0;32mI (36747) mpu6050_log: Pitch: -0.001842[0m
+[0;32mI (36747) mpu6050_log: Roll: 0.167080[0m
+[0;32mI (36847) mpu6050_log: Pitch: -0.001817[0m
+[0;32mI (36847) mpu6050_log: Roll: 0.201238[0m
+[0;32mI (36947) mpu6050_log: Pitch: -0.000796[0m
+[0;32mI (36947) mpu6050_log: Roll: 0.245891[0m
+[0;32mI (37047) mpu6050_log: Pitch: -0.000796[0m
+[0;32mI (37047) mpu6050_log: Roll: 0.270659[0m
+[0;32mI (37147) mpu6050_log: Pitch: 0.000149[0m
+[0;32mI (37147) mpu6050_log: Roll: 0.298931[0m
+[0;32mI (37247) mpu6050_log: Pitch: 0.000821[0m
+[0;32mI (37247) mpu6050_log: Roll: 0.320422[0m
+[0;32mI (37347) mpu6050_log: Pitch: -0.000199[0m
+[0;32mI (37347) mpu6050_log: Roll: 0.345198[0m
+[0;32mI (37447) mpu6050_log: Pitch: 0.000995[0m
+[0;32mI (37447) mpu6050_log: Roll: 0.363452[0m
+[0;32mI (37547) mpu6050_log: Pitch: 0.000523[0m
+[0;32mI (37547) mpu6050_log: Roll: 0.392198[0m
+[0;32mI (37647) mpu6050_log: Pitch: 0.001070[0m
+[0;32mI (37647) mpu6050_log: Roll: 0.416904[0m
+[0;32mI (37747) mpu6050_log: Pitch: 0.001269[0m
+[0;32mI (37747) mpu6050_log: Roll: 0.445540[0m
+[0;32mI (37847) mpu6050_log: Pitch: 0.003534[0m
+[0;32mI (37847) mpu6050_log: Roll: 0.466200[0m
+[0;32mI (37947) mpu6050_log: Pitch: 0.005400[0m
+[0;32mI (37947) mpu6050_log: Roll: 0.493386[0m
+[0;32mI (38047) mpu6050_log: Pitch: 0.004753[0m
+[0;32mI (38047) mpu6050_log: Roll: 0.516242[0m
+[0;32mI (38147) mpu6050_log: Pitch: 0.005301[0m
+[0;32mI (38147) mpu6050_log: Roll: 0.558824[0m
+[0;32mI (38247) mpu6050_log: Pitch: 0.005600[0m
+[0;32mI (38247) mpu6050_log: Roll: 0.566071[0m
+[0;32mI (38347) mpu6050_log: Pitch: 0.005351[0m
+[0;32mI (38347) mpu6050_log: Roll: 0.580744[0m
+[0;32mI (38447) mpu6050_log: Pitch: 0.003310[0m
+[0;32mI (38447) mpu6050_log: Roll: 0.626032[0m
+[0;32mI (38547) mpu6050_log: Pitch: 0.004953[0m
+[0;32mI (38547) mpu6050_log: Roll: 0.627900[0m
+[0;32mI (38647) mpu6050_log: Pitch: 0.003360[0m
+[0;32mI (38647) mpu6050_log: Roll: 0.660508[0m
+[0;32mI (38747) mpu6050_log: Pitch: 0.005774[0m
+[0;32mI (38747) mpu6050_log: Roll: 0.664437[0m
+[0;32mI (38847) mpu6050_log: Pitch: 0.003808[0m
+[0;32mI (38847) mpu6050_log: Roll: 0.692357[0m
+[0;32mI (38947) mpu6050_log: Pitch: 0.005624[0m
+[0;32mI (38947) mpu6050_log: Roll: 0.701477[0m
+[0;32mI (39047) mpu6050_log: Pitch: 0.004256[0m
+[0;32mI (39047) mpu6050_log: Roll: 0.721459[0m
+[0;32mI (39147) mpu6050_log: Pitch: 0.004156[0m
+[0;32mI (39147) mpu6050_log: Roll: 0.761743[0m
+[0;32mI (39247) mpu6050_log: Pitch: 0.005425[0m
+[0;32mI (39247) mpu6050_log: Roll: 0.786735[0m
+[0;32mI (39347) mpu6050_log: Pitch: 0.004753[0m
+[0;32mI (39347) mpu6050_log: Roll: 0.802905[0m
+[0;32mI (39447) mpu6050_log: Pitch: 0.007018[0m
+[0;32mI (39447) mpu6050_log: Roll: 0.803056[0m
+[0;32mI (39547) mpu6050_log: Pitch: 0.004380[0m
+[0;32mI (39547) mpu6050_log: Roll: 0.863812[0m
+[0;32mI (39647) mpu6050_log: Pitch: 0.004953[0m
+[0;32mI (39647) mpu6050_log: Roll: 0.858398[0m
+[0;32mI (39747) mpu6050_log: Pitch: 0.006346[0m
+[0;32mI (39747) mpu6050_log: Roll: 0.880533[0m
+[0;32mI (39847) mpu6050_log: Pitch: 0.007267[0m
+[0;32mI (39847) mpu6050_log: Roll: 0.919254[0m
+[0;32mI (39947) mpu6050_log: Pitch: 0.006919[0m
+[0;32mI (39947) mpu6050_log: Roll: 0.940563[0m
+[0;32mI (40047) mpu6050_log: Pitch: 0.010204[0m
+[0;32mI (40047) mpu6050_log: Roll: 0.931052[0m
+[0;32mI (40147) mpu6050_log: Pitch: 0.006421[0m
+[0;32mI (40147) mpu6050_log: Roll: 1.012485[0m
+[0;32mI (40247) mpu6050_log: Pitch: 0.009109[0m
+[0;32mI (40247) mpu6050_log: Roll: 1.023120[0m
+[0;32mI (40347) mpu6050_log: Pitch: 0.009606[0m
+[0;32mI (40347) mpu6050_log: Roll: 1.031830[0m
+[0;32mI (40447) mpu6050_log: Pitch: 0.011125[0m
+[0;32mI (40447) mpu6050_log: Roll: 1.036665[0m
+[0;32mI (40547) mpu6050_log: Pitch: 0.008611[0m
+[0;32mI (40547) mpu6050_log: Roll: 1.073139[0m
+[0;32mI (40647) mpu6050_log: Pitch: 0.009134[0m
+[0;32mI (40647) mpu6050_log: Roll: 1.096972[0m
+[0;32mI (40747) mpu6050_log: Pitch: 0.013091[0m
+[0;32mI (40747) mpu6050_log: Roll: 1.127694[0m
+[0;32mI (40847) mpu6050_log: Pitch: 0.011324[0m
+[0;32mI (40847) mpu6050_log: Roll: 1.151505[0m
+[0;32mI (40947) mpu6050_log: Pitch: 0.012618[0m
+[0;32mI (40947) mpu6050_log: Roll: 1.175342[0m
+[0;32mI (41047) mpu6050_log: Pitch: 0.012792[0m
+[0;32mI (41047) mpu6050_log: Roll: 1.227415[0m
+[0;32mI (41147) mpu6050_log: Pitch: 0.012867[0m
+[0;32mI (41147) mpu6050_log: Roll: 1.218101[0m
+[0;32mI (41247) mpu6050_log: Pitch: 0.015779[0m
+[0;32mI (41247) mpu6050_log: Roll: 1.229113[0m
+[0;32mI (41347) mpu6050_log: Pitch: 0.012469[0m
+[0;32mI (41347) mpu6050_log: Roll: 1.269147[0m
+[0;32mI (41447) mpu6050_log: Pitch: 0.013514[0m
+[0;32mI (41447) mpu6050_log: Roll: 1.294428[0m
+[0;32mI (41547) mpu6050_log: Pitch: 0.014684[0m
+[0;32mI (41547) mpu6050_log: Roll: 1.306246[0m
+[0;32mI (41647) mpu6050_log: Pitch: 0.014161[0m
+[0;32mI (41647) mpu6050_log: Roll: 1.352179[0m
+[0;32mI (41747) mpu6050_log: Pitch: 0.013937[0m
+[0;32mI (41747) mpu6050_log: Roll: 1.377869[0m
+[0;32mI (41847) mpu6050_log: Pitch: 0.014310[0m
+[0;32mI (41847) mpu6050_log: Roll: 1.390209[0m
+[0;32mI (41947) mpu6050_log: Pitch: 0.014982[0m
+[0;32mI (41947) mpu6050_log: Roll: 1.421859[0m
+[0;32mI (42047) mpu6050_log: Pitch: 0.014684[0m
+[0;32mI (42047) mpu6050_log: Roll: 1.451444[0m
+[0;32mI (42147) mpu6050_log: Pitch: 0.011672[0m
+[0;32mI (42147) mpu6050_log: Roll: 1.498201[0m
+[0;32mI (42247) mpu6050_log: Pitch: 0.011971[0m
+[0;32mI (42247) mpu6050_log: Roll: 1.553633[0m
+[0;32mI (42347) mpu6050_log: Pitch: 0.010478[0m
+[0;32mI (42347) mpu6050_log: Roll: 1.577876[0m
+[0;32mI (42447) mpu6050_log: Pitch: 0.013813[0m
+[0;32mI (42447) mpu6050_log: Roll: 1.561446[0m
+[0;32mI (42547) mpu6050_log: Pitch: 0.013663[0m
+[0;32mI (42547) mpu6050_log: Roll: 1.614729[0m
+[0;32mI (42647) mpu6050_log: Pitch: 0.013788[0m
+[0;32mI (42647) mpu6050_log: Roll: 1.605077[0m
+[0;32mI (42747) mpu6050_log: Pitch: 0.014136[0m
+[0;32mI (42747) mpu6050_log: Roll: 1.595030[0m
+[0;32mI (42847) mpu6050_log: Pitch: 0.013539[0m
+[0;32mI (42847) mpu6050_log: Roll: 1.590658[0m
+[0;32mI (42947) mpu6050_log: Pitch: 0.012145[0m
+[0;32mI (42947) mpu6050_log: Roll: 1.597182[0m
+[0;32mI (43047) mpu6050_log: Pitch: 0.012867[0m
+[0;32mI (43047) mpu6050_log: Roll: 1.582184[0m
+[0;32mI (43147) mpu6050_log: Pitch: 0.012867[0m
+[0;32mI (43147) mpu6050_log: Roll: 1.604571[0m
+[0;32mI (43247) mpu6050_log: Pitch: 0.014709[0m
+[0;32mI (43247) mpu6050_log: Roll: 1.583982[0m
+[0;32mI (43347) mpu6050_log: Pitch: 0.015430[0m
+[0;32mI (43347) mpu6050_log: Roll: 1.587165[0m
+[0;32mI (43447) mpu6050_log: Pitch: 0.012742[0m
+[0;32mI (43447) mpu6050_log: Roll: 1.585116[0m
+[0;32mI (43547) mpu6050_log: Pitch: 0.014460[0m
+[0;32mI (43547) mpu6050_log: Roll: 1.602934[0m
+[0;32mI (43647) mpu6050_log: Pitch: 0.013390[0m
+[0;32mI (43647) mpu6050_log: Roll: 1.589443[0m
+[0;32mI (43747) mpu6050_log: Pitch: 0.014161[0m
+[0;32mI (43747) mpu6050_log: Roll: 1.579051[0m
+[0;32mI (43847) mpu6050_log: Pitch: 0.013016[0m
+[0;32mI (43847) mpu6050_log: Roll: 1.609826[0m
+[0;32mI (43947) mpu6050_log: Pitch: 0.012469[0m
+[0;32mI (43947) mpu6050_log: Roll: 1.587887[0m
+[0;32mI (44047) mpu6050_log: Pitch: 0.009781[0m
+[0;32mI (44047) mpu6050_log: Roll: 1.538085[0m
+[0;32mI (44147) mpu6050_log: Pitch: 0.012469[0m
+[0;32mI (44147) mpu6050_log: Roll: 1.511885[0m
+[0;32mI (44247) mpu6050_log: Pitch: 0.010801[0m
+[0;32mI (44247) mpu6050_log: Roll: 1.520778[0m
+[0;32mI (44347) mpu6050_log: Pitch: 0.010453[0m
+[0;32mI (44347) mpu6050_log: Roll: 1.465270[0m
+[0;32mI (44447) mpu6050_log: Pitch: 0.010876[0m
+[0;32mI (44447) mpu6050_log: Roll: 1.396362[0m
+[0;32mI (44547) mpu6050_log: Pitch: 0.009183[0m
+[0;32mI (44547) mpu6050_log: Roll: 1.372878[0m
+[0;32mI (44647) mpu6050_log: Pitch: 0.010303[0m
+[0;32mI (44647) mpu6050_log: Roll: 1.335998[0m
+[0;32mI (44747) mpu6050_log: Pitch: 0.007815[0m
+[0;32mI (44747) mpu6050_log: Roll: 1.317009[0m
+[0;32mI (44847) mpu6050_log: Pitch: 0.006272[0m
+[0;32mI (44847) mpu6050_log: Roll: 1.278973[0m
+[0;32mI (44947) mpu6050_log: Pitch: 0.012643[0m
+[0;32mI (44947) mpu6050_log: Roll: 1.166151[0m
+[0;32mI (45047) mpu6050_log: Pitch: 0.008984[0m
+[0;32mI (45047) mpu6050_log: Roll: 1.079122[0m
+[0;32mI (45147) mpu6050_log: Pitch: 0.012767[0m
+[0;32mI (45147) mpu6050_log: Roll: 1.026218[0m
+[0;32mI (45247) mpu6050_log: Pitch: 0.003036[0m
+[0;32mI (45247) mpu6050_log: Roll: 0.951221[0m
+[0;32mI (45347) mpu6050_log: Pitch: 0.003484[0m
+[0;32mI (45347) mpu6050_log: Roll: 0.946218[0m
+[0;32mI (45447) mpu6050_log: Pitch: 0.000672[0m
+[0;32mI (45447) mpu6050_log: Roll: 0.915991[0m
+[0;32mI (45547) mpu6050_log: Pitch: 0.005326[0m
+[0;32mI (45547) mpu6050_log: Roll: 0.828061[0m
+[0;32mI (45647) mpu6050_log: Pitch: 0.007043[0m
+[0;32mI (45647) mpu6050_log: Roll: 0.768286[0m
+[0;32mI (45747) mpu6050_log: Pitch: 0.003907[0m
+[0;32mI (45747) mpu6050_log: Roll: 0.722484[0m
+[0;32mI (45847) mpu6050_log: Pitch: 0.005525[0m
+[0;32mI (45847) mpu6050_log: Roll: 0.690070[0m
+[0;32mI (45947) mpu6050_log: Pitch: 0.005799[0m
+[0;32mI (45947) mpu6050_log: Roll: 0.649863[0m
+[0;32mI (46047) mpu6050_log: Pitch: 0.005376[0m
+[0;32mI (46047) mpu6050_log: Roll: 0.595610[0m
+[0;32mI (46147) mpu6050_log: Pitch: 0.001045[0m
+[0;32mI (46147) mpu6050_log: Roll: 0.554182[0m
+[0;32mI (46247) mpu6050_log: Pitch: 0.002812[0m
+[0;32mI (46247) mpu6050_log: Roll: 0.509785[0m
+[0;32mI (46347) mpu6050_log: Pitch: 0.002190[0m
+[0;32mI (46347) mpu6050_log: Roll: 0.451396[0m
+[0;32mI (46447) mpu6050_log: Pitch: 0.001443[0m
+[0;32mI (46447) mpu6050_log: Roll: 0.424709[0m
+[0;32mI (46547) mpu6050_log: Pitch: 0.000448[0m
+[0;32mI (46547) mpu6050_log: Roll: 0.380642[0m
+[0;32mI (46647) mpu6050_log: Pitch: 0.000697[0m
+[0;32mI (46647) mpu6050_log: Roll: 0.345765[0m
+[0;32mI (46747) mpu6050_log: Pitch: -0.001518[0m
+[0;32mI (46747) mpu6050_log: Roll: 0.294663[0m
+[0;32mI (46847) mpu6050_log: Pitch: -0.004554[0m
+[0;32mI (46847) mpu6050_log: Roll: 0.254531[0m
+[0;32mI (46947) mpu6050_log: Pitch: -0.002688[0m
+[0;32mI (46947) mpu6050_log: Roll: 0.197169[0m
+[0;32mI (47047) mpu6050_log: Pitch: -0.002962[0m
+[0;32mI (47047) mpu6050_log: Roll: 0.162923[0m
+[0;32mI (47147) mpu6050_log: Pitch: 0.000124[0m
+[0;32mI (47147) mpu6050_log: Roll: 0.138585[0m
+[0;32mI (47247) mpu6050_log: Pitch: 0.008188[0m
+[0;32mI (47247) mpu6050_log: Roll: 0.092556[0m
+[0;32mI (47347) mpu6050_log: Pitch: -0.000722[0m
+[0;32mI (47347) mpu6050_log: Roll: 0.097851[0m
+[0;32mI (47447) mpu6050_log: Pitch: 0.006247[0m
+[0;32mI (47447) mpu6050_log: Roll: 0.039934[0m
+[0;32mI (47547) mpu6050_log: Pitch: -0.009582[0m
+[0;32mI (47547) mpu6050_log: Roll: 0.030162[0m
+[0;32mI (47647) mpu6050_log: Pitch: -0.004579[0m
+[0;32mI (47647) mpu6050_log: Roll: 0.042028[0m
+[0;32mI (47747) mpu6050_log: Pitch: 0.006371[0m
+[0;32mI (47747) mpu6050_log: Roll: 0.018804[0m
+[0;32mI (47847) mpu6050_log: Pitch: 0.009905[0m
+[0;32mI (47847) mpu6050_log: Roll: 0.019367[0m
+[0;32mI (47947) mpu6050_log: Pitch: 0.017023[0m
+[0;32mI (47947) mpu6050_log: Roll: 0.018599[0m
+[0;32mI (48047) mpu6050_log: Pitch: 0.024914[0m
+[0;32mI (48047) mpu6050_log: Roll: 0.000240[0m
+[0;32mI (48147) mpu6050_log: Pitch: 0.025786[0m
+[0;32mI (48147) mpu6050_log: Roll: 0.005830[0m
+[0;32mI (48247) mpu6050_log: Pitch: 0.029968[0m
+[0;32mI (48247) mpu6050_log: Roll: 0.004309[0m
+[0;32mI (48347) mpu6050_log: Pitch: 0.033728[0m
+[0;32mI (48347) mpu6050_log: Roll: -0.003453[0m
+[0;32mI (48447) mpu6050_log: Pitch: 0.039107[0m
+[0;32mI (48447) mpu6050_log: Roll: 0.000757[0m
+[0;32mI (48547) mpu6050_log: Pitch: 0.045085[0m
+[0;32mI (48547) mpu6050_log: Roll: 0.009814[0m
+[0;32mI (48647) mpu6050_log: Pitch: 0.050318[0m
+[0;32mI (48647) mpu6050_log: Roll: 0.020814[0m
+[0;32mI (48747) mpu6050_log: Pitch: 0.055402[0m
+[0;32mI (48747) mpu6050_log: Roll: 0.037816[0m
+[0;32mI (48847) mpu6050_log: Pitch: 0.057994[0m
+[0;32mI (48847) mpu6050_log: Roll: 0.040323[0m
+[0;32mI (48947) mpu6050_log: Pitch: 0.065599[0m
+[0;32mI (48947) mpu6050_log: Roll: 0.005153[0m
+[0;32mI (49047) mpu6050_log: Pitch: 0.069091[0m
+[0;32mI (49047) mpu6050_log: Roll: 0.045035[0m
+[0;32mI (49147) mpu6050_log: Pitch: 0.071836[0m
+[0;32mI (49147) mpu6050_log: Roll: 0.053119[0m
+[0;32mI (49247) mpu6050_log: Pitch: 0.074032[0m
+[0;32mI (49247) mpu6050_log: Roll: 0.029777[0m
+[0;32mI (49347) mpu6050_log: Pitch: 0.076103[0m
+[0;32mI (49347) mpu6050_log: Roll: 0.034403[0m
+[0;32mI (49447) mpu6050_log: Pitch: 0.081246[0m
+[0;32mI (49447) mpu6050_log: Roll: 0.036366[0m
+[0;32mI (49547) mpu6050_log: Pitch: 0.078275[0m
+[0;32mI (49547) mpu6050_log: Roll: 0.045679[0m
+[0;32mI (49647) mpu6050_log: Pitch: 0.082169[0m
+[0;32mI (49647) mpu6050_log: Roll: 0.041339[0m
+[0;32mI (49747) mpu6050_log: Pitch: 0.084942[0m
+[0;32mI (49747) mpu6050_log: Roll: 0.060554[0m
+[0;32mI (49847) mpu6050_log: Pitch: 0.088589[0m
+[0;32mI (49847) mpu6050_log: Roll: 0.079631[0m
+[0;32mI (49947) mpu6050_log: Pitch: 0.095687[0m
+[0;32mI (49947) mpu6050_log: Roll: 0.026449[0m
+[0;32mI (50047) mpu6050_log: Pitch: 0.096512[0m
+[0;32mI (50047) mpu6050_log: Roll: 0.066681[0m
+[0;32mI (50147) mpu6050_log: Pitch: 0.097212[0m
+[0;32mI (50147) mpu6050_log: Roll: 0.075514[0m
+[0;32mI (50247) mpu6050_log: Pitch: 0.096737[0m
+[0;32mI (50247) mpu6050_log: Roll: 0.086193[0m
+[0;32mI (50347) mpu6050_log: Pitch: 0.099088[0m
+[0;32mI (50347) mpu6050_log: Roll: 0.104714[0m
+[0;32mI (50447) mpu6050_log: Pitch: 0.103315[0m
+[0;32mI (50447) mpu6050_log: Roll: 0.085040[0m
+[0;32mI (50547) mpu6050_log: Pitch: 0.102564[0m
+[0;32mI (50547) mpu6050_log: Roll: 0.023340[0m
+[0;32mI (50647) mpu6050_log: Pitch: 0.101038[0m
+[0;32mI (50647) mpu6050_log: Roll: -0.013802[0m
+[0;32mI (50747) mpu6050_log: Pitch: 0.101964[0m
+[0;32mI (50747) mpu6050_log: Roll: -0.013244[0m
+[0;32mI (50847) mpu6050_log: Pitch: 0.105617[0m
+[0;32mI (50847) mpu6050_log: Roll: -0.087767[0m
+[0;32mI (50947) mpu6050_log: Pitch: 0.107394[0m
+[0;32mI (50947) mpu6050_log: Roll: -0.114322[0m
+[0;32mI (51047) mpu6050_log: Pitch: 0.106618[0m
+[0;32mI (51047) mpu6050_log: Roll: -0.068603[0m
+[0;32mI (51147) mpu6050_log: Pitch: 0.104666[0m
+[0;32mI (51147) mpu6050_log: Roll: -0.089223[0m
+[0;32mI (51247) mpu6050_log: Pitch: 0.107144[0m
+[0;32mI (51247) mpu6050_log: Roll: -0.192378[0m
+[0;32mI (51347) mpu6050_log: Pitch: 0.104992[0m
+[0;32mI (51347) mpu6050_log: Roll: -0.204669[0m
+[0;32mI (51447) mpu6050_log: Pitch: 0.107620[0m
+[0;32mI (51447) mpu6050_log: Roll: -0.094585[0m
+[0;32mI (51547) mpu6050_log: Pitch: 0.107945[0m
+[0;32mI (51547) mpu6050_log: Roll: -0.302035[0m
+[0;32mI (51647) mpu6050_log: Pitch: 0.105742[0m
+[0;32mI (51647) mpu6050_log: Roll: -0.309244[0m
+[0;32mI (51747) mpu6050_log: Pitch: 0.108521[0m
+[0;32mI (51747) mpu6050_log: Roll: -0.233134[0m
+[0;32mI (51847) mpu6050_log: Pitch: 0.109046[0m
+[0;32mI (51847) mpu6050_log: Roll: -0.245418[0m
+[0;32mI (51947) mpu6050_log: Pitch: 0.106819[0m
+[0;32mI (51947) mpu6050_log: Roll: -0.281818[0m
+[0;32mI (52047) mpu6050_log: Pitch: 0.106193[0m
+[0;32mI (52047) mpu6050_log: Roll: -0.259814[0m
+[0;32mI (52147) mpu6050_log: Pitch: 0.103565[0m
+[0;32mI (52147) mpu6050_log: Roll: -0.229116[0m
+[0;32mI (52247) mpu6050_log: Pitch: 0.098837[0m
+[0;32mI (52247) mpu6050_log: Roll: -0.102059[0m
+[0;32mI (52347) mpu6050_log: Pitch: 0.107294[0m
+[0;32mI (52347) mpu6050_log: Roll: -0.044618[0m
+[0;32mI (52447) mpu6050_log: Pitch: 0.103315[0m
+[0;32mI (52447) mpu6050_log: Roll: -0.016932[0m
+[0;32mI (52547) mpu6050_log: Pitch: 0.091762[0m
+[0;32mI (52547) mpu6050_log: Roll: 0.004046[0m
+[0;32mI (52647) mpu6050_log: Pitch: 0.084867[0m
+[0;32mI (52647) mpu6050_log: Roll: -0.020344[0m
+[0;32mI (52747) mpu6050_log: Pitch: 0.074431[0m
+[0;32mI (52747) mpu6050_log: Roll: -0.061382[0m
+[0;32mI (52847) mpu6050_log: Pitch: 0.066722[0m
+[0;32mI (52847) mpu6050_log: Roll: -0.115079[0m
+[0;32mI (52947) mpu6050_log: Pitch: 0.051389[0m
+[0;32mI (52947) mpu6050_log: Roll: -0.059222[0m
+[0;32mI (53047) mpu6050_log: Pitch: 0.043616[0m
+[0;32mI (53047) mpu6050_log: Roll: -0.018664[0m
+[0;32mI (53147) mpu6050_log: Pitch: 0.037762[0m
+[0;32mI (53147) mpu6050_log: Roll: -0.043218[0m
+[0;32mI (53247) mpu6050_log: Pitch: 0.027902[0m
+[0;32mI (53247) mpu6050_log: Roll: -0.040047[0m
+[0;32mI (53347) mpu6050_log: Pitch: 0.013564[0m
+[0;32mI (53347) mpu6050_log: Roll: -0.064165[0m
+[0;32mI (53447) mpu6050_log: Pitch: 0.006023[0m
+[0;32mI (53447) mpu6050_log: Roll: -0.046859[0m
+[0;32mI (53547) mpu6050_log: Pitch: 0.001269[0m
+[0;32mI (53547) mpu6050_log: Roll: -0.052228[0m
+[0;32mI (53647) mpu6050_log: Pitch: -0.020558[0m
+[0;32mI (53647) mpu6050_log: Roll: -0.085295[0m
+[0;32mI (53747) mpu6050_log: Pitch: -0.023744[0m
+[0;32mI (53747) mpu6050_log: Roll: -0.103706[0m
+[0;32mI (53847) mpu6050_log: Pitch: -0.035222[0m
+[0;32mI (53847) mpu6050_log: Roll: -0.099753[0m
+[0;32mI (53947) mpu6050_log: Pitch: -0.052860[0m
+[0;32mI (53947) mpu6050_log: Roll: -0.069329[0m
+[0;32mI (54047) mpu6050_log: Pitch: -0.067969[0m
+[0;32mI (54047) mpu6050_log: Roll: -0.049032[0m
+[0;32mI (54147) mpu6050_log: Pitch: -0.083768[0m
+[0;32mI (54147) mpu6050_log: Roll: -0.170654[0m
+[0;32mI (54247) mpu6050_log: Pitch: -0.091962[0m
+[0;32mI (54247) mpu6050_log: Roll: -0.157833[0m
+[0;32mI (54347) mpu6050_log: Pitch: -0.094537[0m
+[0;32mI (54347) mpu6050_log: Roll: -0.215224[0m
+[0;32mI (54447) mpu6050_log: Pitch: -0.095412[0m
+[0;32mI (54447) mpu6050_log: Roll: -0.373388[0m
+[0;32mI (54547) mpu6050_log: Pitch: -0.090363[0m
+[0;32mI (54547) mpu6050_log: Roll: -0.516337[0m
+[0;32mI (54647) mpu6050_log: Pitch: -0.095562[0m
+[0;32mI (54647) mpu6050_log: Roll: -0.584081[0m
+[0;32mI (54747) mpu6050_log: Pitch: -0.095612[0m
+[0;32mI (54747) mpu6050_log: Roll: -0.617060[0m
+[0;32mI (54847) mpu6050_log: Pitch: -0.099088[0m
+[0;32mI (54847) mpu6050_log: Roll: -0.647864[0m
+[0;32mI (54947) mpu6050_log: Pitch: -0.102364[0m
+[0;32mI (54947) mpu6050_log: Roll: -0.455191[0m
+[0;32mI (55047) mpu6050_log: Pitch: -0.094012[0m
+[0;32mI (55047) mpu6050_log: Roll: -0.377442[0m
+[0;32mI (55147) mpu6050_log: Pitch: -0.099188[0m
+[0;32mI (55147) mpu6050_log: Roll: -0.395079[0m
+[0;32mI (55247) mpu6050_log: Pitch: -0.096362[0m
+[0;32mI (55247) mpu6050_log: Roll: -0.669734[0m
+[0;32mI (55347) mpu6050_log: Pitch: -0.097537[0m
+[0;32mI (55347) mpu6050_log: Roll: -0.799286[0m
+[0;32mI (55447) mpu6050_log: Pitch: -0.098562[0m
+[0;32mI (55447) mpu6050_log: Roll: -0.748885[0m
+[0;32mI (55547) mpu6050_log: Pitch: -0.095462[0m
+[0;32mI (55547) mpu6050_log: Roll: -0.914146[0m
+[0;32mI (55647) mpu6050_log: Pitch: -0.095737[0m
+[0;32mI (55647) mpu6050_log: Roll: -0.972299[0m
+[0;32mI (55747) mpu6050_log: Pitch: -0.097487[0m
+[0;32mI (55747) mpu6050_log: Roll: -1.114360[0m
+[0;32mI (55847) mpu6050_log: Pitch: -0.096837[0m
+[0;32mI (55847) mpu6050_log: Roll: -0.829014[0m
+[0;32mI (55947) mpu6050_log: Pitch: -0.104716[0m
+[0;32mI (55947) mpu6050_log: Roll: -0.772976[0m
+[0;32mI (56047) mpu6050_log: Pitch: -0.097712[0m
+[0;32mI (56047) mpu6050_log: Roll: -1.023617[0m
+[0;32mI (56147) mpu6050_log: Pitch: -0.095812[0m
+[0;32mI (56147) mpu6050_log: Roll: -1.236060[0m
+[0;32mI (56247) mpu6050_log: Pitch: -0.095962[0m
+[0;32mI (56247) mpu6050_log: Roll: -0.779748[0m
+[0;32mI (56347) mpu6050_log: Pitch: -0.096162[0m
+[0;32mI (56347) mpu6050_log: Roll: -0.790292[0m
+[0;32mI (56447) mpu6050_log: Pitch: -0.095737[0m
+[0;32mI (56447) mpu6050_log: Roll: -0.658739[0m
+[0;32mI (56547) mpu6050_log: Pitch: -0.101989[0m
+[0;32mI (56547) mpu6050_log: Roll: -0.407468[0m
+[0;32mI (56647) mpu6050_log: Pitch: -0.095287[0m
+[0;32mI (56647) mpu6050_log: Roll: -0.138197[0m
+[0;32mI (56747) mpu6050_log: Pitch: -0.091287[0m
+[0;32mI (56747) mpu6050_log: Roll: -0.098310[0m
+[0;32mI (56847) mpu6050_log: Pitch: -0.092912[0m
+[0;32mI (56847) mpu6050_log: Roll: -0.106312[0m
+[0;32mI (56947) mpu6050_log: Pitch: -0.071337[0m
+[0;32mI (56947) mpu6050_log: Roll: -0.073098[0m
+[0;32mI (57047) mpu6050_log: Pitch: -0.072983[0m
+[0;32mI (57047) mpu6050_log: Roll: -0.047375[0m
+[0;32mI (57147) mpu6050_log: Pitch: -0.077526[0m
+[0;32mI (57147) mpu6050_log: Roll: 0.006707[0m
+[0;32mI (57247) mpu6050_log: Pitch: -0.049769[0m
+[0;32mI (57247) mpu6050_log: Roll: -0.025908[0m
+[0;32mI (57347) mpu6050_log: Pitch: -0.047876[0m
+[0;32mI (57347) mpu6050_log: Roll: 0.024684[0m
+[0;32mI (57447) mpu6050_log: Pitch: -0.034077[0m
+[0;32mI (57447) mpu6050_log: Roll: 0.010579[0m
+[0;32mI (57547) mpu6050_log: Pitch: -0.020409[0m
+[0;32mI (57547) mpu6050_log: Roll: 0.035049[0m
+[0;32mI (57647) mpu6050_log: Pitch: -0.006421[0m
+[0;32mI (57647) mpu6050_log: Roll: 0.017718[0m
+[0;31mE (57747) i2cdev: Could not read from device [0x68 at 0]: -1 (ESP_FAIL)[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x400d63c6
+file: "./main/mini_drone.c" line 52
+func: mpu6050_task
+expression: mpu6050_get_motion(&dev, &accel, &rotation)
+
+abort() was called at PC 0x400867bb on core 0
+
+
+Backtrace: 0x40081932:0x3ffb6e80 0x400867c5:0x3ffb6ea0 0x4008c8e9:0x3ffb6ec0 0x400867bb:0x3ffb6f30 0x400d63c6:0x3ffb6f60 0x4008726d:0x3ffb6fe0
+
+
+
+
+ELF file SHA256: 597f16055
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 25 2024 23:05:57[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0afe8h ( 45032) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001b010 vaddr=3ffb0000 size=02384h (  9092) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d39c vaddr=40080000 size=02c7ch ( 11388) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17448h ( 95304) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=00037470 vaddr=40082c7c size=0b394h ( 45972) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) app_init: Application information:[0m
+[0;32mI (215) app_init: Project name:     mini_drone[0m
+[0;32mI (220) app_init: App version:      1[0m
+[0;32mI (225) app_init: Compile time:     Aug 26 2024 21:24:40[0m
+[0;32mI (230) app_init: ELF file SHA256:  597f16055...[0m
+[0;32mI (236) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (240) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (245) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (255) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (262) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFB2CA8 len 0002D358 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 4008E010 len 00011FF0 (71 KiB): IRAM[0m
+[0;32mI (295) spi_flash: detected chip: generic[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (315) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (327) main_task: Started on CPU0[0m
+[0;32mI (337) main_task: Calling app_main()[0m
+[0;32mI (337) mpu6050_log: Found MPU60x0 device[0m
+[0;32mI (337) mpu6050_log: Accel range: 0[0m
+[0;32mI (337) mpu6050_log: Gyro range:  0[0m
+[0;32mI (347) main_task: Returned from app_main()[0m
+[0;32mI (347) mpu6050_log: Pitch: 0.004231[0m
+[0;32mI (347) mpu6050_log: Roll: 0.099853[0m
+[0;32mI (457) mpu6050_log: Pitch: 0.003434[0m
+[0;32mI (457) mpu6050_log: Roll: 0.030231[0m
+[0;32mI (557) mpu6050_log: Pitch: -0.000299[0m
+[0;32mI (557) mpu6050_log: Roll: 0.059544[0m
+[0;32mI (657) mpu6050_log: Pitch: 0.006296[0m
+[0;32mI (657) mpu6050_log: Roll: 0.046312[0m
+[0;32mI (757) mpu6050_log: Pitch: -0.000373[0m
+[0;32mI (757) mpu6050_log: Roll: 0.029993[0m
+[0;32mI (857) mpu6050_log: Pitch: 0.008885[0m
+[0;32mI (857) mpu6050_log: Roll: 0.052340[0m
+[0;32mI (957) mpu6050_log: Pitch: 0.006919[0m
+[0;32mI (957) mpu6050_log: Roll: 0.076008[0m
+[0;32mI (1057) mpu6050_log: Pitch: -0.003036[0m
+[0;32mI (1057) mpu6050_log: Roll: 0.025209[0m
+[0;32mI (1157) mpu6050_log: Pitch: 0.000025[0m
+[0;32mI (1157) mpu6050_log: Roll: 0.031340[0m
+[0;32mI (1257) mpu6050_log: Pitch: -0.004007[0m
+[0;32mI (1257) mpu6050_log: Roll: 0.036139[0m
+[0;32mI (1357) mpu6050_log: Pitch: 0.000523[0m
+[0;32mI (1357) mpu6050_log: Roll: 0.096525[0m
+[0;32mI (1457) mpu6050_log: Pitch: 0.002464[0m
+[0;32mI (1457) mpu6050_log: Roll: 0.030748[0m
+[0;32mI (1557) mpu6050_log: Pitch: -0.010030[0m
+[0;32mI (1557) mpu6050_log: Roll: 0.082742[0m
+[0;32mI (1657) mpu6050_log: Pitch: 0.023321[0m
+[0;32mI (1657) mpu6050_log: Roll: 0.010194[0m
+[0;32mI (1757) mpu6050_log: Pitch: 0.004106[0m
+[0;32mI (1757) mpu6050_log: Roll: 0.063734[0m
+[0;32mI (1857) mpu6050_log: Pitch: 0.008536[0m
+[0;32mI (1857) mpu6050_log: Roll: 0.060384[0m
+[0;32mI (1957) mpu6050_log: Pitch: 0.001070[0m
+[0;32mI (1957) mpu6050_log: Roll: 0.067535[0m
+[0;32mI (2057) mpu6050_log: Pitch: 0.000299[0m
+[0;32mI (2057) mpu6050_log: Roll: 0.066356[0m
+[0;32mI (2157) mpu6050_log: Pitch: 0.001667[0m
+[0;32mI (2157) mpu6050_log: Roll: 0.062667[0m
