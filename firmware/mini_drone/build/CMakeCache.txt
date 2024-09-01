@@ -286,6 +286,9 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/home/hieu/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32-elf-strip
 
+//Path to a program.
+CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
+
 //The CMake toolchain file
 CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/hieu/esp/esp-idf/tools/cmake/toolchain-esp32.cmake
 
@@ -347,7 +350,7 @@ Mbed TLS_IS_TOP_LEVEL:STATIC=OFF
 Mbed TLS_SOURCE_DIR:STATIC=/home/hieu/esp/esp-idf/components/mbedtls/mbedtls
 
 //No help, variable specified on the command line.
-PYTHON:UNINITIALIZED=/home/hieu/.espressif/python_env/idf5.3_py3.10_env/bin/python
+PYTHON:UNINITIALIZED=/home/hieu/.espressif/python_env/idf5.3_py3.12_env/bin/python
 
 //No help, variable specified on the command line.
 PYTHON_DEPS_CHECKED:UNINITIALIZED=1
@@ -423,9 +426,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/hieu/esp/datn/firmware/mini_drone/build
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=25
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=28
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 //Path to cpack program executable.
@@ -552,7 +555,7 @@ CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_READELF
 CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.25
+CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.28
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -579,6 +582,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STRIP
 CMAKE_STRIP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_TAPI
+CMAKE_TAPI-ADVANCED:INTERNAL=1
 //uname command
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
@@ -586,9 +591,9 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
 C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS:INTERNAL=1
 //Details about finding Git
-FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.34.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.43.0()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/hieu/.espressif/python_env/idf5.3_py3.10_env/bin/python][cfound components: Interpreter ][v3.10.12()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/hieu/.espressif/python_env/idf5.3_py3.12_env/bin/python][cfound components: Interpreter ][v3.12.3()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE
@@ -599,12 +604,10 @@ _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 _Python3_Compiler_REASON_FAILURE:INTERNAL=
 //Development reason failure
 _Python3_Development_REASON_FAILURE:INTERNAL=
-_Python3_EXECUTABLE:INTERNAL=/home/hieu/.espressif/python_env/idf5.3_py3.10_env/bin/python
+_Python3_EXECUTABLE:INTERNAL=/home/hieu/.espressif/python_env/idf5.3_py3.12_env/bin/python
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;32;;;/usr/lib/python3.10;/usr/lib/python3.10;/home/hieu/.espressif/python_env/idf5.3_py3.10_env/lib/python3.10/site-packages;/home/hieu/.espressif/python_env/idf5.3_py3.10_env/lib/python3.10/site-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=81deb3629a6ffc526cb41908c0fb34a9
-//Interpreter reason failure
-_Python3_Interpreter_REASON_FAILURE:INTERNAL=
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;3;32;64;;;abi3;/usr/lib/python3.12;/home/hieu/.espressif/python_env/idf5.3_py3.12_env/lib/python3.12;/home/hieu/.espressif/python_env/idf5.3_py3.12_env/lib/python3.12/site-packages;/home/hieu/.espressif/python_env/idf5.3_py3.12_env/lib/python3.12/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=d8c747c1ba3116bf923b0be88f28222e
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 

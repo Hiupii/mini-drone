@@ -71,7 +71,7 @@ void pid_compute(pid_t pid)
     
     (*pid->output) = out;
     pid->lastin = in;
-    pid->lasttime = esp_timer_get_time() / 1000;  // Sử dụng thời gian từ ESP-IDF
+    pid->lasttime = esp_timer_get_time() / 100;  // Sử dụng thời gian từ ESP-IDF
 }
 
 

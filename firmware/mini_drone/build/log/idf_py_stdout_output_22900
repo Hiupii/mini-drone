@@ -1,0 +1,185 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 30 2024 14:43:04[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b028h ( 45096) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b050 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d3ec vaddr=40080000 size=02c2ch ( 11308) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=178f4h ( 96500) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=0003791c vaddr=40082c2c size=0b3e4h ( 46052) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (216) app_init: Project name:     mini_drone[0m
+[0;32mI (221) app_init: App version:      6c098b5-dirty[0m
+[0;32mI (226) app_init: Compile time:     Aug 30 2024 14:42:42[0m
+[0;32mI (232) app_init: ELF file SHA256:  06c6e78b4...[0m
+[0;32mI (237) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (242) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (247) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (252) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2D68 len 0002D298 (180 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008E010 len 00011FF0 (71 KiB): IRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;33mW (304) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (317) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;32mI (338) mpu6050_log: Found MPU60x0 device[0m
+[0;32mI (338) mpu6050_log: Accel range: 0[0m
+[0;32mI (338) mpu6050_log: Gyro range:  0[0m
+[0;32mI (348) pid_log: Input Pitch: 11.391374, Output Pitch: 0.000000[0m
+[0;32mI (348) pid_log: Input Roll : 0.094104, Output Roll : 0.000000[0m
+[0;32mI (358) main_task: Returned from app_main()[0m
+[0;32mI (1358) pid_log: Input Pitch: 10.294684, Output Pitch: 13.172726[0m
+[0;32mI (1358) pid_log: Input Roll : 0.212994, Output Roll : 0.000000[0m
+[0;32mI (2358) pid_log: Input Pitch: 10.963614, Output Pitch: 0.000000[0m
+[0;32mI (2358) pid_log: Input Roll : -0.163468, Output Roll : 6.661255[0m
+[0;32mI (3358) pid_log: Input Pitch: 15.186565, Output Pitch: 0.000000[0m
+[0;32mI (3358) pid_log: Input Roll : 0.357826, Output Roll : 0.000000[0m
+[0;32mI (4358) pid_log: Input Pitch: 11.006361, Output Pitch: 96.795120[0m
+[0;32mI (4358) pid_log: Input Roll : 0.189631, Output Roll : 2.253731[0m
+[0;32mI (5358) pid_log: Input Pitch: 3.835639, Output Pitch: 190.866058[0m
+[0;32mI (5358) pid_log: Input Roll : -3.427322, Output Roll : 69.106567[0m
+[0;32mI (6358) pid_log: Input Pitch: 1.832770, Output Pitch: 52.054810[0m
+[0;32mI (6358) pid_log: Input Roll : -1.618912, Output Roll : 0.000000[0m
+[0;32mI (7358) pid_log: Input Pitch: -2.322682, Output Pitch: 118.108528[0m
+[0;32mI (7358) pid_log: Input Roll : -2.477983, Output Roll : 20.992880[0m
+[0;32mI (8358) pid_log: Input Pitch: 2.434684, Output Pitch: 0.000000[0m
+[0;32mI (8358) pid_log: Input Roll : -3.510273, Output Roll : 26.691563[0m
+[0;32mI (9358) pid_log: Input Pitch: 2.672721, Output Pitch: 0.000000[0m
+[0;32mI (9358) pid_log: Input Roll : -3.368036, Output Roll : 6.922382[0m
+[0;32mI (10358) pid_log: Input Pitch: 0.713418, Output Pitch: 52.703686[0m
+[0;32mI (10358) pid_log: Input Roll : -3.072544, Output Roll : 3.582626[0m
+[0;32mI (11358) pid_log: Input Pitch: -0.881293, Output Pitch: 45.309128[0m
+[0;32mI (11358) pid_log: Input Roll : -2.547749, Output Roll : 0.000000[0m
+[0;32mI (12358) pid_log: Input Pitch: 1.510904, Output Pitch: 0.000000[0m
+[0;32mI (12358) pid_log: Input Roll : -3.058697, Output Roll : 16.853603[0m
+[0;32mI (13358) pid_log: Input Pitch: 2.210689, Output Pitch: 0.000000[0m
+[0;32mI (13358) pid_log: Input Roll : 13.922626, Output Roll : 0.000000[0m
+[0;32mI (14358) pid_log: Input Pitch: 2.364682, Output Pitch: 0.000000[0m
+[0;32mI (14358) pid_log: Input Roll : 21.317282, Output Roll : 0.000000[0m
+[0;32mI (15358) pid_log: Input Pitch: 2.238686, Output Pitch: 0.000000[0m
+[0;32mI (15358) pid_log: Input Roll : 17.307840, Output Roll : 18.559223[0m
+[0;32mI (16358) pid_log: Input Pitch: 0.559538, Output Pitch: 45.253330[0m
+[0;32mI (16358) pid_log: Input Roll : 7.549422, Output Roll : 140.253006[0m
+[0;32mI (17358) pid_log: Input Pitch: 2.882791, Output Pitch: 0.000000[0m
+[0;32mI (17358) pid_log: Input Roll : 1.693252, Output Roll : 91.970367[0m
+[0;32mI (18358) pid_log: Input Pitch: 2.574700, Output Pitch: 4.224246[0m
+[0;32mI (18358) pid_log: Input Roll : 0.274666, Output Roll : 22.651333[0m
+[0;32mI (19358) pid_log: Input Pitch: 4.059983, Output Pitch: 0.000000[0m
+[0;32mI (19358) pid_log: Input Roll : -13.434878, Output Roll : 255.000000[0m
+[0;32mI (20358) pid_log: Input Pitch: 7.858018, Output Pitch: 0.000000[0m
+[0;32mI (20358) pid_log: Input Roll : -29.050526, Output Roll : 255.000000[0m
+[0;32mI (21358) pid_log: Input Pitch: 8.536388, Output Pitch: 0.000000[0m
+[0;32mI (21358) pid_log: Input Roll : -24.177925, Output Roll : 0.000000[0m
+[0;32mI (22358) pid_log: Input Pitch: 12.420684, Output Pitch: 0.000000[0m
+[0;32mI (22358) pid_log: Input Roll : -6.691834, Output Roll : 0.000000[0m
+[0;32mI (23358) pid_log: Input Pitch: 12.578291, Output Pitch: 0.000000[0m
+[0;32mI (23358) pid_log: Input Roll : 0.246571, Output Roll : 0.000000[0m
+[0;32mI (24358) pid_log: Input Pitch: -4.536925, Output Pitch: 255.000000[0m
+[0;32mI (24358) pid_log: Input Roll : -14.640139, Output Roll : 255.000000[0m
+[0;32mI (25358) pid_log: Input Pitch: -22.462587, Output Pitch: 255.000000[0m
+[0;32mI (25358) pid_log: Input Roll : -20.612011, Output Roll : 155.273102[0m
+[0;32mI (26358) pid_log: Input Pitch: -23.282419, Output Pitch: 60.986511[0m
+[0;32mI (26358) pid_log: Input Roll : -20.748035, Output Roll : 59.366058[0m
+[0;32mI (27358) pid_log: Input Pitch: -23.023788, Output Pitch: 30.913555[0m
+[0;32mI (27358) pid_log: Input Roll : -18.996899, Output Roll : 23.421768[0m
+[0;32mI (28358) pid_log: Input Pitch: -18.342539, Output Pitch: 0.000000[0m
+[0;32mI (28358) pid_log: Input Roll : -20.139187, Output Roll : 74.314636[0m
+[0;32mI (29358) pid_log: Input Pitch: 41.386326, Output Pitch: 0.000000[0m
+[0;32mI (29358) pid_log: Input Roll : 49.138931, Output Roll : 0.000000[0m
+[0;32mI (30358) pid_log: Input Pitch: 43.029362, Output Pitch: 0.000000[0m
+[0;32mI (30358) pid_log: Input Roll : 53.422905, Output Roll : 0.000000[0m
+[0;32mI (31358) pid_log: Input Pitch: 39.602020, Output Pitch: 28.908562[0m
+[0;32mI (31358) pid_log: Input Roll : 49.809944, Output Roll : 0.000000[0m
+[0;32mI (32358) pid_log: Input Pitch: 43.336300, Output Pitch: 0.000000[0m
+[0;32mI (32358) pid_log: Input Roll : 59.205585, Output Roll : 0.000000[0m
+[0;32mI (33358) pid_log: Input Pitch: 40.903358, Output Pitch: 0.000000[0m
+[0;32mI (33358) pid_log: Input Roll : 57.675003, Output Roll : 0.000000[0m
+[0;32mI (34358) pid_log: Input Pitch: 43.819027, Output Pitch: 0.000000[0m
+[0;32mI (34358) pid_log: Input Roll : 57.596054, Output Roll : 0.000000[0m
+[0;32mI (35358) pid_log: Input Pitch: 42.991104, Output Pitch: 0.000000[0m
+[0;32mI (35358) pid_log: Input Roll : 63.099251, Output Roll : 0.000000[0m
+[0;32mI (36358) pid_log: Input Pitch: 30.242582, Output Pitch: 255.000000[0m
+[0;32mI (36358) pid_log: Input Roll : 38.674774, Output Roll : 255.000000[0m
+[0;32mI (37358) pid_log: Input Pitch: 12.936849, Output Pitch: 255.000000[0m
+[0;32mI (37358) pid_log: Input Roll : 13.641378, Output Roll : 255.000000[0m
+[0;32mI (38358) pid_log: Input Pitch: 5.533950, Output Pitch: 194.448700[0m
+[0;32mI (38358) pid_log: Input Roll : 9.458046, Output Roll : 43.015358[0m
+[0;32mI (39358) pid_log: Input Pitch: 4.803587, Output Pitch: 12.159048[0m
+[0;32mI (39358) pid_log: Input Roll : 8.990039, Output Roll : 0.000000[0m
+[0;32mI (40358) pid_log: Input Pitch: -1.133120, Output Pitch: 165.129669[0m
+[0;32mI (40358) pid_log: Input Roll : 7.804625, Output Roll : 0.000000[0m
+[0;32mI (41358) pid_log: Input Pitch: -32.536842, Output Pitch: 255.000000[0m
+[0;32mI (41358) pid_log: Input Roll : -12.129476, Output Roll : 255.000000[0m
+[0;32mI (42358) pid_log: Input Pitch: 63.542328, Output Pitch: 0.000000[0m
+[0;32mI (42358) pid_log: Input Roll : 16.154116, Output Roll : 0.000000[0m
+[0;32mI (43358) pid_log: Input Pitch: 8.296000, Output Pitch: 255.000000[0m
+[0;32mI (43358) pid_log: Input Roll : -8.986570, Output Roll : 255.000000[0m
+[0;32mI (44358) pid_log: Input Pitch: 35.353065, Output Pitch: 0.000000[0m
+[0;32mI (44358) pid_log: Input Roll : 12.324154, Output Roll : 0.000000[0m
+[0;32mI (45358) pid_log: Input Pitch: 14.622030, Output Pitch: 255.000000[0m
+[0;32mI (45358) pid_log: Input Roll : -10.247268, Output Roll : 255.000000[0m
+[0;32mI (46358) pid_log: Input Pitch: 3.849658, Output Pitch: 255.000000[0m
+[0;32mI (46358) pid_log: Input Roll : -0.424945, Output Roll : 0.000000[0m
+[0;32mI (47358) pid_log: Input Pitch: 8.847705, Output Pitch: 0.000000[0m
+[0;32mI (47358) pid_log: Input Roll : -0.254052, Output Roll : 0.000000[0m
+[0;32mI (48358) pid_log: Input Pitch: 8.465671, Output Pitch: 0.000000[0m
+[0;32mI (48358) pid_log: Input Roll : -0.067454, Output Roll : 0.000000[0m
+[0;32mI (49358) pid_log: Input Pitch: 8.296000, Output Pitch: 0.000000[0m
+[0;32mI (49358) pid_log: Input Roll : -0.334199, Output Roll : 5.326003[0m
+[0;32mI (50358) pid_log: Input Pitch: 8.211192, Output Pitch: 0.000000[0m
+[0;32mI (50358) pid_log: Input Roll : -0.455144, Output Roll : 3.253121[0m
+[0;32mI (51358) pid_log: Input Pitch: 8.692015, Output Pitch: 0.000000[0m
+[0;32mI (51358) pid_log: Input Roll : -0.644198, Output Roll : 4.897154[0m
+[0;32mI (52358) pid_log: Input Pitch: 8.253592, Output Pitch: 0.000000[0m
+[0;32mI (52358) pid_log: Input Roll : -0.026780, Output Roll : 0.000000[0m
+[0;32mI (53358) pid_log: Input Pitch: 8.536388, Output Pitch: 0.000000[0m
+[0;32mI (53358) pid_log: Input Roll : -0.184527, Output Roll : 3.116591[0m
+[0;32mI (54358) pid_log: Input Pitch: 7.985126, Output Pitch: 1.984272[0m
+[0;32mI (54358) pid_log: Input Roll : -0.411143, Output Roll : 4.876339[0m
+[0;32mI (55358) pid_log: Input Pitch: 8.522243, Output Pitch: 0.000000[0m
+[0;32mI (55358) pid_log: Input Roll : -0.134371, Output Roll : 0.000000[0m
+[0;32mI (56358) pid_log: Input Pitch: 8.055757, Output Pitch: 0.000000[0m
+[0;32mI (56358) pid_log: Input Roll : 0.092776, Output Roll : 0.000000[0m
+[0;32mI (57358) pid_log: Input Pitch: 8.409105, Output Pitch: 0.000000[0m
+[0;32mI (57358) pid_log: Input Roll : -0.431598, Output Roll : 9.845833[0m
+[0;32mI (58358) pid_log: Input Pitch: 8.154664, Output Pitch: 0.000000[0m
+[0;32mI (58358) pid_log: Input Roll : -0.357102, Output Roll : 0.000000[0m
+[0;32mI (59358) pid_log: Input Pitch: 8.847705, Output Pitch: 0.000000[0m
+[0;32mI (59358) pid_log: Input Roll : -0.526377, Output Roll : 4.247787[0m
+[0;32mI (60358) pid_log: Input Pitch: 8.352548, Output Pitch: 0.000000[0m
+[0;32mI (60358) pid_log: Input Roll : -0.175257, Output Roll : 0.000000[0m
+[0;32mI (61358) pid_log: Input Pitch: 7.787420, Output Pitch: 2.691759[0m
+[0;32mI (61358) pid_log: Input Roll : -0.332261, Output Roll : 3.511744[0m

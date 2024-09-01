@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "mini_drone",
-    "project_version":    "1",
+    "project_version":    "6c098b5-dirty",
     "project_path":       "/home/hieu/esp/datn/firmware/mini_drone",
     "idf_path":           "/home/hieu/esp/esp-idf",
     "build_dir":          "/home/hieu/esp/datn/firmware/mini_drone/build",

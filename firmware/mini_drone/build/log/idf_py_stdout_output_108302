@@ -1,0 +1,694 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 30 2024 14:43:04[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b058h ( 45144) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b080 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d41c vaddr=40080000 size=02bfch ( 11260) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17818h ( 96280) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00037840 vaddr=40082bfc size=0b414h ( 46100) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (216) app_init: Project name:     mini_drone[0m
+[0;32mI (221) app_init: App version:      6c098b5-dirty[0m
+[0;32mI (226) app_init: Compile time:     Aug 30 2024 14:42:42[0m
+[0;32mI (232) app_init: ELF file SHA256:  fe7673df3...[0m
+[0;32mI (237) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (242) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (247) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (252) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2D68 len 0002D298 (180 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008E010 len 00011FF0 (71 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;33mW (303) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (317) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;32mI (338) mpu6050_log: Found MPU60x0 device[0m
+[0;32mI (338) mpu6050_log: Accel range: 0[0m
+[0;32mI (338) mpu6050_log: Gyro range:  0[0m
+[0;32mI (348) pid_log: mot1_pwm: 4912[0m
+[0;32mI (348) pid_log: mot2_pwm: 4917[0m
+[0;32mI (348) pid_log: mot3_pwm: 4917[0m
+[0;32mI (358) pid_log: mot4_pwm: 4912[0m
+[0;32mI (358) main_task: Returned from app_main()[0m
+[0;32mI (1358) pid_log: mot1_pwm: 4913[0m
+[0;32mI (1358) pid_log: mot2_pwm: 4916[0m
+[0;32mI (1358) pid_log: mot3_pwm: 4916[0m
+[0;32mI (1358) pid_log: mot4_pwm: 4913[0m
+[0;32mI (2358) pid_log: mot1_pwm: 5030[0m
+[0;32mI (2358) pid_log: mot2_pwm: 5030[0m
+[0;32mI (2358) pid_log: mot3_pwm: 4799[0m
+[0;32mI (2358) pid_log: mot4_pwm: 4799[0m
+[0;32mI (3358) pid_log: mot1_pwm: 4904[0m
+[0;32mI (3358) pid_log: mot2_pwm: 4925[0m
+[0;32mI (3358) pid_log: mot3_pwm: 4925[0m
+[0;32mI (3358) pid_log: mot4_pwm: 4904[0m
+[0;32mI (4358) pid_log: mot1_pwm: 4978[0m
+[0;32mI (4358) pid_log: mot2_pwm: 4984[0m
+[0;32mI (4358) pid_log: mot3_pwm: 4851[0m
+[0;32mI (4358) pid_log: mot4_pwm: 4845[0m
+[0;32mI (5358) pid_log: mot1_pwm: 4907[0m
+[0;32mI (5358) pid_log: mot2_pwm: 4922[0m
+[0;32mI (5358) pid_log: mot3_pwm: 4922[0m
+[0;32mI (5358) pid_log: mot4_pwm: 4907[0m
+[0;32mI (6358) pid_log: mot1_pwm: 4900[0m
+[0;32mI (6358) pid_log: mot2_pwm: 4929[0m
+[0;32mI (6358) pid_log: mot3_pwm: 4929[0m
+[0;32mI (6358) pid_log: mot4_pwm: 4900[0m
+[0;32mI (7358) pid_log: mot1_pwm: 4906[0m
+[0;32mI (7358) pid_log: mot2_pwm: 4923[0m
+[0;32mI (7358) pid_log: mot3_pwm: 4923[0m
+[0;32mI (7358) pid_log: mot4_pwm: 4906[0m
+[0;32mI (8358) pid_log: mot1_pwm: 4904[0m
+[0;32mI (8358) pid_log: mot2_pwm: 4925[0m
+[0;32mI (8358) pid_log: mot3_pwm: 4925[0m
+[0;32mI (8358) pid_log: mot4_pwm: 4904[0m
+[0;32mI (9358) pid_log: mot1_pwm: 4903[0m
+[0;32mI (9358) pid_log: mot2_pwm: 4926[0m
+[0;32mI (9358) pid_log: mot3_pwm: 4926[0m
+[0;32mI (9358) pid_log: mot4_pwm: 4903[0m
+[0;32mI (10358) pid_log: mot1_pwm: 4903[0m
+[0;32mI (10358) pid_log: mot2_pwm: 4926[0m
+[0;32mI (10358) pid_log: mot3_pwm: 4926[0m
+[0;32mI (10358) pid_log: mot4_pwm: 4903[0m
+[0;32mI (11358) pid_log: mot1_pwm: 4904[0m
+[0;32mI (11358) pid_log: mot2_pwm: 4925[0m
+[0;32mI (11358) pid_log: mot3_pwm: 4925[0m
+[0;32mI (11358) pid_log: mot4_pwm: 4904[0m
+[0;32mI (12358) pid_log: mot1_pwm: 4902[0m
+[0;32mI (12358) pid_log: mot2_pwm: 4927[0m
+[0;32mI (12358) pid_log: mot3_pwm: 4927[0m
+[0;32mI (12358) pid_log: mot4_pwm: 4902[0m
+[0;32mI (13358) pid_log: mot1_pwm: 4901[0m
+[0;32mI (13358) pid_log: mot2_pwm: 4928[0m
+[0;32mI (13358) pid_log: mot3_pwm: 4928[0m
+[0;32mI (13358) pid_log: mot4_pwm: 4901[0m
+[0;32mI (14358) pid_log: mot1_pwm: 4907[0m
+[0;32mI (14358) pid_log: mot2_pwm: 4933[0m
+[0;32mI (14358) pid_log: mot3_pwm: 4922[0m
+[0;32mI (14358) pid_log: mot4_pwm: 4896[0m
+[0;32mI (15358) pid_log: mot1_pwm: 4918[0m
+[0;32mI (15358) pid_log: mot2_pwm: 4943[0m
+[0;32mI (15358) pid_log: mot3_pwm: 4911[0m
+[0;32mI (15358) pid_log: mot4_pwm: 4886[0m
+[0;32mI (16358) pid_log: mot1_pwm: 4898[0m
+[0;32mI (16358) pid_log: mot2_pwm: 4931[0m
+[0;32mI (16358) pid_log: mot3_pwm: 4931[0m
+[0;32mI (16358) pid_log: mot4_pwm: 4898[0m
+[0;32mI (17358) pid_log: mot1_pwm: 4939[0m
+[0;32mI (17358) pid_log: mot2_pwm: 4966[0m
+[0;32mI (17358) pid_log: mot3_pwm: 4890[0m
+[0;32mI (17358) pid_log: mot4_pwm: 4863[0m
+[0;32mI (18358) pid_log: mot1_pwm: 4900[0m
+[0;32mI (18358) pid_log: mot2_pwm: 4929[0m
+[0;32mI (18358) pid_log: mot3_pwm: 4929[0m
+[0;32mI (18358) pid_log: mot4_pwm: 4900[0m
+[0;32mI (19358) pid_log: mot1_pwm: 5134[0m
+[0;32mI (19358) pid_log: mot2_pwm: 5158[0m
+[0;32mI (19358) pid_log: mot3_pwm: 4695[0m
+[0;32mI (19358) pid_log: mot4_pwm: 4671[0m
+[0;32mI (20358) pid_log: mot1_pwm: 5008[0m
+[0;32mI (20358) pid_log: mot2_pwm: 5039[0m
+[0;32mI (20358) pid_log: mot3_pwm: 4821[0m
+[0;32mI (20358) pid_log: mot4_pwm: 4790[0m
+[0;32mI (21358) pid_log: mot1_pwm: 4913[0m
+[0;32mI (21358) pid_log: mot2_pwm: 4944[0m
+[0;32mI (21358) pid_log: mot3_pwm: 4916[0m
+[0;32mI (21358) pid_log: mot4_pwm: 4885[0m
+[0;32mI (22358) pid_log: mot1_pwm: 4915[0m
+[0;32mI (22358) pid_log: mot2_pwm: 4944[0m
+[0;32mI (22358) pid_log: mot3_pwm: 4914[0m
+[0;32mI (22358) pid_log: mot4_pwm: 4885[0m
+[0;32mI (23358) pid_log: mot1_pwm: 4906[0m
+[0;32mI (23358) pid_log: mot2_pwm: 4923[0m
+[0;32mI (23358) pid_log: mot3_pwm: 4923[0m
+[0;32mI (23358) pid_log: mot4_pwm: 4906[0m
+[0;32mI (24358) pid_log: mot1_pwm: 4905[0m
+[0;32mI (24358) pid_log: mot2_pwm: 4932[0m
+[0;32mI (24358) pid_log: mot3_pwm: 4924[0m
+[0;32mI (24358) pid_log: mot4_pwm: 4897[0m
+[0;32mI (25358) pid_log: mot1_pwm: 4924[0m
+[0;32mI (25358) pid_log: mot2_pwm: 4952[0m
+[0;32mI (25358) pid_log: mot3_pwm: 4905[0m
+[0;32mI (25358) pid_log: mot4_pwm: 4877[0m
+[0;32mI (26358) pid_log: mot1_pwm: 5152[0m
+[0;32mI (26358) pid_log: mot2_pwm: 5187[0m
+[0;32mI (26358) pid_log: mot3_pwm: 4677[0m
+[0;32mI (26358) pid_log: mot4_pwm: 4642[0m
+[0;32mI (27358) pid_log: mot1_pwm: 4905[0m
+[0;32mI (27358) pid_log: mot2_pwm: 4938[0m
+[0;32mI (27358) pid_log: mot3_pwm: 4924[0m
+[0;32mI (27358) pid_log: mot4_pwm: 4891[0m
+[0;32mI (28358) pid_log: mot1_pwm: 4898[0m
+[0;32mI (28358) pid_log: mot2_pwm: 4931[0m
+[0;32mI (28358) pid_log: mot3_pwm: 4931[0m
+[0;32mI (28358) pid_log: mot4_pwm: 4898[0m
+[0;32mI (29358) pid_log: mot1_pwm: 4923[0m
+[0;32mI (29358) pid_log: mot2_pwm: 4951[0m
+[0;32mI (29358) pid_log: mot3_pwm: 4906[0m
+[0;32mI (29358) pid_log: mot4_pwm: 4878[0m
+[0;32mI (30358) pid_log: mot1_pwm: 4897[0m
+[0;32mI (30358) pid_log: mot2_pwm: 4932[0m
+[0;32mI (30358) pid_log: mot3_pwm: 4932[0m
+[0;32mI (30358) pid_log: mot4_pwm: 4897[0m
+[0;32mI (31358) pid_log: mot1_pwm: 4908[0m
+[0;32mI (31358) pid_log: mot2_pwm: 4943[0m
+[0;32mI (31358) pid_log: mot3_pwm: 4921[0m
+[0;32mI (31358) pid_log: mot4_pwm: 4886[0m
+[0;32mI (32358) pid_log: mot1_pwm: 4905[0m
+[0;32mI (32358) pid_log: mot2_pwm: 4937[0m
+[0;32mI (32358) pid_log: mot3_pwm: 4924[0m
+[0;32mI (32358) pid_log: mot4_pwm: 4892[0m
+[0;32mI (33358) pid_log: mot1_pwm: 4903[0m
+[0;32mI (33358) pid_log: mot2_pwm: 4926[0m
+[0;32mI (33358) pid_log: mot3_pwm: 4926[0m
+[0;32mI (33358) pid_log: mot4_pwm: 4903[0m
+[0;32mI (34358) pid_log: mot1_pwm: 4897[0m
+[0;32mI (34358) pid_log: mot2_pwm: 4932[0m
+[0;32mI (34358) pid_log: mot3_pwm: 4932[0m
+[0;32mI (34358) pid_log: mot4_pwm: 4897[0m
+[0;32mI (35358) pid_log: mot1_pwm: 4915[0m
+[0;32mI (35358) pid_log: mot2_pwm: 4915[0m
+[0;32mI (35358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (35358) pid_log: mot4_pwm: 4915[0m
+[0;32mI (36358) pid_log: mot1_pwm: 4915[0m
+[0;32mI (36358) pid_log: mot2_pwm: 4915[0m
+[0;32mI (36358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (36358) pid_log: mot4_pwm: 4915[0m
+[0;32mI (37358) pid_log: mot1_pwm: 4953[0m
+[0;32mI (37358) pid_log: mot2_pwm: 4953[0m
+[0;32mI (37358) pid_log: mot3_pwm: 4876[0m
+[0;32mI (37358) pid_log: mot4_pwm: 4876[0m
+[0;32mI (38358) pid_log: mot1_pwm: 4915[0m
+[0;32mI (38358) pid_log: mot2_pwm: 4915[0m
+[0;32mI (38358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (38358) pid_log: mot4_pwm: 4915[0m
+[0;32mI (39358) pid_log: mot1_pwm: 4922[0m
+[0;32mI (39358) pid_log: mot2_pwm: 4922[0m
+[0;32mI (39358) pid_log: mot3_pwm: 4907[0m
+[0;32mI (39358) pid_log: mot4_pwm: 4907[0m
+[0;32mI (40358) pid_log: mot1_pwm: 4927[0m
+[0;32mI (40358) pid_log: mot2_pwm: 4927[0m
+[0;32mI (40358) pid_log: mot3_pwm: 4902[0m
+[0;32mI (40358) pid_log: mot4_pwm: 4902[0m
+[0;32mI (41358) pid_log: mot1_pwm: 4925[0m
+[0;32mI (41358) pid_log: mot2_pwm: 4925[0m
+[0;32mI (41358) pid_log: mot3_pwm: 4904[0m
+[0;32mI (41358) pid_log: mot4_pwm: 4904[0m
+[0;32mI (42358) pid_log: mot1_pwm: 4926[0m
+[0;32mI (42358) pid_log: mot2_pwm: 4926[0m
+[0;32mI (42358) pid_log: mot3_pwm: 4903[0m
+[0;32mI (42358) pid_log: mot4_pwm: 4903[0m
+[0;32mI (43358) pid_log: mot1_pwm: 4925[0m
+[0;32mI (43358) pid_log: mot2_pwm: 4925[0m
+[0;32mI (43358) pid_log: mot3_pwm: 4904[0m
+[0;32mI (43358) pid_log: mot4_pwm: 4904[0m
+[0;32mI (44358) pid_log: mot1_pwm: 4926[0m
+[0;32mI (44358) pid_log: mot2_pwm: 4926[0m
+[0;32mI (44358) pid_log: mot3_pwm: 4903[0m
+[0;32mI (44358) pid_log: mot4_pwm: 4903[0m
+[0;32mI (45358) pid_log: mot1_pwm: 4943[0m
+[0;32mI (45358) pid_log: mot2_pwm: 4943[0m
+[0;32mI (45358) pid_log: mot3_pwm: 4886[0m
+[0;32mI (45358) pid_log: mot4_pwm: 4886[0m
+[0;32mI (46358) pid_log: mot1_pwm: 4921[0m
+[0;32mI (46358) pid_log: mot2_pwm: 4921[0m
+[0;32mI (46358) pid_log: mot3_pwm: 4908[0m
+[0;32mI (46358) pid_log: mot4_pwm: 4908[0m
+[0;32mI (47358) pid_log: mot1_pwm: 4945[0m
+[0;32mI (47358) pid_log: mot2_pwm: 4952[0m
+[0;32mI (47358) pid_log: mot3_pwm: 4884[0m
+[0;32mI (47358) pid_log: mot4_pwm: 4877[0m
+[0;32mI (48358) pid_log: mot1_pwm: 4909[0m
+[0;32mI (48358) pid_log: mot2_pwm: 4920[0m
+[0;32mI (48358) pid_log: mot3_pwm: 4920[0m
+[0;32mI (48358) pid_log: mot4_pwm: 4909[0m
+[0;32mI (49358) pid_log: mot1_pwm: 4908[0m
+[0;32mI (49358) pid_log: mot2_pwm: 4922[0m
+[0;32mI (49358) pid_log: mot3_pwm: 4921[0m
+[0;32mI (49358) pid_log: mot4_pwm: 4907[0m
+[0;32mI (50358) pid_log: mot1_pwm: 4919[0m
+[0;32mI (50358) pid_log: mot2_pwm: 4925[0m
+[0;32mI (50358) pid_log: mot3_pwm: 4910[0m
+[0;32mI (50358) pid_log: mot4_pwm: 4904[0m
+[0;32mI (51358) pid_log: mot1_pwm: 4888[0m
+[0;32mI (51358) pid_log: mot2_pwm: 4946[0m
+[0;32mI (51358) pid_log: mot3_pwm: 4941[0m
+[0;32mI (51358) pid_log: mot4_pwm: 4883[0m
+[0;32mI (52358) pid_log: mot1_pwm: 4883[0m
+[0;32mI (52358) pid_log: mot2_pwm: 4946[0m
+[0;32mI (52358) pid_log: mot3_pwm: 4946[0m
+[0;32mI (52358) pid_log: mot4_pwm: 4883[0m
+[0;32mI (53358) pid_log: mot1_pwm: 4878[0m
+[0;32mI (53358) pid_log: mot2_pwm: 4951[0m
+[0;32mI (53358) pid_log: mot3_pwm: 4951[0m
+[0;32mI (53358) pid_log: mot4_pwm: 4878[0m
+[0;32mI (54358) pid_log: mot1_pwm: 4906[0m
+[0;32mI (54358) pid_log: mot2_pwm: 4991[0m
+[0;32mI (54358) pid_log: mot3_pwm: 4923[0m
+[0;32mI (54358) pid_log: mot4_pwm: 4838[0m
+[0;32mI (55358) pid_log: mot1_pwm: 4862[0m
+[0;32mI (55358) pid_log: mot2_pwm: 4967[0m
+[0;32mI (55358) pid_log: mot3_pwm: 4967[0m
+[0;32mI (55358) pid_log: mot4_pwm: 4862[0m
+[0;32mI (56358) pid_log: mot1_pwm: 4892[0m
+[0;32mI (56358) pid_log: mot2_pwm: 4993[0m
+[0;32mI (56358) pid_log: mot3_pwm: 4937[0m
+[0;32mI (56358) pid_log: mot4_pwm: 4836[0m
+[0;32mI (57358) pid_log: mot1_pwm: 4868[0m
+[0;32mI (57358) pid_log: mot2_pwm: 4970[0m
+[0;32mI (57358) pid_log: mot3_pwm: 4961[0m
+[0;32mI (57358) pid_log: mot4_pwm: 4859[0m
+[0;32mI (58358) pid_log: mot1_pwm: 4854[0m
+[0;32mI (58358) pid_log: mot2_pwm: 4975[0m
+[0;32mI (58358) pid_log: mot3_pwm: 4975[0m
+[0;32mI (58358) pid_log: mot4_pwm: 4854[0m
+[0;32mI (59358) pid_log: mot1_pwm: 4894[0m
+[0;32mI (59358) pid_log: mot2_pwm: 5010[0m
+[0;32mI (59358) pid_log: mot3_pwm: 4935[0m
+[0;32mI (59358) pid_log: mot4_pwm: 4819[0m
+[0;32mI (60358) pid_log: mot1_pwm: 4866[0m
+[0;32mI (60358) pid_log: mot2_pwm: 4976[0m
+[0;32mI (60358) pid_log: mot3_pwm: 4963[0m
+[0;32mI (60358) pid_log: mot4_pwm: 4853[0m
+[0;32mI (61358) pid_log: mot1_pwm: 4900[0m
+[0;32mI (61358) pid_log: mot2_pwm: 5024[0m
+[0;32mI (61358) pid_log: mot3_pwm: 4929[0m
+[0;32mI (61358) pid_log: mot4_pwm: 4805[0m
+[0;32mI (62358) pid_log: mot1_pwm: 4838[0m
+[0;32mI (62358) pid_log: mot2_pwm: 4991[0m
+[0;32mI (62358) pid_log: mot3_pwm: 4991[0m
+[0;32mI (62358) pid_log: mot4_pwm: 4838[0m
+[0;32mI (63358) pid_log: mot1_pwm: 4832[0m
+[0;32mI (63358) pid_log: mot2_pwm: 4997[0m
+[0;32mI (63358) pid_log: mot3_pwm: 4997[0m
+[0;32mI (63358) pid_log: mot4_pwm: 4832[0m
+[0;32mI (64358) pid_log: mot1_pwm: 4839[0m
+[0;32mI (64358) pid_log: mot2_pwm: 5003[0m
+[0;32mI (64358) pid_log: mot3_pwm: 4990[0m
+[0;32mI (64358) pid_log: mot4_pwm: 4826[0m
+[0;32mI (65358) pid_log: mot1_pwm: 4850[0m
+[0;32mI (65358) pid_log: mot2_pwm: 5005[0m
+[0;32mI (65358) pid_log: mot3_pwm: 4979[0m
+[0;32mI (65358) pid_log: mot4_pwm: 4824[0m
+[0;32mI (66358) pid_log: mot1_pwm: 4842[0m
+[0;32mI (66358) pid_log: mot2_pwm: 5007[0m
+[0;32mI (66358) pid_log: mot3_pwm: 4987[0m
+[0;32mI (66358) pid_log: mot4_pwm: 4822[0m
+[0;32mI (67358) pid_log: mot1_pwm: 4834[0m
+[0;32mI (67358) pid_log: mot2_pwm: 4995[0m
+[0;32mI (67358) pid_log: mot3_pwm: 4995[0m
+[0;32mI (67358) pid_log: mot4_pwm: 4834[0m
+[0;32mI (68358) pid_log: mot1_pwm: 4836[0m
+[0;32mI (68358) pid_log: mot2_pwm: 5004[0m
+[0;32mI (68358) pid_log: mot3_pwm: 4993[0m
+[0;32mI (68358) pid_log: mot4_pwm: 4825[0m
+[0;32mI (69358) pid_log: mot1_pwm: 4840[0m
+[0;32mI (69358) pid_log: mot2_pwm: 5014[0m
+[0;32mI (69358) pid_log: mot3_pwm: 4989[0m
+[0;32mI (69358) pid_log: mot4_pwm: 4815[0m
+[0;32mI (70358) pid_log: mot1_pwm: 4823[0m
+[0;32mI (70358) pid_log: mot2_pwm: 5006[0m
+[0;32mI (70358) pid_log: mot3_pwm: 5006[0m
+[0;32mI (70358) pid_log: mot4_pwm: 4823[0m
+[0;32mI (71358) pid_log: mot1_pwm: 4916[0m
+[0;32mI (71358) pid_log: mot2_pwm: 5044[0m
+[0;32mI (71358) pid_log: mot3_pwm: 4913[0m
+[0;32mI (71358) pid_log: mot4_pwm: 4785[0m
+[0;32mI (72358) pid_log: mot1_pwm: 4923[0m
+[0;32mI (72358) pid_log: mot2_pwm: 5012[0m
+[0;32mI (72358) pid_log: mot3_pwm: 4906[0m
+[0;32mI (72358) pid_log: mot4_pwm: 4817[0m
+[0;32mI (73358) pid_log: mot1_pwm: 4928[0m
+[0;32mI (73358) pid_log: mot2_pwm: 4994[0m
+[0;32mI (73358) pid_log: mot3_pwm: 4901[0m
+[0;32mI (73358) pid_log: mot4_pwm: 4835[0m
+[0;32mI (74358) pid_log: mot1_pwm: 4915[0m
+[0;32mI (74358) pid_log: mot2_pwm: 4915[0m
+[0;32mI (74358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (74358) pid_log: mot4_pwm: 4915[0m
+[0;32mI (75358) pid_log: mot1_pwm: 4919[0m
+[0;32mI (75358) pid_log: mot2_pwm: 4919[0m
+[0;32mI (75358) pid_log: mot3_pwm: 4910[0m
+[0;32mI (75358) pid_log: mot4_pwm: 4910[0m
+[0;32mI (76358) pid_log: mot1_pwm: 4926[0m
+[0;32mI (76358) pid_log: mot2_pwm: 4926[0m
+[0;32mI (76358) pid_log: mot3_pwm: 4903[0m
+[0;32mI (76358) pid_log: mot4_pwm: 4903[0m
+[0;32mI (77358) pid_log: mot1_pwm: 4932[0m
+[0;32mI (77358) pid_log: mot2_pwm: 4932[0m
+[0;32mI (77358) pid_log: mot3_pwm: 4897[0m
+[0;32mI (77358) pid_log: mot4_pwm: 4897[0m
+[0;32mI (78358) pid_log: mot1_pwm: 4927[0m
+[0;32mI (78358) pid_log: mot2_pwm: 4927[0m
+[0;32mI (78358) pid_log: mot3_pwm: 4902[0m
+[0;32mI (78358) pid_log: mot4_pwm: 4902[0m
+[0;32mI (79358) pid_log: mot1_pwm: 4915[0m
+[0;32mI (79358) pid_log: mot2_pwm: 4915[0m
+[0;32mI (79358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (79358) pid_log: mot4_pwm: 4915[0m
+[0;32mI (80358) pid_log: mot1_pwm: 4927[0m
+[0;32mI (80358) pid_log: mot2_pwm: 4927[0m
+[0;32mI (80358) pid_log: mot3_pwm: 4902[0m
+[0;32mI (80358) pid_log: mot4_pwm: 4902[0m
+[0;32mI (81358) pid_log: mot1_pwm: 4915[0m
+[0;32mI (81358) pid_log: mot2_pwm: 4915[0m
+[0;32mI (81358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (81358) pid_log: mot4_pwm: 4915[0m
+[0;32mI (82358) pid_log: mot1_pwm: 4921[0m
+[0;32mI (82358) pid_log: mot2_pwm: 4921[0m
+[0;32mI (82358) pid_log: mot3_pwm: 4908[0m
+[0;32mI (82358) pid_log: mot4_pwm: 4908[0m
+[0;32mI (83358) pid_log: mot1_pwm: 4921[0m
+[0;32mI (83358) pid_log: mot2_pwm: 4921[0m
+[0;32mI (83358) pid_log: mot3_pwm: 4908[0m
+[0;32mI (83358) pid_log: mot4_pwm: 4908[0m
+[0;32mI (84358) pid_log: mot1_pwm: 4923[0m
+[0;32mI (84358) pid_log: mot2_pwm: 4923[0m
+[0;32mI (84358) pid_log: mot3_pwm: 4906[0m
+[0;32mI (84358) pid_log: mot4_pwm: 4906[0m
+[0;32mI (85358) pid_log: mot1_pwm: 4915[0m
+[0;32mI (85358) pid_log: mot2_pwm: 4915[0m
+[0;32mI (85358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (85358) pid_log: mot4_pwm: 4915[0m
+[0;32mI (86358) pid_log: mot1_pwm: 4929[0m
+[0;32mI (86358) pid_log: mot2_pwm: 4929[0m
+[0;32mI (86358) pid_log: mot3_pwm: 4900[0m
+[0;32mI (86358) pid_log: mot4_pwm: 4900[0m
+[0;32mI (87358) pid_log: mot1_pwm: 4908[0m
+[0;32mI (87358) pid_log: mot2_pwm: 5018[0m
+[0;32mI (87358) pid_log: mot3_pwm: 4921[0m
+[0;32mI (87358) pid_log: mot4_pwm: 4811[0m
+[0;32mI (88358) pid_log: mot1_pwm: 4890[0m
+[0;32mI (88358) pid_log: mot2_pwm: 4939[0m
+[0;32mI (88358) pid_log: mot3_pwm: 4939[0m
+[0;32mI (88358) pid_log: mot4_pwm: 4890[0m
+[0;32mI (89358) pid_log: mot1_pwm: 5004[0m
+[0;32mI (89358) pid_log: mot2_pwm: 5051[0m
+[0;32mI (89358) pid_log: mot3_pwm: 4825[0m
+[0;32mI (89358) pid_log: mot4_pwm: 4778[0m
+[0;32mI (90358) pid_log: mot1_pwm: 5046[0m
+[0;32mI (90358) pid_log: mot2_pwm: 5046[0m
+[0;32mI (90358) pid_log: mot3_pwm: 4783[0m
+[0;32mI (90358) pid_log: mot4_pwm: 4783[0m
+[0;32mI (91358) pid_log: mot1_pwm: 4910[0m
+[0;32mI (91358) pid_log: mot2_pwm: 4919[0m
+[0;32mI (91358) pid_log: mot3_pwm: 4919[0m
+[0;32mI (91358) pid_log: mot4_pwm: 4910[0m
+[0;32mI (92358) pid_log: mot1_pwm: 4953[0m
+[0;32mI (92358) pid_log: mot2_pwm: 4953[0m
+[0;32mI (92358) pid_log: mot3_pwm: 4876[0m
+[0;32mI (92358) pid_log: mot4_pwm: 4876[0m
+[0;32mI (93358) pid_log: mot1_pwm: 4889[0m
+[0;32mI (93358) pid_log: mot2_pwm: 4940[0m
+[0;32mI (93358) pid_log: mot3_pwm: 4940[0m
+[0;32mI (93358) pid_log: mot4_pwm: 4889[0m
+[0;32mI (94358) pid_log: mot1_pwm: 4915[0m
+[0;32mI (94358) pid_log: mot2_pwm: 4915[0m
+[0;32mI (94358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (94358) pid_log: mot4_pwm: 4915[0m
+[0;32mI (95358) pid_log: mot1_pwm: 4935[0m
+[0;32mI (95358) pid_log: mot2_pwm: 4935[0m
+[0;32mI (95358) pid_log: mot3_pwm: 4894[0m
+[0;32mI (95358) pid_log: mot4_pwm: 4894[0m
+[0;32mI (96358) pid_log: mot1_pwm: 4915[0m
+[0;32mI (96358) pid_log: mot2_pwm: 4915[0m
+[0;32mI (96358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (96358) pid_log: mot4_pwm: 4915[0m
+[0;32mI (97358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (97358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (97358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (97358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (98358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (98358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (98358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (98358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (99358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (99358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (99358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (99358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (100358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (100358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (100358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (100358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (101358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (101358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (101358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (101358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (102358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (102358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (102358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (102358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (103358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (103358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (103358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (103358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (104358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (104358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (104358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (104358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (105358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (105358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (105358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (105358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (106358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (106358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (106358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (106358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (107358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (107358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (107358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (107358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (108358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (108358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (108358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (108358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (109358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (109358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (109358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (109358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (110358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (110358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (110358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (110358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (111358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (111358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (111358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (111358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (112358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (112358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (112358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (112358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (113358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (113358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (113358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (113358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (114358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (114358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (114358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (114358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (115358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (115358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (115358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (115358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (116358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (116358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (116358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (116358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (117358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (117358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (117358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (117358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (118358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (118358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (118358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (118358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (119358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (119358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (119358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (119358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (120358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (120358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (120358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (120358) pid_log: mot4_pwm: 8191[0m
+[0;32mI (121358) pid_log: mot1_pwm: 8191[0m
+[0;32mI (121358) pid_log: mot2_pwm: 8191[0m
+[0;32mI (121358) pid_log: mot3_pwm: 8191[0m
+[0;32mI (121358) pid_log: mot4_pwm: 8191[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 30 2024 14:43:04[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b058h ( 45144) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b080 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d41c vaddr=40080000 size=02bfch ( 11260) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17818h ( 96280) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=00037840 vaddr=40082bfc size=0b414h ( 46100) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (215) app_init: Project name:     mini_drone[0m
+[0;32mI (221) app_init: App version:      6c098b5-dirty[0m
+[0;32mI (226) app_init: Compile time:     Aug 30 2024 14:42:42[0m
+[0;32mI (232) app_init: ELF file SHA256:  fe7673df3...[0m
+[0;32mI (237) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (242) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (247) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (252) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2D68 len 0002D298 (180 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008E010 len 00011FF0 (71 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;33mW (303) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (317) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;32mI (338) mpu6050_log: Found MPU60x0 device[0m
+[0;32mI (338) mpu6050_log: Accel range: 0[0m
+[0;32mI (338) mpu6050_log: Gyro range:  0[0m
+[0;32mI (348) pid_log: mot1_pwm: 4915[0m
+[0;32mI (348) pid_log: mot2_pwm: 4915[0m
+[0;32mI (348) pid_log: mot3_pwm: 4915[0m
+[0;32mI (358) pid_log: mot4_pwm: 4915[0m
+[0;32mI (358) main_task: Returned from app_main()[0m
+[0;32mI (1358) pid_log: mot1_pwm: 4964[0m
+[0;32mI (1358) pid_log: mot2_pwm: 4971[0m
+[0;32mI (1358) pid_log: mot3_pwm: 4865[0m
+[0;32mI (1358) pid_log: mot4_pwm: 4858[0m
+[0;32mI (2358) pid_log: mot1_pwm: 4910[0m
+[0;32mI (2358) pid_log: mot2_pwm: 4919[0m
+[0;32mI (2358) pid_log: mot3_pwm: 4919[0m
+[0;32mI (2358) pid_log: mot4_pwm: 4910[0m
+[0;32mI (3358) pid_log: mot1_pwm: 5022[0m
+[0;32mI (3358) pid_log: mot2_pwm: 5022[0m
+[0;32mI (3358) pid_log: mot3_pwm: 4807[0m
+[0;32mI (3358) pid_log: mot4_pwm: 4807[0m
+[0;32mI (4358) pid_log: mot1_pwm: 4915[0m
+[0;32mI (4358) pid_log: mot2_pwm: 4915[0m
+[0;32mI (4358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (4358) pid_log: mot4_pwm: 4915[0m
+[0;32mI (5358) pid_log: mot1_pwm: 4915[0m
+[0;32mI (5358) pid_log: mot2_pwm: 4915[0m
+[0;32mI (5358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (5358) pid_log: mot4_pwm: 4915[0m
+[0;32mI (6358) pid_log: mot1_pwm: 4867[0m
+[0;32mI (6358) pid_log: mot2_pwm: 5050[0m
+[0;32mI (6358) pid_log: mot3_pwm: 4962[0m
+[0;32mI (6358) pid_log: mot4_pwm: 4779[0m
+[0;32mI (7358) pid_log: mot1_pwm: 4917[0m
+[0;32mI (7358) pid_log: mot2_pwm: 4947[0m
+[0;32mI (7358) pid_log: mot3_pwm: 4912[0m
+[0;32mI (7358) pid_log: mot4_pwm: 4882[0m
+[0;32mI (8358) pid_log: mot1_pwm: 4979[0m
+[0;32mI (8358) pid_log: mot2_pwm: 4993[0m
+[0;32mI (8358) pid_log: mot3_pwm: 4850[0m
+[0;32mI (8358) pid_log: mot4_pwm: 4836[0m
+[0;32mI (9358) pid_log: mot1_pwm: 4914[0m
+[0;32mI (9358) pid_log: mot2_pwm: 4934[0m
+[0;32mI (9358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (9358) pid_log: mot4_pwm: 4895[0m
+[0;32mI (10358) pid_log: mot1_pwm: 5170[0m
+[0;32mI (10358) pid_log: mot2_pwm: 5170[0m
+[0;32mI (10358) pid_log: mot3_pwm: 4660[0m
+[0;32mI (10358) pid_log: mot4_pwm: 4660[0m
+[0;32mI (11358) pid_log: mot1_pwm: 4940[0m
+[0;32mI (11358) pid_log: mot2_pwm: 4940[0m
+[0;32mI (11358) pid_log: mot3_pwm: 4889[0m
+[0;32mI (11358) pid_log: mot4_pwm: 4889[0m
+[0;32mI (12358) pid_log: mot1_pwm: 4914[0m
+[0;32mI (12358) pid_log: mot2_pwm: 4915[0m
+[0;32mI (12358) pid_log: mot3_pwm: 4915[0m
+[0;32mI (12358) pid_log: mot4_pwm: 4914[0m
+[0;32mI (13358) pid_log: mot1_pwm: 4962[0m
+[0;32mI (13358) pid_log: mot2_pwm: 4962[0m
+[0;32mI (13358) pid_log: mot3_pwm: 4867[0m
+[0;32mI (13358) pid_log: mot4_pwm: 4867[0m
+[0;32mI (14358) pid_log: mot1_pwm: 4912[0m
+[0;32mI (14358) pid_log: mot2_pwm: 4917[0m
+[0;32mI (14358) pid_log: mot3_pwm: 4917[0m
+[0;32mI (14358) pid_log: mot4_pwm: 4912[0m
+[0;32mI (15358) pid_log: mot1_pwm: 4902[0m
+[0;32mI (15358) pid_log: mot2_pwm: 4927[0m
+[0;32mI (15358) pid_log: mot3_pwm: 4927[0m
+[0;32mI (15358) pid_log: mot4_pwm: 4902[0m
+[0;32mI (16358) pid_log: mot1_pwm: 4870[0m
+[0;32mI (16358) pid_log: mot2_pwm: 4959[0m
+[0;32mI (16358) pid_log: mot3_pwm: 4959[0m
+[0;32mI (16358) pid_log: mot4_pwm: 4870[0m
+[0;32mI (17358) pid_log: mot1_pwm: 5099[0m
+[0;32mI (17358) pid_log: mot2_pwm: 5240[0m
+[0;32mI (17358) pid_log: mot3_pwm: 4730[0m
+[0;32mI (17358) pid_log: mot4_pwm: 4589[0m
+[0;32mI (18358) pid_log: mot1_pwm: 4874[0m
+[0;32mI (18358) pid_log: mot2_pwm: 4955[0m
+[0;32mI (18358) pid_log: mot3_pwm: 4955[0m
+[0;32mI (18358) pid_log: mot4_pwm: 4874[0m
+[0;32mI (19358) pid_log: mot1_pwm: 5170[0m
+[0;32mI (19358) pid_log: mot2_pwm: 5170[0m
+[0;32mI (19358) pid_log: mot3_pwm: 4660[0m
+[0;32mI (19358) pid_log: mot4_pwm: 4660[0m
+[0;32mI (20358) pid_log: mot1_pwm: 4906[0m
+[0;32mI (20358) pid_log: mot2_pwm: 4923[0m
+[0;32mI (20358) pid_log: mot3_pwm: 4923[0m
+[0;32mI (20358) pid_log: mot4_pwm: 4906[0m

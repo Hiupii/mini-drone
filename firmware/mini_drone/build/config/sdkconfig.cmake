@@ -1,7 +1,7 @@
 #
-# Automatically generated file. DO NOT EDIT.
-# Espressif IoT Development Framework (ESP-IDF) Configuration cmake include file
-#
+                # Automatically generated file. DO NOT EDIT.
+                # Espressif IoT Development Framework (ESP-IDF) Configuration cmake include file
+                #
 set(CONFIG_SOC_BROWNOUT_RESET_SUPPORTED "Not determined")
 set(CONFIG_SOC_TWAI_BRP_DIV_SUPPORTED "Not determined")
 set(CONFIG_SOC_DPORT_WORKAROUND "Not determined")

@@ -1,0 +1,48 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/hieu/esp/datn/firmware/mini_drone/build/bootloader/esp-idf/esptool_py && /home/hieu/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/hieu/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/hieu/esp/datn/firmware/mini_drone/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/mini_drone.c.obj
+In file included from /home/hieu/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:12,
+                 from /home/hieu/esp/esp-idf/components/esp_hw_support/include/esp_cpu.h:20,
+                 from /home/hieu/esp/esp-idf/components/esp_hw_support/include/spinlock.h:11,
+                 from /home/hieu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:49,
+                 from /home/hieu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:57,
+                 from /home/hieu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:69,
+                 from /home/hieu/esp/datn/firmware/mini_drone/main/mini_drone.c:2:
+/home/hieu/esp/datn/firmware/mini_drone/main/mini_drone.c: In function 'mpu6050_task':
+/home/hieu/esp/datn/firmware/mini_drone/main/mini_drone.c:62:60: warning: passing argument 2 of 'mpu6050_get_raw_acceleration' from incompatible pointer type [-Wincompatible-pointer-types]
+   62 |         ESP_ERROR_CHECK(mpu6050_get_raw_acceleration(&dev, &accel));
+      |                                                            ^~~~~~
+      |                                                            |
+      |                                                            mpu6050_acceleration_t *
+/home/hieu/esp/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+In file included from /home/hieu/esp/datn/firmware/mini_drone/main/mini_drone.c:9:
+/home/hieu/esp/datn/firmware/mini_drone/main/mpu6050.h:1598:88: note: expected 'mpu6050_raw_acceleration_t *' but argument is of type 'mpu6050_acceleration_t *'
+ 1598 | esp_err_t mpu6050_get_raw_acceleration(mpu6050_dev_t *dev, mpu6050_raw_acceleration_t *raw_accel);
+      |                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/hieu/esp/datn/firmware/mini_drone/main/mini_drone.c:63:56: warning: passing argument 2 of 'mpu6050_get_raw_rotation' from incompatible pointer type [-Wincompatible-pointer-types]
+   63 |         ESP_ERROR_CHECK(mpu6050_get_raw_rotation(&dev, &gyro));
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        mpu6050_rotation_t *
+/home/hieu/esp/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/home/hieu/esp/datn/firmware/mini_drone/main/mpu6050.h:1662:80: note: expected 'mpu6050_raw_rotation_t *' but argument is of type 'mpu6050_rotation_t *'
+ 1662 | esp_err_t mpu6050_get_raw_rotation(mpu6050_dev_t *dev, mpu6050_raw_rotation_t *raw_gyro);
+      |                                                        ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable mini_drone.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/hieu/esp/datn/firmware/mini_drone/build/mini_drone.bin
+[9/9] cd /home/hieu/esp/datn/firmware/mini_drone/build/esp-idf/esptool_py && /home/hieu/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/hieu/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/hieu/esp/datn/firmware/mini_drone/build/partition_table/partition-table.bin /home/hieu/esp/datn/firmware/mini_drone/build/mini_drone.bin
+mini_drone.bin binary size 0x335f0 bytes. Smallest app partition is 0x100000 bytes. 0xcca10 bytes (80%) free.
