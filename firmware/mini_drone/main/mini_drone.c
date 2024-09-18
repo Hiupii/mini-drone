@@ -25,7 +25,6 @@ static float input_roll = 0.0f;
 static float g = 9.81f;
 
 /*----------pid var----------*/
-static const char *PID_TAG = "pid_log";
 
 struct pid_controller pitch_control;
 pid_t pitch_pid;
@@ -167,14 +166,6 @@ void setup_pwm() {
     }
 }
 
-// void pid_task(void *pvParameters)
-// {
-//     while(1)
-//     {
-
-//     }
-// }
-
 void app_main()
 {
     setup_pwm();
@@ -201,10 +192,8 @@ void app_main()
     pid_auto(roll_pid);
 
     xTaskCreate(mpu6050_task, "mpu6050_test", configMINIMAL_STACK_SIZE * 6, NULL, 5, NULL);
-    // xTaskCreate(pid_task, "pid_task", configMINIMAL_STACK_SIZE * 6, NULL, 5, NULL);
 }
 
-// Hàm constrain: giới hạn giá trị trong phạm vi min và max
 int constrain(int value, int min_value, int max_value) {
     if (value < min_value) {
         return min_value;
@@ -214,61 +203,3 @@ int constrain(int value, int min_value, int max_value) {
         return value;
     }
 }
-
-
-/*
-
-// Cấu hình PID
-float Kp = 1.0;   // Hệ số Proportional
-float Ki = 0.5;   // Hệ số Integral
-float Kd = 0.1;   // Hệ số Derivative
-
-PID pitchPID(&input_pitch, &output_pitch, &setpoint_pitch, Kp, Ki, Kd, DIRECT);
-PID rollPID(&input_roll, &output_roll, &setpoint_roll, Kp, Ki, Kd, DIRECT);
-
-// Biến lưu giá trị cảm biến và điều khiển
-float input_pitch, input_roll;
-float output_pitch, output_roll;
-float setpoint_pitch = 0.0;  // Mục tiêu cân bằng (góc 0)
-float setpoint_roll = 0.0;   // Mục tiêu cân bằng (góc 0)
-
-// Hàm chính
-void app_main() {
-    // Khởi tạo PWM
-    setup_pwm();
-
-    // Vòng lặp chính
-    while (true) {
-        // Tính toán giá trị PID
-        pitchPID.Compute();
-        rollPID.Compute();
-
-        // Điều chỉnh động cơ dựa trên output của PID
-        // Giả sử output_pitch và output_roll là giá trị PWM cho động cơ
-        // Tăng tốc động cơ phía sau khi pitch nghiêng về phía trước
-        int motor1_pwm = base_throttle + output_pitch - output_roll;
-        int motor2_pwm = base_throttle + output_pitch + output_roll;
-        int motor3_pwm = base_throttle - output_pitch + output_roll;
-        int motor4_pwm = base_throttle - output_pitch - output_roll;
-
-        // Đảm bảo giá trị PWM nằm trong giới hạn
-        motor1_pwm = constrain(motor1_pwm, 0, 8191);  // 13-bit PWM max value is 8191
-        motor2_pwm = constrain(motor2_pwm, 0, 8191);
-        motor3_pwm = constrain(motor3_pwm, 0, 8191);
-        motor4_pwm = constrain(motor4_pwm, 0, 8191);
-
-        // Cập nhật giá trị PWM cho động cơ
-        ledc_set_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0, motor1_pwm);
-        ledc_set_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_1, motor2_pwm);
-        ledc_set_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_2, motor3_pwm);
-        ledc_set_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_3, motor4_pwm);
-        ledc_update_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0);
-        ledc_update_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_1);
-        ledc_update_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_2);
-        ledc_update_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_3);
-
-        // Delay nhỏ để ổn định vòng lặp
-        vTaskDelay(10 / portTICK_PERIOD_MS);
-    }
-}
-*/
