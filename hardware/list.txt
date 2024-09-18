@@ -1,0 +1,11 @@
+Power:
+    - Battery: LiPo 1300mAh 30C https://www.thegioiic.com/pin-sac-lipo-2500mah-3-7v
+    - Charging circuit: TP4056 MODULE
+    - LDO: MIC5219-3.3YM5 MODULE
+    - Diode: 1N4148
+Motor:
+    - 720 Coreless Motor
+    - Mosfet: IRFZ44N
+MCU, Sensor:
+    - ESP32
+    - MPU6050
