@@ -17,10 +17,10 @@
 	Author website: http://www.geekfactory.mx
 	Author e-mail: ruben at geekfactory dot mx
  */
-#include "PID.h"
+#include "../include/PID.h"
 #include "esp_timer.h"
 
-pid_t pid_create(pid_t pid, float* in, float* out, float* set, float kp, float ki, float kd)
+struct_pid_t pid_create(struct_pid_t pid, float* in, float* out, float* set, float kp, float ki, float kd)
 {
 	pid->input = in;
 	pid->output = out;
@@ -40,13 +40,13 @@ pid_t pid_create(pid_t pid, float* in, float* out, float* set, float kp, float k
 	return pid;
 }
 
-bool pid_need_compute(pid_t pid)
+bool pid_need_compute(struct_pid_t pid)
 {
 	// Check if the PID period has elapsed
 	return(esp_timer_get_time() - pid->lasttime >= pid->sampletime) ? true : false;
 }
 
-void pid_compute(pid_t pid)
+void pid_compute(struct_pid_t pid)
 {
     // Check if control is enabled
     if (!pid->automode)
@@ -75,7 +75,7 @@ void pid_compute(pid_t pid)
 }
 
 
-void pid_tune(pid_t pid, float kp, float ki, float kd)
+void pid_tune(struct_pid_t pid, float kp, float ki, float kd)
 {
 	// Check for validity
 	if (kp < 0 || ki < 0 || kd < 0)
@@ -95,7 +95,7 @@ void pid_tune(pid_t pid, float kp, float ki, float kd)
 	}
 }
 
-void pid_sample(pid_t pid, uint32_t time)
+void pid_sample(struct_pid_t pid, uint32_t time)
 {
 	if (time > 0) {
 		float ratio = (float) (time * 1000) / (float) pid->sampletime;
@@ -105,7 +105,7 @@ void pid_sample(pid_t pid, uint32_t time)
 	}
 }
 
-void pid_limits(pid_t pid, float min, float max)
+void pid_limits(struct_pid_t pid, float min, float max)
 {
 	if (min >= max) return;
 	pid->omin = min;
@@ -124,7 +124,7 @@ void pid_limits(pid_t pid, float min, float max)
 	}
 }
 
-void pid_auto(pid_t pid)
+void pid_auto(struct_pid_t pid)
 {
 	// If going from manual to auto
 	if (!pid->automode) {
@@ -138,12 +138,12 @@ void pid_auto(pid_t pid)
 	}
 }
 
-void pid_manual(pid_t pid)
+void pid_manual(struct_pid_t pid)
 {
 	pid->automode = false;
 }
 
-void pid_direction(pid_t pid, enum pid_control_directions dir)
+void pid_direction(struct_pid_t pid, enum pid_control_directions dir)
 {
 	if (pid->automode && pid->direction != dir) {
 		pid->Kp = (0 - pid->Kp);
