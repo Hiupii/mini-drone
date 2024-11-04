@@ -1,64 +1,52 @@
 #include "../include/control.h"
 #include <Arduino.h>
 
-void control_up()
-{
 
-}
 
-void control_down()
+void control_set_point(bool btn1, bool btn2, bool btn3, bool btn4,
+                       bool btn5, bool btn6, bool btn7)
 {
-  
-}
+  if (btn1 == 1) { //Up
+    pitch_setpoint = 10;
+  } else {
+    pitch_setpoint = 0;
+  }
 
-void control_left()
-{
-  
-}
+  if (btn2 == 1) { //Down
+    pitch_setpoint = -10;
+  } else {
+    pitch_setpoint = 0;
+  }
 
-void control_right()
-{
-  
-}
+  if (btn3 == 1) { //Left
+    roll_setpoint = 10;
+  } else {
+    roll_setpoint = 0;
+  }
 
-void control_high()
-{
-  
-}
+  if (btn4 == 1) { //Right
+    roll_setpoint = -10;
+  } else {
+    roll_setpoint = 0;
+  }
 
-void control_low()
-{
-  
-}
+  if (btn5 == 1) { //High
+    base_throttle = HIGH_THROTTLE;
+  } else {
+    base_throttle = IDLE_THROTTLE;
+  }
 
-void control_reset_up()
-{
-  
-}
+  if (btn6 == 1) { //Low
+    base_throttle = LOW_THROTTLE;
+  } else {
+    base_throttle = IDLE_THROTTLE;
+  }
 
-void control_reset_down()
-{
-  
-}
+  if (btn7 == 1) { //Cap
 
-void control_reset_left()
-{
-  
-}
-
-void control_reset_right()
-{
-  
-}
-
-void control_reset_high()
-{
-  
-}
-
-void control_reset_low()
-{
-  
+  } else {
+    
+  }
 }
 
 void prescale_output(float* ptr)

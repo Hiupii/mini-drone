@@ -1,15 +1,17 @@
 #include <Arduino.h>
 #include <string>
 #include <NimBLEDevice.h>
+#include "../include/joystick.h"
 
-#define UP_PIN        13 
-#define DOWN_PIN      12  
-#define LEFT_PIN      14
-#define RIGHT_PIN     27
-#define HIGH_PIN      26
-#define LOW_PIN       25
-#define CAP_PIN       33
+bool button1 = 0;
+bool button2 = 0;
+bool button3 = 0;
+bool button4 = 0;
+bool button5 = 0;
+bool button6 = 0;
+bool button7 = 0;
 
+uint8_t currentState;
 
 NimBLEClient* pClient = nullptr;
 NimBLERemoteCharacteristic* pRemoteCharacteristic = nullptr;  // Sửa thành NimBLERemoteCharacteristic
@@ -32,7 +34,7 @@ bool connectToServer() {
   pClient = NimBLEDevice::createClient();
   pClient->setClientCallbacks(new MyClientCallback(), false);
   
-  if (pClient->connect(BLEAddress("08:d1:f9:6b:00:1a"))) {
+  if (pClient->connect(BLEAddress("e0:5a:1b:6b:b2:3e"))) {
     Serial.println("Connected to server");
     NimBLERemoteService* pRemoteService = pClient->getService(serviceUUID);  // Lấy dịch vụ từ drone
     if (pRemoteService) {
@@ -63,25 +65,19 @@ void setup() {
     Serial.println("Failed to connect to drone.");
     while (1);
   }
-
-  pinMode(UP_PIN, INPUT_PULLUP);
-  pinMode(DOWN_PIN, INPUT_PULLUP);
-  pinMode(LEFT_PIN, INPUT_PULLUP);
-  pinMode(RIGHT_PIN, INPUT_PULLUP);
-  pinMode(HIGH_PIN, INPUT_PULLUP);
-  pinMode(LOW_PIN, INPUT_PULLUP);
-  pinMode(CAP_PIN, INPUT_PULLUP);
+  joystick_setup();
+  analogReadResolution(10);
+  Serial.println("Init done");
 }
 
 void loop() {
-  // Giả sử bạn đọc trạng thái của các nút nhấn (button) qua các pin (ví dụ: GPIO pin)
-  bool button1 = digitalRead(UP_PIN);
-  bool button2 = digitalRead(DOWN_PIN);
-  bool button3 = digitalRead(LEFT_PIN);
-  bool button4 = digitalRead(RIGHT_PIN);
-  bool button5 = digitalRead(HIGH_PIN);
-  bool button6 = digitalRead(LOW_PIN);
-  bool button7 = digitalRead(CAP_PIN);
+  joystick_getdata(&button1,
+                   &button2,
+                   &button3,
+                   &button4,
+                   &button5,
+                   &button6,
+                   &button7);
 
   // Mã hóa trạng thái các nút thành 1 byte
   uint8_t buttonState = 0;
@@ -95,8 +91,11 @@ void loop() {
 
   uint8_t fixedState = ~buttonState &0b1111111;
   
-  // Gửi tín hiệu điều khiển đến drone
-  sendControlSignal(fixedState);
-
-  delay(1000);  // Chu kỳ gửi dữ liệu
+  if (fixedState != currentState) {
+    // Gửi tín hiệu điều khiển đến drone
+    sendControlSignal(fixedState);
+    currentState = fixedState;
+    Serial.print("Send: ");
+    Serial.println(fixedState);
+  }
 }
