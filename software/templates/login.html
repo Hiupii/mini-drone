@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/mdb/css/login.css">
+    <script src="/static/js/login.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bt-form-login-simple-1">
+            <form class="form" autocomplete="off" method="post" action="/login">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            {% if category == 'error' %}
+                                <style>
+                                .error-message {
+                                color: #ffffff;
+                                background-color: red;
+                                border-radius: 5px;
+                                padding: 10px;
+                                margin-bottom: 20px;
+                                }
+                                </style>
+                                    <div class="error-message">
+                                        {{ message }}
+                                    </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <div class="form-group">
+                    <label for="email">Username *</label>
+                    <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="Username"
+                        class="form-input"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Password"
+                        class="form-input"
+                    />
+                </div>
+                <div class="form-meta">
+                    <!-- <div class="form-remember">
+                        <input
+                            type="checkbox"
+                            name="remember-account"
+                            id="remember-account"
+                        />
+                        <label for="remember-account">
+                            Remember me
+                        </label>
+                    </div> -->
+                </div>
+                <button type="submit" class="form-btn">
+                    Login
+                </button>
+            </form>
+            <!-- <div class="form-option">
+                Don&#x27;t have an account?
+                <a href="{{url_for('login_page')}}">Sign up for free</a>
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>
