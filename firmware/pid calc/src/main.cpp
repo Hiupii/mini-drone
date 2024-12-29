@@ -60,6 +60,18 @@ const char index_html[] PROGMEM = R"rawliteral(
 <head>
   <title>Drone PID Control</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // Function to update duty values from server
+    function fetchDutyValues() {
+      fetch('/get_duty').then(response => response.json()).then(data => {
+        document.getElementById('duty1').innerText = data.duty1;
+        document.getElementById('duty2').innerText = data.duty2;
+        document.getElementById('duty3').innerText = data.duty3;
+        document.getElementById('duty4').innerText = data.duty4;
+      });
+    }
+    setInterval(fetchDutyValues, 500);  // Fetch every 500ms
+  </script>
 </head>
 <body>
   <h1>PID Tuning</h1>
@@ -75,6 +87,11 @@ const char index_html[] PROGMEM = R"rawliteral(
     <br><br>
     <input type="submit" value="Update PID">
   </form>
+  <h2>Motor Duty Cycles</h2>
+  <p>Motor 1 Duty: <span id="duty1">0</span></p>
+  <p>Motor 2 Duty: <span id="duty2">0</span></p>
+  <p>Motor 3 Duty: <span id="duty3">0</span></p>
+  <p>Motor 4 Duty: <span id="duty4">0</span></p>
 </body>
 </html>)rawliteral";
 
@@ -101,12 +118,6 @@ String processor(const String& var) {
 
 void setup() {
   Serial.begin(115200);
-  Wire.begin();
-  mpu.initialize();
-  if (!mpu.testConnection()) {
-    Serial.println("MPU6050 connection failed");
-    while (1);
-  }
 
   pitch_setpoint = 0;
   roll_setpoint = 0;
@@ -148,8 +159,21 @@ void setup() {
     request->send(200, "text/plain", "PID Updated");
   });
 
+  server.on("/get_duty", HTTP_GET, [](AsyncWebServerRequest *request) {
+    String json = "{\"duty1\":" + String(duty_1) + ",\"duty2\":" + String(duty_2) +
+                  ",\"duty3\":" + String(duty_3) + ",\"duty4\":" + String(duty_4) + "}";
+    request->send(200, "application/json", json);
+  });
+
   // Bắt đầu web server
   server.begin();
+
+  Wire.begin();
+  mpu.initialize();
+  if (!mpu.testConnection()) {
+    Serial.println("MPU6050 connection failed");
+    while (1);
+  }
 
   ledcSetup(CHN_1, FREQ, RES);
   ledcAttachPin(MOT1, CHN_1);
@@ -168,24 +192,29 @@ void loop() {
 
   pid_compute(pitch_pid);
   pid_compute(roll_pid);
-  duty_1 = base_throttle + pitch_output - roll_output;
-  duty_2 = base_throttle + pitch_output + roll_output;
-  duty_3 = base_throttle - pitch_output + roll_output;
-  duty_4 = base_throttle - pitch_output - roll_output;
+  duty_1 = base_throttle - pitch_output + roll_output;
+  duty_2 = base_throttle - pitch_output - roll_output;
+  duty_3 = base_throttle + pitch_output - roll_output;
+  duty_4 = base_throttle + pitch_output + roll_output;
   duty_1 = constrain(duty_1, 0, 8191);
   duty_2 = constrain(duty_2, 0, 8191);
   duty_3 = constrain(duty_3, 0, 8191);
   duty_4 = constrain(duty_4, 0, 8191);
-  /*
+  
   Serial.print("Mot 1: "); Serial.print(duty_1);
   Serial.print(", Mot 2: "); Serial.print(duty_2);
   Serial.print(", Mot 3: "); Serial.print(duty_3);
   Serial.print(", Mot 4: "); Serial.println(duty_4);
-  */
-  ledcWrite(CHN_1, duty_1);
-  ledcWrite(CHN_2, duty_2);
-  ledcWrite(CHN_3, duty_3);
-  ledcWrite(CHN_4, duty_4);
+
+  // ledcWrite(CHN_1, duty_1);
+  // ledcWrite(CHN_2, duty_2);
+  // ledcWrite(CHN_3, duty_3);
+  // ledcWrite(CHN_4, duty_4);
+
+  ledcWrite(CHN_1, 1000);
+  ledcWrite(CHN_2, 1000);
+  ledcWrite(CHN_3, 1000);
+  ledcWrite(CHN_4, 1000);
   delay(10); // Delay for 10ms (adjust as needed
 }
 

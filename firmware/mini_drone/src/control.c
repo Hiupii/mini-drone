@@ -1,8 +1,6 @@
 #include "../include/control.h"
 #include <Arduino.h>
 
-
-
 void control_set_point(bool btn1, bool btn2, bool btn3, bool btn4,
                        bool btn5, bool btn6, bool btn7)
 {
