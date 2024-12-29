@@ -4,8 +4,12 @@
 #include <NimBLEDevice.h>
 #include <MPU6050.h>
 #include <WiFi.h>
+#include "FreeRTOSConfig.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/semphr.h"
 #include "../include/control.h"
-#include "../include/PID.h"
+#include "../include/pid.h"
 #include "esp_camera.h"
 
 #define CAMERA_MODEL_AI_THINKER // Has PSRAM
@@ -15,36 +19,22 @@
 #include "camera_pins.h"
 
 //Prototype 
-void setupBLE();
-void setupMPU6050();
+void task_BLE_initialize();
+void task_setup_MPU6050(void* pvParameters);
+void task_camera_capture(void* pvParameters);
+void task_motor_control(void* pvParameters);
 void setupCamera();
-void setupWiFi();
-void updateMotors();
-void captureAndHandleImage();
 
 // UUID cho Service và Characteristic
 #define SERVICE_UUID "00FF"
 #define DRONE_CONTROL_CHAR_UUID "FF01"
 #define DRONE_INFO_CHAR_UUID "FF02"
 
-float Kp=2.5, Ki=0.05, Kd=0.01;
-
-float pitch_setpoint, pitch_input, pitch_output;
-
-float roll_setpoint, roll_input, roll_output;
-
-struct pid_controller pitch_control;
-struct_pid_t pitch_pid;
-
-struct pid_controller roll_control;
-struct_pid_t roll_pid;
-
 float base_throttle = IDLE_THROTTLE;
 float duty_1;
 float duty_2;
 float duty_3;
 float duty_4;
-
 bool button1 = false;
 bool button2 = false;
 bool button3 = false;
@@ -52,6 +42,7 @@ bool button4 = false;
 bool button5 = false;
 bool button6 = false;
 bool button7 = false;
+SemaphoreHandle_t control_mutex;
 
 NimBLEServer* pServer = nullptr;
 NimBLECharacteristic* pWriteCharacteristic = nullptr;
@@ -125,26 +116,79 @@ void calculate_angle(float* roll, float* pitch)
   float AccX = ax / 16384.0;
   float AccY = ay / 16384.0;
   float AccZ = az / 16384.0;
+  float gyroZ = gz / 131.0;  // Convert gyro value to degrees/s
 
   // Calculate roll and pitch from the accelerometer data
   *roll = atan2(AccY, AccZ) * 180 / PI;
   *pitch = atan2(-AccX, sqrt(AccY * AccY + AccZ * AccZ)) * 180 / PI;
   
   // Integrate gyroscope data for yaw calculation
-  float gyroZ = gz / 131.0;  // Convert gyro value to degrees/s
-  yaw += gyroZ * 0.01;  // Assume loop runs every 10ms
+  yaw += gyroZ * 0.01;
   //End of calculate roll, pitch, yaw
 }
 
 void setup() {
   Serial.begin(115200);
-  setupBLE();
-  // setupMPU6050();
+  control_mutex = xSemaphoreCreateMutex();
+  xTaskHandle motor_task_handle;
+  xTaskHandle mpu_task_handle;
+  xTaskHandle camera_task_handle;
+  task_BLE_initialize();
   setupCamera();
-  setupWiFi();
+  xTaskCreate(task_motor_control,
+              "Motor_LOG",
+              configMINIMAL_STACK_SIZE,
+              NULL,
+              tskIDLE_PRIORITY + 1,
+              &motor_task_handle);
+  xTaskCreate(task_setup_MPU6050,
+              "MPU_LOG",
+              configMINIMAL_STACK_SIZE,
+              NULL,
+              tskIDLE_PRIORITY+1,
+              &mpu_task_handle);
+  xTaskCreate(task_camera_capture,
+              "Camera_LOG",
+              configMINIMAL_STACK_SIZE,
+              NULL,
+              tskIDLE_PRIORITY+1,
+              &camera_task_handle);
 }
 
-void setupBLE() {
+void task_motor_control(void* pvParameters)
+{
+  ledcSetup(CHN_1, FREQ, RES);
+  ledcAttachPin(MOT1, CHN_1);
+  ledcSetup(CHN_2, FREQ, RES);
+  ledcAttachPin(MOT2, CHN_2);
+  ledcSetup(CHN_3, FREQ, RES);
+  ledcAttachPin(MOT3, CHN_3);
+  ledcSetup(CHN_4, FREQ, RES);
+  ledcAttachPin(MOT4, CHN_4);
+
+  while (1)
+  {
+    xSemaphoreTake(control_mutex, portMAX_DELAY);
+    duty_1 = base_throttle - pitch_output + roll_output;
+    duty_2 = base_throttle - pitch_output - roll_output;
+    duty_3 = base_throttle + pitch_output - roll_output;
+    duty_4 = base_throttle + pitch_output + roll_output;
+    xSemaphoreGive(control_mutex);
+
+    duty_1 = constrain(duty_1, 0, 8191);
+    duty_2 = constrain(duty_2, 0, 8191);
+    duty_3 = constrain(duty_3, 0, 8191);
+    duty_4 = constrain(duty_4, 0, 8191);
+
+    ledcWrite(CHN_1, duty_1);
+    ledcWrite(CHN_2, duty_2);
+    ledcWrite(CHN_3, duty_3);
+    ledcWrite(CHN_4, duty_4);
+    vTaskDelay(pdMS_TO_TICKS(10));
+  }
+}
+
+void task_BLE_initialize() {
   NimBLEDevice::init("TRUNG HIEU Drone");
   NimBLEDevice::setPower(ESP_PWR_LVL_P9);
 
@@ -172,27 +216,26 @@ void setupBLE() {
   Serial.println("BLE Server is started and advertising");
   Serial.println(NimBLEDevice::getAddress().toString().c_str());
 }
-/*
-void setupMPU6050() {
+
+void task_setup_MPU6050(void* pvParameters) {
+  (void)pvParameters;
   Wire.begin();
   mpu.initialize();
-  if (!mpu.testConnection()) {
+  while (!mpu.testConnection()) {
     Serial.println("MPU6050 connection failed");
-    while (1);
+    Wire.begin();
+    mpu.initialize(); 
+    vTaskDelay(pdMS_TO_TICKS(10));
   }
 
-  pitch_setpoint = roll_setpoint = 0;
-
-  pitch_pid = pid_create(&pitch_control, &pitch_input, &pitch_output, &pitch_setpoint, Kd, Ki, Kp);
-  roll_pid = pid_create(&roll_control, &roll_input, &roll_output, &roll_setpoint, Kp, Ki, Kd);
-
-  pid_limits(pitch_pid, -8191, 8191);
-  pid_limits(roll_pid, -8191, 8191);
-
-  pid_auto(pitch_pid);
-  pid_auto(roll_pid);
+  while (1) {
+    calculate_angle(&roll_input, &pitch_input);
+    xSemaphoreTake(control_mutex, portMAX_DELAY);
+    pid_calculate();
+    xSemaphoreGive(control_mutex);
+    vTaskDelay(pdMS_TO_TICKS(10));
+  }
 }
-*/
 
 void setupCamera() {
   camera_config_t config;
@@ -244,7 +287,9 @@ void setupCamera() {
   }
 }
 
-void setupWiFi() {
+void task_camera_capture(void* pvParameters)
+{
+  (void)pvParameters;
   WiFi.begin(ssid, password);
   Serial.println("Connecting to WiFi...");
   while (WiFi.status() != WL_CONNECTED) {
@@ -252,41 +297,10 @@ void setupWiFi() {
     Serial.println("Connecting...");
   }
   Serial.print("Connected to WiFi! IP Address: ");
-  Serial.println(WiFi.localIP());
-}
-
-void loop() {
-/*
-  calculate_angle(&roll_input, &pitch_input);
-  
-  pid_compute(pitch_pid);
-  pid_compute(roll_pid);
-  updateMotors();
-*/
-  captureAndHandleImage();
-}
-
-void updateMotors() {
-  duty_1 = base_throttle + pitch_output - roll_output;
-  duty_2 = base_throttle + pitch_output + roll_output;
-  duty_3 = base_throttle - pitch_output + roll_output;
-  duty_4 = base_throttle - pitch_output - roll_output;
-
-  duty_1 = constrain(duty_1, 0, 8191);
-  duty_2 = constrain(duty_2, 0, 8191);
-  duty_3 = constrain(duty_3, 0, 8191);
-  duty_4 = constrain(duty_4, 0, 8191);
-
-  ledcWrite(CHN_1, duty_1);
-  ledcWrite(CHN_2, duty_2);
-  ledcWrite(CHN_3, duty_3);
-  ledcWrite(CHN_4, duty_4);
-}
-
-void captureAndHandleImage() {
+  Serial.println(WiFi.localIP()); 
   WiFiServer server(80);
   server.begin();
-  while (true) {
+  while (1) {
     WiFiClient client = server.available();
     if (client) {
       Serial.println("New Client");
@@ -307,9 +321,12 @@ void captureAndHandleImage() {
       client.println("Content-Length: " + String(fb->len));
       client.println();
       client.write(fb->buf, fb->len);
-
       esp_camera_fb_return(fb);
-      delay(1000);
+      vTaskDelay(pdMS_TO_TICKS(1000));
     }
   }
+}
+
+void loop() {
+  
 }
