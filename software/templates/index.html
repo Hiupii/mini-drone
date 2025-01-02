@@ -8,20 +8,33 @@
 </head>
 <body>
   <body>
-  <div class="container">
+  <div class="header">
     <header>
       <h1>Flycam Image Viewer</h1>
     </header>
+    </div>
+    <div class="container">
 
     <!-- Hiển thị ảnh hiện tại -->
     <section class="current-image-section card">
       <h2>Ảnh hiện tại</h2>
-      <img id="current-image" src="http://your-drone-ip-address/image.jpg" alt="Current Flycam Image">
+      <img id="current-image" src="placeholder.jpg" alt="Current Flycam Image">
+
       <p id="image-timestamp">Thời gian chụp: 2024-10-20 12:30</p>
-      <button id="view-details" class="btn">Xem chi tiết ảnh</button>
+      <button id="view-details" class="btn" style="display: none;">Xem chi tiết ảnh</button>
+
     </section>
 
     <!-- Xem lịch sử ảnh -->
+    
+    <!-- Thông tin chi tiết của ảnh -->
+    <section id="details" class="details-section card">
+      <h2>Thông tin chi tiết</h2>
+      <p><strong>Thời gian chụp:</strong> <span id="detail-timestamp">2024-10-20 12:30</span></p>
+      <p><strong>Kích thước ảnh:</strong> 600x400</p>
+      <p><strong>Định dạng:</strong> JPEG</p>
+      <p><strong>IP Flycam:</strong> http://your-drone-ip-address</p>
+    </section>
     <section class="history-section card">
       <h2>Lịch sử ảnh</h2>
       <div id="history-container">
@@ -31,17 +44,9 @@
         <img class="history-image" src="http://your-drone-ip-address/image3.jpg" alt="History Image 3" data-timestamp="2024-10-17 16:20">
       </div>
     </section>
-
-    <!-- Thông tin chi tiết của ảnh -->
-    <section id="details" class="details-section card">
-      <h2>Thông tin chi tiết</h2>
-      <p><strong>Thời gian chụp:</strong> <span id="detail-timestamp">2024-10-20 12:30</span></p>
-      <p><strong>Kích thước ảnh:</strong> 600x400</p>
-      <p><strong>Định dạng:</strong> JPEG</p>
-      <p><strong>IP Flycam:</strong> http://your-drone-ip-address</p>
-    </section>
   </div>
-
+  
   <script src="../static/js/script.js"></script>
+  <script src="../static/js/image_handler.js"></script>
 </body>
 </html>
